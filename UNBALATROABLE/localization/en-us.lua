@@ -536,6 +536,7 @@ return {
                     "played cards with",
                     "{C:hearts}Heart{} suit to give",
                     "{X:mult,C:white} X#3# {} Mult when scored",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
                 unlock={
                     "Have at least {E:1,C:attention}#1#",
