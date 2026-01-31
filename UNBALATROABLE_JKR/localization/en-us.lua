@@ -563,8 +563,6 @@ return {
                     "{C:mult}+#1#{} Mult for every",
                     "{C:money}$#2#{} you have",
                     "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)",
-                },
-                text={
                     "{C:planet} Artwork by PLOUTRE",
                 },
                 unlock={
