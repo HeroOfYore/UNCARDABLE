@@ -439,6 +439,7 @@ return {
                     "played {C:attention}8{} to create a",
                     "{C:tarot}Tarot{} card when scored",
                     "{C:inactive}(Must have room)",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
             },
             j_abstract={
@@ -447,6 +448,7 @@ return {
                     "{C:mult}+#1#{} Mult for",
                     "each {C:attention}Joker{} card",
                     "{C:inactive}(Currently {C:red}+#2#{C:inactive} Mult)",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
             },
             j_acrobat={
@@ -454,6 +456,7 @@ return {
                 text={
                     "{X:red,C:white} X#1# {} Mult on {C:attention}final",
                     "{C:attention}hand{} of round",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
                 unlock={
                     "Play {C:attention,E:1}#1#{} hands",
@@ -515,6 +518,7 @@ return {
                 text={
                     "{C:green}Uncommon{} Jokers",
                     "each give {X:mult,C:white} X#1# {} Mult",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
             },
             j_blackboard={
@@ -552,6 +556,7 @@ return {
                 text={
                     "Copies ability of",
                     "{C:attention}Joker{} to the right",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
                 unlock={
                     "Win a run",
@@ -603,6 +608,7 @@ return {
                     "Upgrade the level of",
                     "the first {C:attention}discarded",
                     "poker hand each round",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
                 unlock={
                     "Sell a total",
@@ -616,6 +622,7 @@ return {
                     "Played {C:attention}face{} cards have",
                     "a {C:green}#1# in #2#{} chance to",
                     "give {C:money}$2{} when scored",
+                    "{C:planet} Artwork by ermywurm",
                 },
             },
             j_caino={
@@ -666,6 +673,7 @@ return {
                     "per discarded {V:1}#2#{} card,",
                     "suit changes every round",
                     "{C:inactive}(Currently {C:chips}+#3#{C:inactive} Chips)",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
             },
             j_cavendish={
@@ -675,6 +683,7 @@ return {
                     "{C:green}#2# in #3#{} chance this",
                     "card is destroyed",
                     "at end of round",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
             },
             j_ceremonial={
@@ -685,6 +694,7 @@ return {
                     "and permanently add {C:attention}double",
                     "its sell value to this {C:red}Mult",
                     "{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
             },
             j_certificate={
@@ -773,6 +783,7 @@ return {
                     "Earn {C:money}$#1#{} per {C:attention}discard{} if",
                     "no discards are used",
                     "by end of the round",
+                    "{C:planet} Artwork by PLOUTRE",
                 },
             },
             j_devious={
@@ -781,6 +792,7 @@ return {
                     "{C:chips}+#1#{} Chips if played",
                     "hand contains",
                     "a {C:attention}#2#",
+                    "{C:planet} Artwork by ermywurm",
                 },
             },
             j_diet_cola={
@@ -789,6 +801,7 @@ return {
                     "Sell this card to",
                     "create a free",
                     "{C:attention}#1#",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
             },
             j_dna={
@@ -855,6 +868,7 @@ return {
                     "Gains {C:money}$#1#{} of",
                     "{C:attention}sell value{} at",
                     "end of round",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
             },
             j_erosion={
@@ -882,6 +896,7 @@ return {
                     "more {C:attention}face cards{}",
                     "are discarded",
                     "at the same time",
+                    "{C:planet} Artwork by Objitude",
                 },
             },
             j_family={
@@ -920,6 +935,7 @@ return {
                     "hand contains a",
                     "{C:diamonds}Diamond{} card, {C:clubs}Club{} card,",
                     "{C:hearts}Heart{} card, and {C:spades}Spade{} card",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
                 unlock={
                     "Reach Ante",
@@ -949,6 +965,7 @@ return {
                     "to every {C:attention}Joker{} and",
                     "{C:attention}Consumable{} card at",
                     "end of round",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
             },
             j_glass={
@@ -1003,6 +1020,7 @@ return {
                     "{C:green}#2# in #3#{} chance this",
                     "card is destroyed",
                     "at end of round",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
             },
             j_hack={
@@ -1036,6 +1054,7 @@ return {
                     "Retrigger {C:attention}first{} played",
                     "card used in scoring",
                     "{C:attention}#1#{} additional times",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
                 unlock={
                     "Beat a Boss Blind",
@@ -1071,6 +1090,7 @@ return {
                     "every time a {C:attention}playing card{}",
                     "is added to your deck",
                     "{C:inactive}(Currently {X:mult,C:white} X#2# {C:inactive} Mult)",
+                    "{C:planet} Artwork by StanzaRorae",
                 },
             },
             j_ice_cream={
@@ -1079,6 +1099,7 @@ return {
                     "{C:chips}+#1#{} Chips",
                     "{C:chips}-#2#{} Chips for",
                     "every hand played",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
             },
             j_idol={
@@ -1143,6 +1164,7 @@ return {
                     "Sell this card to",
                     "disable the current",
                     "{C:attention}Boss Blind{}",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
             },
             j_lucky_cat={
@@ -1152,6 +1174,7 @@ return {
                     "every time a {C:attention}Lucky{} card",
                     "{C:green}successfully{} triggers",
                     "{C:inactive}(Currently {X:mult,C:white} X#2# {C:inactive} Mult)",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
             },
             j_lusty_joker={
@@ -1185,6 +1208,7 @@ return {
                     "Earn {C:money}$#1#{} for each",
                     "discarded {C:attention}#2#{}, rank",
                     "changes every round",
+                    "{C:planet} Artwork by PLOUTRE",
                 },
             },
             j_marble={
@@ -1201,6 +1225,7 @@ return {
                     "Earn {C:money}$#1#{} if played",
                     "hand triggers the",
                     "{C:attention}Boss Blind{} ability",
+                    "{C:planet} Artwork by ermywurm",
                 },
                 unlock={
                     "Defeat a Boss Blind",
@@ -1240,6 +1265,7 @@ return {
                 name="Misprint",
                 text={
                     "",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
             },
             j_mr_bones={
@@ -1250,6 +1276,7 @@ return {
                     "are at least {C:attention}25%",
                     "of required chips",
                     "{S:1.1,C:red,E:2}self destructs{}",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
                 unlock={
                     "Lose {C:attention,E:1}#1#{} runs",
@@ -1281,6 +1308,7 @@ return {
                     "{C:attention}odd{} rank give",
                     "{C:chips}+#1#{} Chips when scored",
                     "{C:inactive}(A, 9, 7, 5, 3)",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
             },
             j_onyx_agate={
@@ -1348,6 +1376,7 @@ return {
                     "First played {C:attention}face",
                     "card gives {X:mult,C:white} X#1# {} Mult",
                     "when scored",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
             },
             j_popcorn={
@@ -1372,6 +1401,7 @@ return {
                     "{X:mult,C:white} X#1# {} Mult,",
                     "loses {X:mult,C:white} X#2# {} Mult",
                     "per {C:attention}card{} discarded",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
             },
             j_red_card={
@@ -1400,6 +1430,7 @@ return {
                     "played without a",
                     "scoring {C:attention}face{} card",
                     "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
             },
             j_riff_raff={
@@ -1459,6 +1490,7 @@ return {
                     "round per unique {C:planet}Planet",
                     "card used this run",
                     "{C:inactive}(Currently {C:money}$#2#{C:inactive})",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
                 unlock={
                     "Have {E:1,C:money}$#1#",
@@ -1471,6 +1503,7 @@ return {
                     "Played {C:attention}face{} cards",
                     "give {C:chips}+#1#{} Chips",
                     "when scored",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
             },
             j_scholar={
@@ -1511,6 +1544,7 @@ return {
                     "Retrigger all",
                     "cards played for",
                     "the next {C:attention}#1#{} hands",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
             },
             j_shoot_the_moon={
@@ -1541,6 +1575,7 @@ return {
                     "a single {C:attention}6{}, destroy it and",
                     "create a {C:spectral}Spectral{} card",
                     "{C:inactive}(Must have room)",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
             },
             j_sly={
@@ -1558,6 +1593,7 @@ return {
                     "count as the same suit,",
                     "{C:spades}Spades{} and {C:clubs}Clubs",
                     "count as the same suit",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
                 unlock={
                     "Have at least {C:attention}#1#",
@@ -1571,6 +1607,7 @@ return {
                     "Played {C:attention}face{} cards",
                     "give {C:mult}+#1#{} Mult",
                     "when scored",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
             },
             j_sock_and_buskin={
@@ -1591,6 +1628,7 @@ return {
                     "{C:green}#1# in #2#{} chance to",
                     "upgrade level of",
                     "played {C:attention}poker hand{}",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
             },
             j_splash={
@@ -1607,6 +1645,7 @@ return {
                     "if played hand has",
                     "exactly {C:attention}4{} cards",
                     "{C:inactive}(Currently {C:chips}#1#{C:inactive} Chips)",
+                    "{C:planet} Artwork by PLOUTRE",
                 },
             },
             j_steel_joker={
@@ -1625,6 +1664,7 @@ return {
                     "empty {C:attention}Joker{} slot",
                     "{s:0.8}Joker Stencil included",
                     "{C:inactive}(Currently {X:red,C:white} X#1# {C:inactive})",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
             },
             j_stone={
@@ -1663,6 +1703,7 @@ return {
                     "poker hand contains an",
                     "{C:attention}Ace{} and a {C:attention}Straight{}",
                     "{C:inactive}(Must have room)",
+                    "{C:planet} Artwork by ermywurm",
                 },
             },
             j_swashbuckler={
@@ -1672,6 +1713,7 @@ return {
                     "of all other owned",
                     "{C:attention}Jokers{} to Mult",
                     "{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
                 unlock={
                     "Sell a total of",
@@ -1718,6 +1760,7 @@ return {
                     "is a {C:attention}#2#{},",
                     "poker hand changes",
                     "at end of round",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
             },
             j_trading={
@@ -1826,6 +1869,7 @@ return {
                     "{C:chips}+#2#{} Chips when each",
                     "played {C:attention}2{} is scored",
                     "{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips)",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
                 unlock={
                     "Win a run in {E:1,C:attention}#1#",
