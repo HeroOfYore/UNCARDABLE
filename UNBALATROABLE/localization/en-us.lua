@@ -570,6 +570,9 @@ return {
                     "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)",
                     "{C:planet} Artwork by PLOUTRE",
                 },
+                {
+                    "{C:planet} Artwork by PLOUTRE!!",
+                },
                 unlock={
                     "Have at least {E:1,C:attention}#1#",
                     "{C:dark_edition}Polychrome{} Jokers",
@@ -1516,7 +1519,7 @@ return {
                 },
             },
             j_seance={
-                name="Séance",
+                name="Sï¿½ance",
                 text={
                     "If {C:attention}poker hand{} is a",
                     "{C:attention}#1#{}, create a",
@@ -3474,7 +3477,7 @@ return {
                 ["2"]="The Witcher",
                 ["3"]="Cyberpunk 2077",
                 ["4"]="Shovel Knight",
-                ["5"]="Don’t Starve",
+                ["5"]="Donï¿½t Starve",
                 ["6"]="Assassin's Creed",
                 ["7"]="Slay the Princess",
             },

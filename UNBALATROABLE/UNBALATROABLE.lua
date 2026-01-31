@@ -8,8 +8,10 @@
 --local mod_path = "" .. SMODS.current_mod.path
 --UNBALATROABLE.path = mod_path
 --UNBALATROABLE_config = SMODS.current_mod.config
-assert(SMODS.load_file("config.lua"))()
+UNBALATROABLE = SMODS.current_mod
+--assert(SMODS.load_file("config.lua"))()
 ----UNBALATROABLE_config.gameset_toggle = true;
+assert(SMODS.load_file('reskins/UNBALATROABLE_JKR.lua'))()
 -----------------------------
 ----------------------------
 
@@ -154,11 +156,10 @@ local UNBALATROABLEConfigTab = function()
 	config = { n = G.UIT.R, config = { align = "tm", padding = 0 }, nodes = { left_settings, right_settings } }
 	unbal_nodes[#unbal_nodes + 1] = config
     unbal_nodes[#unbal_nodes + 1] = create_toggle({
-        label = "Disable Reskinned Jokers",
+        label = "Disable Reskinned Jokers (requires restart to activate)",
         active_colour = HEX("E01BDE"),
-        ref_table = UNBALATROABLE_config,
+        ref_table = UNBALATROABLE.config,
         ref_value = "disabled",
-        SMODS.save_mod_config
     })
     return {
 		n = G.UIT.ROOT,
@@ -176,4 +177,7 @@ local UNBALATROABLEConfigTab = function()
 end
 
 SMODS.current_mod.config_tab = UNBALATROABLEConfigTab
-    
+
+G.FUNCS.close_initial_config = function()
+    SMODS.save_mod_config(UNBALATROABLE)
+end
