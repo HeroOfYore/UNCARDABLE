@@ -1,3 +1,3 @@
 return {
-    ["disabled"] = true;
+    ["disabled"] = false;
 }
