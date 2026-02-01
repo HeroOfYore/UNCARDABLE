@@ -333,44 +333,6 @@ return {
                 },
             },
         },
-        Edition={
-            e_base={
-                name="Base",
-                text={
-                    "No extra effects",
-                },
-            },
-            e_foil={
-                name="Foil",
-                text={
-                    "{C:chips}+#1#{} chips",
-                },
-            },
-            e_holo={
-                name="Holographic",
-                text={
-                    "{C:mult}+#1#{} Mult",
-                },
-            },
-            e_negative={
-                name="Negative",
-                text={
-                    "{C:dark_edition}+#1#{} Joker slot",
-                },
-            },
-            e_negative_consumable={
-                name="Negative",
-                text={
-                    "{C:dark_edition}+#1#{} consumable slot",
-                },
-            },
-            e_polychrome={
-                name="Polychrome",
-                text={
-                    "{X:mult,C:white} X#1# {} Mult",
-                },
-            },
-        },
         Enhanced={
             m_bonus={
                 name="Bonus Card",
@@ -756,6 +718,7 @@ return {
                     "{X:mult,C:white} X#1# {} Mult every time",
                     "a {C:planet}Planet{} card is used",
                     "{C:inactive}(Currently {X:mult,C:white} X#2# {C:inactive} Mult)",
+                    "{C:planet} Artwork by HeroOfYore",
                 },
             },
             j_crafty={
@@ -1127,6 +1090,7 @@ return {
                     "sell this card to",
                     "{C:attention}Duplicate{} a random Joker",
                     "{C:inactive}(Currently {C:attention}#2#{C:inactive}/#1#)",
+                    "{C:planet}Art by HeroOfYore",
                 },
                 unlock={
                     "Win a run without",
@@ -1847,6 +1811,7 @@ return {
                     "Create a {C:purple}Tarot{} card",
                     "if hand is played",
                     "with {C:money}$#1#{} or less",
+                    "{C:planet} Artwork by Objitude",
                 },
             },
             j_vampire={

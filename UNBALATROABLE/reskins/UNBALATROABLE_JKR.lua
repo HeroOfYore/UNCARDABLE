@@ -37,6 +37,8 @@
         j_delayed_grat = {pos = 27},
         j_faceless = {pos = 28},
         j_bootstraps = {pos = 29},
+        j_vagabond = {pos = 30},
+        j_smiley = {pos = 31},
     }
 
 
@@ -68,6 +70,8 @@
         j_superposition = {row = 10},
         j_bloodstone = {row = 11},
         j_misprint = {row = 12},
+        j_constellation = {row = 13},
+        j_invisible = {row = 14},
     }
 
     SMODS.Atlas {
@@ -187,6 +191,24 @@
             path = "UNSCOOPABLE.png",
             atlas_table = 'ANIMATION_ATLAS',
             frames = 47,
+            fps = 10,
+            px = 71,
+            py = 95
+        }
+        SMODS.Atlas{
+            key = "j_constellation_anim",
+            path = "UNSCOOPABLE.png",
+            atlas_table = 'ANIMATION_ATLAS',
+            frames = 27,
+            fps = 10,
+            px = 71,
+            py = 95
+        }
+        SMODS.Atlas{
+            key = "j_invisible_anim",
+            path = "UNSCOOPABLE.png",
+            atlas_table = 'ANIMATION_ATLAS',
+            frames = 12,
             fps = 10,
             px = 71,
             py = 95
