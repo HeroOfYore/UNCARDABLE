@@ -3980,8 +3980,8 @@ return {
                 "You do crimes!",
             },
             wq_6={
-                "You made some",
-                "heads up plays!",
+                "Lose your voice.",
+                "Find your way.",
             },
             wq_7={
                 "Batta-SWING!",
