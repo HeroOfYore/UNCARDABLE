@@ -3949,7 +3949,7 @@ return {
                 "out of this moment!",
             },
             lq_7={
-                "I'm so fucking',
+                "I'm so fucking",
                 "TIIIIIRED!",
             },
             lq_8={
