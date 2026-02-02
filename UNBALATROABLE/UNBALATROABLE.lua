@@ -12,6 +12,7 @@ UNBALATROABLE = SMODS.current_mod
 --assert(SMODS.load_file("config.lua"))()
 ----UNBALATROABLE_config.gameset_toggle = true;
 assert(SMODS.load_file('reskins/UNBALATROABLE_JKR.lua'))()
+assert(SMODS.load_file('reskins/artistui.lua'))()
 -----------------------------
 ----------------------------
 
