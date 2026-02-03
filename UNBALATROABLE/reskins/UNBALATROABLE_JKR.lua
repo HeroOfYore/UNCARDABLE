@@ -7,38 +7,38 @@
 ---UNBALATROABLE_config_JKR = SMODS.current_mod.config
 ----UNBALATROABLE_config.gameset_toggle = true;    
     jokers = {
-        j_8_ball = {pos = 0},
-        j_mr_bones = {pos = 1},
-        j_sixth_sense = {pos = 2},
-        j_stencil = {pos = 3},
-        j_wee = {pos = 4},
-        j_photograph = {pos = 5},
-        j_diet_cola = {pos = 6},
-        j_ice_cream = {pos = 7},
-        j_gros_michel = {pos = 8},
-        j_castle = {pos = 9},
-        j_cavendish = {pos = 10},
-        j_seltzer = {pos = 11},
-        j_hanging_chad = {pos = 12},
-        j_scary_face = {pos = 13},
-        j_acrobat = {pos = 14},
-        j_abstract = {pos = 15},
-        j_matador = {pos = 16},
-        j_ride_the_bus = {pos = 17},
-        j_blueprint = {pos = 18},
-        j_business = {pos = 19},
-        j_devious = {pos = 20},
-        j_luchador = {pos = 21},
-        j_swashbuckler = {pos = 22},
-        j_mail = {pos = 23},
-        j_hologram = {pos = 24},
-        j_space = {pos = 25},
-        j_satellite = {pos = 26},
-        j_delayed_grat = {pos = 27},
-        j_faceless = {pos = 28},
-        j_bootstraps = {pos = 29},
-        j_vagabond = {pos = 30},
-        j_smiley = {pos = 31},
+        j_8_ball = {pos = 0, artist = {'heroofyore'}},
+        j_mr_bones = {pos = 1, artist = {'heroofyore'}},
+        j_sixth_sense = {pos = 2, artist = {'heroofyore'}},
+        j_stencil = {pos = 3, artist = {'heroofyore'}},
+        j_wee = {pos = 4, artist = {'heroofyore'}},
+        j_photograph = {pos = 5, artist = {'heroofyore'}},
+        j_diet_cola = {pos = 6, artist = {'heroofyore'}},
+        j_ice_cream = {pos = 7, artist = {'heroofyore'}},
+        j_gros_michel = {pos = 8, artist = {'heroofyore'}},
+        j_castle = {pos = 9, artist = {'heroofyore'}},
+        j_cavendish = {pos = 10, artist = {'heroofyore'}},
+        j_seltzer = {pos = 11, artist = {'heroofyore'}},
+        j_hanging_chad = {pos = 12, artist = {'heroofyore'}},
+        j_scary_face = {pos = 13, artist = {'heroofyore'}},
+        j_acrobat = {pos = 14, artist = {'heroofyore'}},
+        j_abstract = {pos = 15, artist = {'heroofyore'}},
+        j_matador = {pos = 16, artist = {'ermywurm'}},
+        j_ride_the_bus = {pos = 17, artist = {'heroofyore'}},
+        j_blueprint = {pos = 18, artist = {'heroofyore'}},
+        j_business = {pos = 19, artist = {'ermywurm'}},
+        j_devious = {pos = 20, artist = {'ermywurm'}},
+        j_luchador = {pos = 21, artist = {'heroofyore'}},
+        j_swashbuckler = {pos = 22, artist = {'heroofyore'}},
+        j_mail = {pos = 23, artist = {'ploutre'}},
+        j_hologram = {pos = 24, artist= {'stanza'}},
+        j_space = {pos = 25, artist = {'heroofyore'}},
+        j_satellite = {pos = 26, artist = {'heroofyore'}},
+        j_delayed_grat = {pos = 27, artist = {'ploutre'}},
+        j_faceless = {pos = 28, artist = {'objitude'}},
+        j_bootstraps = {pos = 29, artist = {'ploutre'}},
+        j_vagabond = {pos = 30, artist = {'objitude'}},
+        j_smiley = {pos = 31, artist = {'heroofyore'}},
     }
 
 
@@ -53,25 +53,26 @@
         for jkr, data in pairs(jokers) do
             SMODS["Joker"]:take_ownership(jkr, {atlas = "agglomeration",
             pos = {x = 0 + data.pos, y = 0},
+            artist_credits = data.artist,
             soul_pos = {x = 0 + data.pos, y = 1}}, true)
         end
     end
     animated_jokers = {
-        j_lucky_cat = {row = 0},
-        j_smeared = {row = 1},
-        j_baseball = {row = 2},
-        j_ramen = {row = 3},
-        j_flower_pot = {row = 4},
-        j_gift = {row = 5},
-        j_egg = {row = 6},
-        j_todo_list = {row = 7},
-        j_odd_todd = {row = 8},
-        j_burnt = {row = 9},
-        j_superposition = {row = 10},
-        j_bloodstone = {row = 11},
-        j_misprint = {row = 12},
-        j_constellation = {row = 13},
-        j_invisible = {row = 14},
+        j_lucky_cat = {row = 0, artist = {'heroofyore'}},
+        j_smeared = {row = 1, artist = {'heroofyore'}},
+        j_baseball = {row = 2, artist = {'heroofyore'}},
+        j_ramen = {row = 3, artist = {'heroofyore'}},
+        j_flower_pot = {row = 4, artist = {'heroofyore'}},
+        j_gift = {row = 5, artist = {'heroofyore'}},
+        j_egg = {row = 6, artist = {'heroofyore'}},
+        j_todo_list = {row = 7, artist = {'heroofyore'}},
+        j_odd_todd = {row = 8, artist = {'heroofyore'}},
+        j_burnt = {row = 9, artist = {'heroofyore'}},
+        j_superposition = {row = 10, artist = {'ermywurm'}},
+        j_bloodstone = {row = 11, artist = {'heroofyore'}},
+        j_misprint = {row = 12, artist = {'heroofyore'}},
+        j_constellation = {row = 13, artist = {'heroofyore'}},
+        j_invisible = {row = 14, artist = {'heroofyore'}},
     }
 
     SMODS.Atlas {
@@ -81,7 +82,6 @@
         frames = 3,
         px = 71, 
         py = 95,
-        artist_credits = {'HeroOfYore'}
     }
 
     SMODS.Atlas {
@@ -217,6 +217,7 @@
         for jkr, data in pairs(animated_jokers) do
             SMODS["Joker"]:take_ownership(jkr, {atlas = jkr .. "_anim",
             pos = {x = 0, y = 0 + data.row},
+            artist_credits = data.artist,
             --soul_pos = {x = 0, y = 1}
         }, true)
         end
