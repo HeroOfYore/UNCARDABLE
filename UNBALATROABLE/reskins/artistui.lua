@@ -1,6 +1,6 @@
 loc_colour("red")
 G.ARGS.LOC_COLOURS['heroofyore'] = HEX('C0E332')
-G.ARGS.LOC_COLOURS['ermywurm'] = HEX('CBA334')
+G.ARGS.LOC_COLOURS['ermywurm'] = HEX('AD7193')
 G.ARGS.LOC_COLOURS['guac'] = HEX('5708BA')
 G.ARGS.LOC_COLOURS['ploutre'] = HEX('AAAAAA')
 G.ARGS.LOC_COLOURS['sonata'] = HEX('FF004A')
