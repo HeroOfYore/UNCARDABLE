@@ -2,6 +2,7 @@ return {
     ["misc"] = {
         ["dictionary"] = {
             ["UNCARDABLE_artist"] = 'Artist',
+            uncardable_art_credit = "Art by ",
         },
     },
     ["descriptions"]={

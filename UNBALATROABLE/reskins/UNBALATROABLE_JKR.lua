@@ -7,8 +7,8 @@
 ---UNBALATROABLE_config_JKR = SMODS.current_mod.config
 ----UNBALATROABLE_config.gameset_toggle = true;    
     jokers = {
-        j_8_ball = {pos = 0},
-        j_mr_bones = {pos = 1},
+        j_8_ball = {pos = 0, artist = {'heroofyore'}},
+        j_mr_bones = {pos = 1, artist = {'heroofyore'}},
         j_sixth_sense = {pos = 2},
         j_stencil = {pos = 3},
         j_wee = {pos = 4},
@@ -53,6 +53,7 @@
         for jkr, data in pairs(jokers) do
             SMODS["Joker"]:take_ownership(jkr, {atlas = "agglomeration",
             pos = {x = 0 + data.pos, y = 0},
+            artist_credits = {'heroofyore'},
             soul_pos = {x = 0 + data.pos, y = 1}}, true)
         end
     end
@@ -81,7 +82,7 @@
         frames = 3,
         px = 71, 
         py = 95,
-        artist_credits = {'HeroOfYore'}
+        artist_credits = {'heroofyore'},
     }
 
     SMODS.Atlas {
