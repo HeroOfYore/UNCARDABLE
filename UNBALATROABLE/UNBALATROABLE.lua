@@ -128,7 +128,17 @@ SMODS.DeckSkin({
 -----------------------------
 -----------------------------
 
-
+SMODS.Sound({
+    vol = 1.0,
+    pitch = 1,
+    key = "music_uncardable",
+    path = "music_uncardable.ogg",
+    select_music_track = function()
+        return G.GAME 
+    end,
+    sync = {
+    }
+})
 
 
 local UNBALATROABLEConfigTab = function()
