@@ -1,6 +1,12 @@
 loc_colour("red")
-G.ARGS.LOC_COLOURS['heroofyore'] = HEX('7B2F2B')
+G.ARGS.LOC_COLOURS['heroofyore'] = HEX('C0E332')
 G.ARGS.LOC_COLOURS['ermywurm'] = HEX('CBA334')
+G.ARGS.LOC_COLOURS['guac'] = HEX('5708BA')
+G.ARGS.LOC_COLOURS['ploutre'] = HEX('AAAAAA')
+G.ARGS.LOC_COLOURS['sonata'] = HEX('FF004A')
+G.ARGS.LOC_COLOURS['mcres'] = HEX('2F11BA')
+G.ARGS.LOC_COLOURS['stanza'] = HEX('6DD3E2')
+G.ARGS.LOC_COLOURS['objitude'] = HEX('FFAABB')
 
 function UNCARDABLE_artist_tooltip(_c, info_queue, card, desc_nodes, specific_vars, full_UI_table)
     localize{type = 'descriptions', set = 'UNCARDABLE Artist', key = _c.key, nodes = desc_nodes, vars = specific_vars or _c.vars}

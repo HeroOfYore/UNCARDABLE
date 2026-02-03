@@ -1,10 +1,5 @@
 return {
-    ["misc"] = {
-        ["dictionary"] = {
-            ["UNCARDABLE_artist"] = 'Artist',
-            uncardable_art_credit = "Art by ",
-        },
-    },
+
     ["descriptions"]={
         ["UNCARDABLE Artist"] = {
             ['heroofyore'] = {
@@ -25,6 +20,36 @@ return {
                     "PLOUTRE",
                 }
             },
+            ['guac'] = {
+                ['text'] =
+                {
+                    "Guacamole Sean",
+                }
+            },
+            ['sonata'] = {
+                ['text'] =
+                {
+                    "Sonata",
+                }
+            },
+            ['mcres'] = {
+                ['text'] =
+                {
+                    "Maid Crescendo"
+                }
+            },
+            ['stanza'] = {
+                ['text'] = 
+                {
+                    "Stanza Rorae"
+                }
+            },
+            ['objitude'] = {
+                ['text'] =
+                {
+                    "Objitude"
+                }
+            }
         },
         Enhanced={
             m_bonus={
@@ -3142,6 +3167,8 @@ return {
             },
         },
         dictionary={
+            ["UNCARDABLE_artist"] = 'Artist',
+            uncardable_art_credit = "Art by ",
             ["$"]="$",
             b_FAQ="FAQ",
             b_and_use="& USE",
