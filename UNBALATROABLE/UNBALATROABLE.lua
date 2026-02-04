@@ -133,7 +133,7 @@ SMODS.Sound({
     vol = 1.0,
     pitch = 1,
     key = "music_uncardable",
-    path = "music_uncardable.ogg",
+    path = "music_uncardable_v2.ogg",
     select_music_track = function()
         return G.GAME 
     end,
