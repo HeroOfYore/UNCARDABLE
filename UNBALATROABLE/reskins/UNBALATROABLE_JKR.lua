@@ -39,6 +39,12 @@
         j_bootstraps = {pos = 29, artist = {'ploutre'}},
         j_vagabond = {pos = 30, artist = {'objitude'}},
         j_smiley = {pos = 31, artist = {'heroofyore'}},
+        j_trousers = {pos = 32, artist = {'ploutre'}},
+        j_cloud_9 = {pos = 33, artist = {'ploutre'}},
+        j_joker = {pos = 34, artist = {'guac'}},
+        j_showman = {pos = 35, artist = {'ploutre'}},
+        j_mime = {pos = 36, artist = {'heroofyore'}},
+        j_even_steven = {pos = 37, artist = {'murdock'}},
     }
 
 
@@ -73,6 +79,7 @@
         j_misprint = {row = 12, artist = {'heroofyore'}},
         j_constellation = {row = 13, artist = {'heroofyore'}},
         j_invisible = {row = 14, artist = {'heroofyore'}},
+        j_madness = {row = 15, artist = {'heroofyore'}},
     }
 
     SMODS.Atlas {
@@ -209,6 +216,15 @@
             path = "UNSCOOPABLE.png",
             atlas_table = 'ANIMATION_ATLAS',
             frames = 12,
+            fps = 10,
+            px = 71,
+            py = 95
+        }
+        SMODS.Atlas{
+            key = "j_madness_anim",
+            path = "UNSCOOPABLE.png",
+            atlas_table = 'ANIMATION_ATLAS',
+            frames = 10,
             fps = 10,
             px = 71,
             py = 95

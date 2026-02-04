@@ -128,6 +128,12 @@ return {
                     "Objitude"
                 }
             },
+            ['murdock'] = {
+                ['text'] =
+                {
+                    "Murdock"
+                }
+            },
         }
     }
 }
