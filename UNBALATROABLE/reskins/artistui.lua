@@ -1,5 +1,10 @@
 loc_colour("red")
-G.ARGS.LOC_COLOURS['heroofyore'] = HEX('C0E332')
+G.C.yore = SMODS.Gradient {
+    key = "YORE",
+    colours = { HEX("AAFFBB"), HEX("DDDDDD") }
+}
+
+G.ARGS.LOC_COLOURS['heroofyore'] = G.C.yore
 G.ARGS.LOC_COLOURS['ermywurm'] = HEX('AD7193')
 G.ARGS.LOC_COLOURS['guac'] = HEX('F394FF')
 G.ARGS.LOC_COLOURS['ploutre'] = HEX('AAAAAA')
