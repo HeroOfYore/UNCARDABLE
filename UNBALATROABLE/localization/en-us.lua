@@ -139,7 +139,13 @@ return {
                 {
                     "8Z"
                 }
-            }
+            },
+            ['bramble'] = {
+                ['text'] = 
+                {
+                    "Bramble"
+                }
+            },
         }
     }
 }

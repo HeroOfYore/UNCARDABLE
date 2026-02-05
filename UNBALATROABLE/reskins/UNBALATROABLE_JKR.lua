@@ -84,7 +84,10 @@
         j_madness = {row = 15, artist = {'heroofyore'}},
         j_brainstorm = {row = 16, artist = {'heroofyore'}},
         j_fibonacci = {row = 17, artist = {'heroofyore'}},
-        j_perkeo = {row = 18, artist = {'guac'}},
+        j_jolly = {row = 18, artist = {'bramble'}},
+    }
+    animated_with_soul = {
+        j_perkeo = {row = 0, artist = {'guac'}},
     }
 
     SMODS.Atlas {
@@ -252,12 +255,13 @@
             px = 71,
             py = 95
         }
+
         SMODS.Atlas{
-            key = "j_perkeo_anim",
+            key = "j_jolly_anim",
             path = "UNSCOOPABLE.png",
             atlas_table = 'ANIMATION_ATLAS',
-            frames = 100,
-            fps = 60,
+            frames = 23,
+            fps = 10,
             px = 71,
             py = 95
         }
@@ -267,6 +271,24 @@
             pos = {x = 0, y = 0 + data.row},
             artist_credits = data.artist,
             --soul_pos = {x = 0, y = 1}
+        }, true)
+        end
+    end
+        SMODS.Atlas{
+            key = "j_perkeo_anim",
+            path = "UNLEGENDABLE.png",
+            atlas_table = 'ANIMATION_ATLAS',
+            frames = 108,
+            fps = 60,
+            px = 71,
+            py = 95
+        }
+    if not UNBALATROABLE.config.disabled then
+        for jkr, data in pairs(animated_with_soul) do
+            SMODS["Joker"]:take_ownership(jkr, {atlas = jkr .. "_anim",
+            pos = {x = 0, y = 0 + data.row},
+            artist_credits = data.artist,
+            soul_pos = {x = 0, y = 1 + data.row},
         }, true)
         end
     end
