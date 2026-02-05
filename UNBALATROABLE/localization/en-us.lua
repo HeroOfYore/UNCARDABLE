@@ -143,7 +143,7 @@ return {
             ['bramble'] = {
                 ['text'] = 
                 {
-                    "Bramble"
+                    "BRAMBLE"
                 }
             },
         }
