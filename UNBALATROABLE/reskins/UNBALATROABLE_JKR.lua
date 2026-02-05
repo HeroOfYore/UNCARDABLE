@@ -45,6 +45,8 @@
         j_showman = {pos = 35, artist = {'ploutre'}},
         j_mime = {pos = 36, artist = {'heroofyore'}},
         j_even_steven = {pos = 37, artist = {'murdock'}},
+        j_sock_and_buskin = {pos = 38, artist = {'8z'}},
+        j_steel_joker = {pos = 39, artist={'stanza'}},
     }
 
 
@@ -80,6 +82,9 @@
         j_constellation = {row = 13, artist = {'heroofyore'}},
         j_invisible = {row = 14, artist = {'heroofyore'}},
         j_madness = {row = 15, artist = {'heroofyore'}},
+        j_brainstorm = {row = 16, artist = {'heroofyore'}},
+        j_fibonacci = {row = 17, artist = {'heroofyore'}},
+        j_perkeo = {row = 18, artist = {'guac'}},
     }
 
     SMODS.Atlas {
@@ -226,6 +231,33 @@
             atlas_table = 'ANIMATION_ATLAS',
             frames = 10,
             fps = 10,
+            px = 71,
+            py = 95
+        }
+        SMODS.Atlas{
+            key = "j_brainstorm_anim",
+            path = "UNSCOOPABLE.png",
+            atlas_table = 'ANIMATION_ATLAS',
+            frames = 4,
+            fps = 10,
+            px = 71,
+            py = 95
+        }
+        SMODS.Atlas{
+            key = "j_fibonacci_anim",
+            path = "UNSCOOPABLE.png",
+            atlas_table = 'ANIMATION_ATLAS',
+            frames = 63,
+            fps = 10,
+            px = 71,
+            py = 95
+        }
+        SMODS.Atlas{
+            key = "j_perkeo_anim",
+            path = "UNSCOOPABLE.png",
+            atlas_table = 'ANIMATION_ATLAS',
+            frames = 100,
+            fps = 60,
             px = 71,
             py = 95
         }
