@@ -18,7 +18,7 @@
         j_gros_michel = {pos = 8, artist = {'heroofyore'}},
         j_castle = {pos = 9, artist = {'heroofyore'}},
         j_cavendish = {pos = 10, artist = {'heroofyore'}},
-        j_seltzer = {pos = 11, artist = {'heroofyore'}},
+        j_selzer = {pos = 11, artist = {'heroofyore'}},
         j_hanging_chad = {pos = 12, artist = {'heroofyore'}},
         j_scary_face = {pos = 13, artist = {'heroofyore'}},
         j_acrobat = {pos = 14, artist = {'heroofyore'}},
