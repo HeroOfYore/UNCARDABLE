@@ -47,6 +47,8 @@
         j_even_steven = {pos = 37, artist = {'murdock'}},
         j_sock_and_buskin = {pos = 38, artist = {'8z'}},
         j_steel_joker = {pos = 39, artist={'stanza'}},
+        j_to_the_moon = {pos = 40, artist={'birb'}},
+        j_sly = {pos= 41, artist={'8z'}},
     }
 
 

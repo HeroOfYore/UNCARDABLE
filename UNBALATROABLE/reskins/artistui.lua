@@ -11,6 +11,10 @@ G.C.bramble = SMODS.Gradient {
     key = "BRAMBLE",
     colours = {HEX("FFFFFF"), HEX('992D22')}
 }
+G.C.birb = SMODS.Gradient {
+    key = "BIRB",
+    colours = {HEX("1A0823"), HEX('95879D')}
+}
 G.ARGS.LOC_COLOURS['heroofyore'] = G.C.yore
 G.ARGS.LOC_COLOURS['ermywurm'] = HEX('AD7193')
 G.ARGS.LOC_COLOURS['guac'] = HEX('F394FF')
@@ -22,6 +26,7 @@ G.ARGS.LOC_COLOURS['objitude'] = HEX('FFAABB')
 G.ARGS.LOC_COLOURS['murdock'] = HEX('AC23BD')
 G.ARGS.LOC_COLOURS['8z'] = HEX('506385')
 G.ARGS.LOC_COLOURS['bramble'] = G.C.bramble
+G.ARGS.LOC_COLOURS['birb'] = G.C.birb
 
 function UNCARDABLE_artist_tooltip(_c, info_queue, card, desc_nodes, specific_vars, full_UI_table)
     localize{type = 'descriptions', set = 'UNCARDABLE Artist', key = _c.key, nodes = desc_nodes, vars = specific_vars or _c.vars}

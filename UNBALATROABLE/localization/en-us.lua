@@ -146,6 +146,12 @@ return {
                     "BRAMBLE"
                 }
             },
+            ['birb'] = {
+                ['text'] =
+                {
+                    "Fleur"
+                }
+            },
         }
     }
 }
