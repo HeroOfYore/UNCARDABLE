@@ -88,14 +88,14 @@ return {
             },
 
 --space here for more custom loss quips
-            custom_wq1 = {
+            uncaradble_custom_wq1 = {
                 "I'm Beat and",
                 "I'm posting.",
             },
-            custom_wq2 = {
+            uncardable_custom_wq2 = {
                 "Custard..."
             },
-            custom_wq3 = {
+            uncardable_custom_wq3 = {
                 "Oh my god I can finally",
                 "take this makeup off now."
             },
