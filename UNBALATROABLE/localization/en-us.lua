@@ -72,6 +72,33 @@ return {
             wq_7={
                 "Batta-SWING!",
             },
+            custom_lq1 = {
+                "I really hate to say it... ",
+                "but you didn't need",
+                "that third chorus.",
+            },
+            custom_lq2 = {
+                "Y'know, you're supposed to",
+                "{E:1}find{} your way.",
+            },
+            custom_lq3 = {
+                "Heyyyyyyyyyyy.",
+                "Welcome back to ",
+                "the results screen."
+            },
+
+--space here for more custom loss quips
+            custom_wq1 = {
+                "I'm Beat and",
+                "I'm posting.",
+            },
+            custom_wq2 = {
+                "Custard..."
+            },
+            custom_wq3 = {
+                "Oh my god I can finally",
+                "take this makeup off now."
+            },
         },
         ["dictionary"] = {
             ["UNCARDABLE_artist"] = 'Artist',
