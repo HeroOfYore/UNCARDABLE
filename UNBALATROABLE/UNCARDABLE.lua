@@ -8,10 +8,10 @@
 --local mod_path = "" .. SMODS.current_mod.path
 --UNBALATROABLE.path = mod_path
 --UNBALATROABLE_config = SMODS.current_mod.config
-UNBALATROABLE = SMODS.current_mod
+UNCARDABLE = SMODS.current_mod
 --assert(SMODS.load_file("config.lua"))()
 ----UNBALATROABLE_config.gameset_toggle = true;
-assert(SMODS.load_file('reskins/UNBALATROABLE_JKR.lua'))()
+assert(SMODS.load_file('reskins/UNCARDABLE_JKR.lua'))()
 assert(SMODS.load_file('reskins/artistui.lua'))()
 assert(SMODS.load_file('reskins/quipadds.lua'))()
 -----------------------------
@@ -139,12 +139,12 @@ SMODS.Sound({
         return G.GAME
         and 1
     end,
-    sync = {
+    --[[sync = {
         music_uncardable_shop = true,
         music_uncardable_tarot = true,
         music_uncardable_planet = true,
-        music_uncardable_boss = true,
-    }
+        music_uncardable_shop = true,
+    }]]
 })
 
 SMODS.Sound({
@@ -177,9 +177,9 @@ SMODS.Sound({
     end,
     --[[sync = {
         music_uncardable = true,
-        music_uncardable_shop = true,
-        music_uncardable_planet = true,
         music_uncardable_boss = true,
+        music_uncardable_planet = true,
+        music_uncardable_shop = true,
     }]]
 })
 
@@ -195,9 +195,9 @@ SMODS.Sound({
     end,
     --[[sync = {
         music_uncardable = true,
-        music_uncardable_shop = true,
         music_uncardable_tarot = true,
         music_uncardable_boss = true,
+        music_uncardable_shop = true,
     }]]
 })
 
@@ -219,7 +219,7 @@ SMODS.Sound({
     }]]
 })
 
-local UNBALATROABLEConfigTab = function()
+local UNCARDABLEConfigTab = function()
     unbal_nodes = {
         {
             n = G.UIT.R,
@@ -246,7 +246,7 @@ local UNBALATROABLEConfigTab = function()
     unbal_nodes[#unbal_nodes + 1] = create_toggle({
         label = "Disable Reskinned Jokers (requires restart to activate)",
         active_colour = HEX("E01BDE"),
-        ref_table = UNBALATROABLE.config,
+        ref_table = UNCARDABLE.config,
         ref_value = "disabled",
     })
     return {
@@ -264,8 +264,8 @@ local UNBALATROABLEConfigTab = function()
 	}
 end
 
-SMODS.current_mod.config_tab = UNBALATROABLEConfigTab
+SMODS.current_mod.config_tab = UNCARDABLEConfigTab
 
 G.FUNCS.close_initial_config = function()
-    SMODS.save_mod_config(UNBALATROABLE)
+    SMODS.save_mod_config(UNCARDABLE)
 end

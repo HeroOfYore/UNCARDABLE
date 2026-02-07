@@ -59,7 +59,7 @@
         px = 71, 
         py = 95
     }
-    if not UNBALATROABLE.config.disabled then
+    if not UNCARDABLE.config.disabled then
         for jkr, data in pairs(jokers) do
             SMODS["Joker"]:take_ownership(jkr, {atlas = "agglomeration",
             pos = {x = 0 + data.pos, y = 0},
@@ -287,7 +287,7 @@
             px = 71,
             py = 95
         }
-    if not UNBALATROABLE.config.disabled then
+    if not UNCARDABLE.config.disabled then
         for jkr, data in pairs(animated_jokers) do
             SMODS["Joker"]:take_ownership(jkr, {atlas = jkr .. "_anim",
             pos = {x = 0, y = 0 + data.row},
@@ -305,7 +305,7 @@
             px = 71,
             py = 95
         }
-    if not UNBALATROABLE.config.disabled then
+    if not UNCARDABLE.config.disabled then
         for jkr, data in pairs(animated_with_soul) do
             SMODS["Joker"]:take_ownership(jkr, {atlas = jkr .. "_anim",
             pos = {x = 0, y = 0 + data.row},
@@ -381,7 +381,7 @@
         path = 'b_voice11.ogg',
         replace = 'voice11'
     })
-    if not UNBALATROABLE.config.disabled then
+    if not UNCARDABLE.config.disabled then
         SMODS["Joker"]:take_ownership("j_ceremonial", {atlas = "SHOOTABLE",
         pos = {x = 0, y = 0},
         }, true)

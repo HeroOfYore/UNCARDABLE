@@ -72,16 +72,16 @@ return {
             wq_7={
                 "Batta-SWING!",
             },
-            custom_lq1 = {
+            uncardable_custom_lq1 = {
                 "I really hate to say it... ",
                 "but you didn't need",
                 "that third chorus.",
             },
-            custom_lq2 = {
+            uncardable_custom_lq2 = {
                 "Y'know, you're supposed to",
                 "{E:1}find{} your way.",
             },
-            custom_lq3 = {
+            uncardable_custom_lq3 = {
                 "Heyyyyyyyyyyy.",
                 "Welcome back to ",
                 "the results screen."

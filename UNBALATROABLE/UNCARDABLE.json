@@ -1,11 +1,11 @@
 {
-    "name":"UNBALATROABLE",
-    "id":"UNBALATROABLE",
+    "name":"UNCARDABLE",
+    "id":"UNCARDABLE",
     "version":"1.0.0",
     "author":["HeroOfYore"],
     "description":"Balatro Unbeatable-ized",
-    "prefix":"unbalatroable",
-    "main_file":"UNBALATROABLE.lua",
+    "prefix":"uncardable",
+    "main_file":"UNCARDABLE.lua",
     "priority": -20,
     "display_name":"UBL"
 }
