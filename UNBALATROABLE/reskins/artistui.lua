@@ -46,6 +46,17 @@ function info_tip_from_rows(desc_nodes, name)
             {n=G.UIT.R, config={align = "tm", minh = 0.36, padding = 0.03}, nodes={{n=G.UIT.T, config={text = desc_nodes.title, scale = 0.32, colour = G.C.UI.TEXT_LIGHT}}}},
             {n=G.UIT.R, config={align = "cm", minw = 1.5, minh = 0.4, r = 0.1, padding = 0.05, colour = lighten(desc_nodes.colour, 0.5)}, nodes={{n=G.UIT.R, config={align = "cm", padding = 0.03}, nodes=t}}}
         }}
+    elseif desc_nodes.tag then
+        local t = {}
+        for k, v in ipairs(desc_nodes) do
+            t[#t+1] = {n=G.UIT.R, config={align = "cm"}, nodes=v}
+        end
+        return {n=G.UIT.R, config={align = "cm", colour = lighten(G.C.GREY, 0.15), r = 0.1}, nodes={
+            {n=G.UIT.R, config={align = "tm", minh = 0.36, padding = 0.03}, nodes={{n=G.UIT.T, config={text = desc_nodes.title, scale = 0.32, colour = G.C.UI.TEXT_LIGHT}}}},
+            {n=G.UIT.R, config={align = "cm", minw = 1.5, minh = 0.4, r = 0.1, padding = 0.05, colour = G.C.WHITE}, nodes={{n=G.UIT.R, config={align = "cm", padding = 0.03}, nodes=t}}}
+        }}
+    else
+        return itfr(desc_nodes, name)
     end
 end
 
@@ -73,7 +84,26 @@ function artist_node(artists, first_string)
     }}
     local total_artists = #artists
     for i, artist in ipairs(artists) do
-        table.insert(artist_node.nodes,
+        if total_artists > 1 and i > 1 then
+            if i == total_artists then
+                table.insert(artist_node.nodes,
+                    {n=G.UIT.T, config ={
+                    text = localize('uncardable_and'),
+                    shadow = true,
+                    colour = G.C.WHITE,
+                    scale = 0.27}}
+                )
+            else
+                table.insert(artist_node.nodes,
+                {n=G.UIT.T, config = {
+                text = ', ',
+                shadow = true,
+                colour = G.C.WHITE,
+                scale = 0.27}}
+                )
+            end
+        end
+    table.insert(artist_node.nodes,
             {n=G.UIT.O, config={
                 object = DynaText({string = localize{type = 'raw_descriptions', set = 'UNCARDABLE Artist', key = artist},
                 colours = {G.ARGS.LOC_COLOURS[artist] or G.C.WHITE},

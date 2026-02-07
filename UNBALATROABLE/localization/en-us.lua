@@ -103,6 +103,7 @@ return {
         ["dictionary"] = {
             ["UNCARDABLE_artist"] = 'Artist',
             uncardable_art_credit = "Art by ",
+            uncardable_and = " and ",
         }
     },
     ["descriptions"]={
