@@ -87,6 +87,8 @@
         j_brainstorm = {row = 16, artist = {'heroofyore'}},
         j_fibonacci = {row = 17, artist = {'heroofyore'}},
         j_jolly = {row = 18, artist = {'bramble'}},
+        j_zany = {row = 19, artist = {'bramble'}},
+        j_astronomer = {row = 20, artist = {'heroofyore'}},
     }
     animated_with_soul = {
         j_perkeo = {row = 0, artist = {'guac'}},
@@ -264,6 +266,24 @@
             atlas_table = 'ANIMATION_ATLAS',
             frames = 23,
             fps = 10,
+            px = 71,
+            py = 95
+        }
+        SMODS.Atlas{
+            key = "j_zany_anim",
+            path = "UNSCOOPABLE.png",
+            atlas_table = 'ANIMATION_ATLAS',
+            frames = 7,
+            fps = 10,
+            px = 71,
+            py = 95
+        }
+        SMODS.Atlas{
+            key = "j_astronomer_anim",
+            path = "UNSCOOPABLE.png",
+            atlas_table = 'ANIMATION_ATLAS',
+            frames = 36,
+            fps = 30,
             px = 71,
             py = 95
         }
