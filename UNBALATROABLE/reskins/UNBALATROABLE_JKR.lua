@@ -306,6 +306,61 @@
         path = 'BANG.ogg',
         replace = 'slice1'
     })
+    SMODS.Sound({
+        key = 'b_voice1',
+        path = 'b_voice1.ogg',
+        replace = 'voice1'
+    })
+    SMODS.Sound({
+        key = 'b_voice2',
+        path = 'b_voice2.ogg',
+        replace = 'voice2'
+    })
+    SMODS.Sound({
+        key = 'b_voice3',
+        path = 'b_voice3.ogg',
+        replace = 'voice3'
+    })
+    SMODS.Sound({
+        key = 'b_voice4',
+        path = 'b_voice4.ogg',
+        replace = 'voice4'
+    })    
+    SMODS.Sound({
+        key = 'b_voice5',
+        path = 'b_voice5.ogg',
+        replace = 'voice5'
+    })
+    SMODS.Sound({
+        key = 'b_voice6',
+        path = 'b_voice6.ogg',
+        replace = 'voice6'
+    })    
+    SMODS.Sound({
+        key = 'b_voice7',
+        path = 'b_voice7.ogg',
+        replace = 'voice7'
+    })
+    SMODS.Sound({
+        key = 'b_voice8',
+        path = 'b_voice8.ogg',
+        replace = 'voice8'
+    })    
+    SMODS.Sound({
+        key = 'b_voice9',
+        path = 'b_voice9.ogg',
+        replace = 'voice9'
+    })
+    SMODS.Sound({
+        key = 'b_voice10',
+        path = 'b_voice10.ogg',
+        replace = 'voice10'
+    })
+    SMODS.Sound({
+        key = 'b_voice11',
+        path = 'b_voice11.ogg',
+        replace = 'voice11'
+    })
     if not UNBALATROABLE.config.disabled then
         SMODS["Joker"]:take_ownership("j_ceremonial", {atlas = "SHOOTABLE",
         pos = {x = 0, y = 0},
