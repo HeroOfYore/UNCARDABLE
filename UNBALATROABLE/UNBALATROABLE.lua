@@ -134,14 +134,84 @@ SMODS.Sound({
     vol = 1.0,
     pitch = 1,
     key = "music_uncardable",
-    path = "music_uncardable_v3.ogg",
+    path = "music_uncardable_v4.ogg",
     select_music_track = function()
-        return G.GAME 
+        return G.STAGE == G.STAGES.MAIN_MENU
     end,
     sync = {
+        music_uncardable_shop = true,
+        music_uncardable_tarot = true,
+        music_uncardable_planet = true,
+        music_uncardable_boss = true,
     }
 })
 
+SMODS.Sound({
+    vol = 1.0,
+    pitch = 1,
+    key = "music_uncardable_shop",
+    path = "music_uncardable_shop.ogg",
+    select_music_track = function()
+        return G.SHOP
+    end,
+    sync = {
+        music_uncardable = true,
+        music_uncardable_tarot = true,
+        music_uncardable_planet = true,
+        music_uncardable_boss = true,
+    }
+})
+
+SMODS.Sound({
+    vol = 1.0,
+    pitch = 1,
+    key = "music_uncardable_tarot",
+    path = "music_uncardable_tarot.ogg",
+    select_music_track = function()
+		return G.STATES.TAROT_PACK
+        or G.STATES.STANDARD_PACK
+        or G.STATES.BUFFOON_PACK
+    end,
+    sync = {
+        music_uncardable = true,
+        music_uncardable_shop = true,
+        music_uncardable_planet = true,
+        music_uncardable_boss = true,
+    }
+})
+
+SMODS.Sound({
+    vol = 1.0,
+    pitch = 1,
+    key = "music_uncardable_planet",
+    path = "music_uncardable_planet.ogg",
+    select_music_track = function()
+		return G.STATES.PLANET_PACK
+        or G.STATES.SPECTRAL_PACK
+    end,
+    sync = {
+        music_uncardable = true,
+        music_uncardable_shop = true,
+        music_uncardable_tarot = true,
+        music_uncardable_boss = true,
+    }
+})
+
+SMODS.Sound({
+    vol = 1.0,
+    pitch = 1,
+    key = "music_uncardable_boss",
+    path = "music_uncardable_boss.ogg",
+    select_music_track = function()
+        return G.GAME.blind.boss
+    end,
+    sync = {
+        music_uncardable = true,
+        music_uncardable_tarot = true,
+        music_uncardable_planet = true,
+        music_uncardable_shop = true,
+    }
+})
 
 local UNBALATROABLEConfigTab = function()
     unbal_nodes = {
