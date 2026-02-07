@@ -134,14 +134,90 @@ SMODS.Sound({
     vol = 1.0,
     pitch = 1,
     key = "music_uncardable",
-    path = "music_uncardable_v3.ogg",
+    path = "music_uncardable_v4.ogg",
     select_music_track = function()
-        return G.GAME 
+        return G.GAME
+        and 1
     end,
     sync = {
+        music_uncardable_shop = true,
+        music_uncardable_tarot = true,
+        music_uncardable_planet = true,
+        music_uncardable_boss = true,
     }
 })
 
+SMODS.Sound({
+    vol = 1.0,
+    pitch = 1,
+    key = "music_uncardable_shop",
+    path = "music_uncardable_shop.ogg",
+    select_music_track = function()
+        return G.GAME
+        and (G.GAME and G.shop)
+        and 50
+    end,
+    --[[sync = {
+        music_uncardable = true,
+        music_uncardable_tarot = true,
+        music_uncardable_planet = true,
+        music_uncardable_boss = true,
+    }]]
+})
+
+SMODS.Sound({
+    vol = 1.0,
+    pitch = 1,
+    key = "music_uncardable_tarot",
+    path = "music_uncardable_tarot.ogg",
+    select_music_track = function()
+		return G.GAME
+        and (G.booster_pack)
+        and 100
+    end,
+    --[[sync = {
+        music_uncardable = true,
+        music_uncardable_shop = true,
+        music_uncardable_planet = true,
+        music_uncardable_boss = true,
+    }]]
+})
+
+SMODS.Sound({
+    vol = 1.0,
+    pitch = 1,
+    key = "music_uncardable_planet",
+    path = "music_uncardable_planet.ogg",
+    select_music_track = function()
+		return G.GAME
+        and (G.STATE and (G.STATE == G.STATES.SPECTRAL_PACK or G.booster_pack_meteors))
+        and 200
+    end,
+    --[[sync = {
+        music_uncardable = true,
+        music_uncardable_shop = true,
+        music_uncardable_tarot = true,
+        music_uncardable_boss = true,
+    }]]
+})
+
+SMODS.Sound({
+    vol = 1.0,
+    pitch = 1,
+    key = "music_uncardable_boss",
+    path = "music_uncardable_boss.ogg",
+    select_music_track = function()
+        return G.GAME
+        and (G.GAME and G.GAME.blind and G.GAME.blind.boss)
+        and 200
+    end,
+    --[[sync = {
+        music_uncardable = true,
+        music_uncardable_tarot = true,
+        music_uncardable_planet = true,
+        music_uncardable_shop = true,
+    }]]
+})
 
 local UNBALATROABLEConfigTab = function()
     unbal_nodes = {
