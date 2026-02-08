@@ -20,6 +20,21 @@ SMODS.JimboQuip{
 }
 
 SMODS.JimboQuip{
+    key = 'custom_lq4',
+    type = 'loss',
+}
+SMODS.JimboQuip{
+    key = 'custom_lq5',
+    type = 'loss',
+}
+SMODS.JimboQuip{
+    key = 'custom_lq6',
+    type = 'loss',
+}
+
+--- division of loss and win
+
+SMODS.JimboQuip{
     key = 'custom_wq1',
     type = 'win',
     --localize('custom_wq1')
@@ -35,6 +50,14 @@ SMODS.JimboQuip{
     key = 'custom_wq3',
     type = 'win',
     --localize('custom_wq2')
+}
+SMODS.JimboQuip{
+    key = 'custom_wq4',
+    type = 'win',
+}
+SMODS.JimboQuip{
+    key = 'custom_wq5',
+    type = 'win',
 }
 
 

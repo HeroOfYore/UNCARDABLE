@@ -8,15 +8,15 @@ return {
                 "this final challenge!",
             },
             lq_1={
-                "I guess it really was",
-                "UNBEATABLE!",
+                "Wow, that was",
+                "{E:1}way{} off tune",
             },
             lq_10={
-                "BUSTED!",
+                "F. Retry?",
             },
             lq_2={
-                "You're not even",
-                "a real DJ!",
+                "Are you even",
+                "a real DJ?",
             },
             lq_3={
                 "Wouldn't be",
@@ -31,8 +31,8 @@ return {
                 "only make!",
             },
             lq_6={
-                "Get me",
-                "out of this moment!",
+                "Get me. Out.",
+                "Of this moment.",
             },
             lq_7={
                 "I'm so fucking",
@@ -43,9 +43,9 @@ return {
                 "same shit.",
             },
             lq_9={
-                "I'm WAITING and WAITING and WAITING",
+                "I've been WAITING and WAITING and WAITING",
                 "and WAITING and WAITING and WAITING",
-                "for you!",
+                "for you.",
             },
             wq_1={
                 "Oh my god, it's you!",
@@ -84,7 +84,18 @@ return {
             uncardable_custom_lq3 = {
                 "Heyyyyyyyyyyy.",
                 "Welcome back to ",
-                "the results screen."
+                "the results screen.",
+            },
+            uncardable_custom_lq4 = {
+                "You might need this clown",
+                "makeup more than me, girlie",
+            },
+            uncardable_custom_lq5 = {
+                "{E:2}NOT{} my",
+                "goddamn name",
+            },
+            uncardable_custom_lq6 = {
+                "{E:1}zzzzzzz",
             },
 
 --space here for more custom loss quips
@@ -98,6 +109,15 @@ return {
             uncardable_custom_wq3 = {
                 "Oh my god I can finally",
                 "take this makeup off now."
+            },
+            uncardable_custom_wq4 = {
+                "Wow. Can we not tell",
+                "jumprope girl about",
+                "that number?",
+            },
+            uncardable_custom_wq5 = {
+                "Hey! You did it!",
+                "You UNBEATABLE'd!",
             },
         },
         ["dictionary"] = {
