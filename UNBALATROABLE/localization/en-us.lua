@@ -200,6 +200,12 @@ return {
                     "Fleur"
                 }
             },
+            ['epicjeong'] = {
+                ['text'] = 
+            {
+                "Epicjeong"
+            }
+            }
         }
     }
 }

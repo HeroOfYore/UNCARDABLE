@@ -49,6 +49,10 @@
         j_steel_joker = {pos = 39, artist={'stanza'}},
         j_to_the_moon = {pos = 40, artist={'birb'}},
         j_sly = {pos= 41, artist={'8z'}},
+        j_greedy_joker = {pos = 42, artist = {'epicjeong'}},
+        j_ticket = {pos = 43, artist={'heroofyore'}},
+        j_bull = {pos = 44, artist = {'heroofyore'}},
+
     }
 
 
