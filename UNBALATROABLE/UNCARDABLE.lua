@@ -1,6 +1,4 @@
---- STEAMODDED HEADER
---- MOD_AUTHOR: [HeroOfYore]
---- MOD_DESCRIPTION: Adds UNBEATABLE reskins of J, Q, K of all suits
+
 
 --if not UNBALATROABLE then
 --    UNBALATROABLE = {}

@@ -1,11 +1,4 @@
---- STEAMODDED HEADER
---- MOD_ID: BalatrUNBEATABLE_JKR
---- prefix: UNBEATJKR
---- MOD_AUTHOR: [HeroOfYore]
---- MOD_DESCRIPTION: Adds reskins of jokers. Very WIP.
---UNBALATROABLEJKR = SMODS.current_mod
----UNBALATROABLE_config_JKR = SMODS.current_mod.config
-----UNBALATROABLE_config.gameset_toggle = true;    
+
     jokers = {
         j_8_ball = {pos = 0, artist = {'heroofyore'}},
         j_mr_bones = {pos = 1, artist = {'heroofyore'}},
