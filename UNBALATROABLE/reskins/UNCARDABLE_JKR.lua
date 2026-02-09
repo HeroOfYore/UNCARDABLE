@@ -42,7 +42,7 @@
         j_trousers = {pos = 32, artist = {'ploutre'}},
         j_cloud_9 = {pos = 33, artist = {'ploutre'}},
         j_joker = {pos = 34, artist = {'guac'}},
-        j_showman = {pos = 35, artist = {'ploutre'}},
+        j_ring_master = {pos = 35, artist = {'ploutre'}},
         j_mime = {pos = 36, artist = {'heroofyore'}},
         j_even_steven = {pos = 37, artist = {'murdock'}},
         j_sock_and_buskin = {pos = 38, artist = {'8z'}},
