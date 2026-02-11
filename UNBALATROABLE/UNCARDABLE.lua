@@ -12,6 +12,7 @@ UNCARDABLE = SMODS.current_mod
 assert(SMODS.load_file('reskins/UNCARDABLE_JKR.lua'))()
 assert(SMODS.load_file('reskins/artistui.lua'))()
 assert(SMODS.load_file('reskins/quipadds.lua'))()
+assert(SMODS.load_file('reskins/UNCARDABLE_OTHER.lua'))()
 -----------------------------
 ----------------------------
 

@@ -4,7 +4,7 @@
         j_mr_bones = {pos = 1, artist = {'heroofyore'}},
         j_sixth_sense = {pos = 2, artist = {'heroofyore'}},
         j_stencil = {pos = 3, artist = {'heroofyore'}},
-        j_wee = {pos = 4, artist = {'heroofyore'}},
+        j_wee = {pos = 4, artist = {'heroofyore'}, {name = "j_wee"}},
         j_photograph = {pos = 5, artist = {'heroofyore'}},
         j_diet_cola = {pos = 6, artist = {'heroofyore'}},
         j_ice_cream = {pos = 7, artist = {'heroofyore'}},
@@ -61,7 +61,15 @@
             SMODS["Joker"]:take_ownership(jkr, {atlas = "agglomeration",
             pos = {x = 0 + data.pos, y = 0},
             artist_credits = data.artist,
-            soul_pos = {x = 0 + data.pos, y = 1}}, true)
+            soul_pos = {x = 0 + data.pos, y = 1},
+            calculate = function(self, card, context)
+                if data.name == "j_wee" then
+                    loc_txt = {name = "I'm so tiny! I'm only 2kb!"} --- this isn't working, though i'm not sure why at the moment
+                end
+            end
+
+        }, true)
+
         end
     end
     animated_jokers = {
@@ -383,3 +391,5 @@
         pos = {x = 0, y = 0},
         }, true)
     end
+
+ 
