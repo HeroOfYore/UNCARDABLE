@@ -45,6 +45,8 @@
         j_greedy_joker = {pos = 42, artist = {'epicjeong'}},
         j_ticket = {pos = 43, artist={'heroofyore'}},
         j_bull = {pos = 44, artist = {'heroofyore'}},
+        j_troubadour = {pos = 45, artist = {'epicjeong'}},
+        j_dna = {pos = 46, artist = {'murdock'}},
 
     }
 
@@ -94,6 +96,8 @@
         j_jolly = {row = 18, artist = {'bramble'}},
         j_zany = {row = 19, artist = {'bramble'}},
         j_astronomer = {row = 20, artist = {'heroofyore'}},
+        j_vampire = {row = 21, artist = {'ermywurm'}},
+        j_throwback = {row = 22, artist = {'heroofyore'}},
     }
     animated_with_soul = {
         j_perkeo = {row = 0, artist = {'guac'}},
@@ -289,6 +293,24 @@
             atlas_table = 'ANIMATION_ATLAS',
             frames = 36,
             fps = 30,
+            px = 71,
+            py = 95
+        }
+        SMODS.Atlas{
+            key = "j_vampire_anim",
+            path = "UNSCOOPABLE.png",
+            atlas_table = 'ANIMATION_ATLAS',
+            frames = 77,
+            fps = 10,
+            px = 71,
+            py = 95
+        }
+        SMODS.Atlas{
+            key = "j_throwback_anim",
+            path = "UNSCOOPABLE.png",
+            atlas_table = 'ANIMATION_ATLAS',
+            frames = 104,
+            fps = 10,
             px = 71,
             py = 95
         }
