@@ -124,6 +124,11 @@ return {
             ["UNCARDABLE_artist"] = 'Artist',
             uncardable_art_credit = "Art by ",
             uncardable_and = " and ",
+            msg_eaten = "all gone",
+
+        },
+        v_dictionary = {
+            a_mult_minus="-#1# Mult",
         }
     },
     ["descriptions"]={
@@ -219,6 +224,14 @@ return {
                 unlock={
                     "Win a run in {E:1,C:attention}#1#",
                     "or fewer rounds",
+                },
+            },
+            j_popcorn = {
+                name = "Procrastination",
+                text={
+                    "{C:mult}+#1#{} Mult",
+                    "{C:mult}-#2#{} Mult per",
+                    "round played",
                 },
             },
         }

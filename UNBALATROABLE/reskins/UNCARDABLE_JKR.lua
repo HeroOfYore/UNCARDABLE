@@ -75,6 +75,12 @@
     end
 
     --[[ This section is for jokers with special properties e.g. popcorn and wee joker]]
+    SMODS.Atlas {
+        key = "multistage",
+        path = "MULTISTAGE.png",
+        px = 71,
+        py = 95
+    }
     if not UNCARDABLE.config.disabled then
         SMODS.Joker:take_ownership('j_wee', {
             loc_vars = function(self, info_queue, card)
@@ -83,9 +89,39 @@
         }, true)
 
         SMODS.Joker:take_ownership("j_popcorn", {
-            atlas = "agglomeration",
-            pos = {x = 47, y = 0},
+            atlas = "multistage",
+            pos = {x = 0, y = 0},
             artist_credits = {"8z"},
+            config = {extra = {mult_loss = 4, mult = 20, cardpos = 0} },
+            loc_vars = function(self, info_queue, card)
+                return { vars = { card.ability.extra.mult, card.ability.extra.mult_loss } }
+            end,
+            calculate = function(self, card, context)
+            if context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint then
+                if card.ability.extra.mult - card.ability.extra.mult_loss <= 0 then
+                    SMODS.destroy_cards(card, nil, nil, true)
+                    return {
+                        message = localize('msg_eaten'),
+                        colour = G.C.RED
+                    }
+                else
+                    card.ability.extra.mult = card.ability.extra.mult - card.ability.extra.mult_loss 
+                    card.ability.extra.cardpos = card.ability.extra.cardpos + 1
+                    return
+                    {
+                        message = localize{type = 'variable', key = 'a_mult_minus', vars = {card.ability.extra.mult_loss}},
+                        colour = G.C.MULT, 
+                        card.children.center:set_sprite_pos({x = card.ability.extra.cardpos, y = 0})
+                    }
+                end
+            end
+            if context.joker_main then
+                return {
+                    mult = card.ability.extra.mult
+                }
+            end
+        end
+
         }, true)
     end
 
