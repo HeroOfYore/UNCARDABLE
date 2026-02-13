@@ -4,7 +4,7 @@
         j_mr_bones = {pos = 1, artist = {'heroofyore'}},
         j_sixth_sense = {pos = 2, artist = {'heroofyore'}},
         j_stencil = {pos = 3, artist = {'heroofyore'}},
-        j_wee = {pos = 4, artist = {'heroofyore'}, {name = "j_wee"}},
+        j_wee = {pos = 4, artist = {'guac', 'heroofyore'}, {name = "j_wee"}},
         j_photograph = {pos = 5, artist = {'heroofyore'}},
         j_diet_cola = {pos = 6, artist = {'heroofyore'}},
         j_ice_cream = {pos = 7, artist = {'heroofyore'}},
@@ -47,7 +47,6 @@
         j_bull = {pos = 44, artist = {'heroofyore'}},
         j_troubadour = {pos = 45, artist = {'epicjeong'}},
         j_dna = {pos = 46, artist = {'murdock'}},
-
     }
 
 
@@ -74,6 +73,25 @@
 
         end
     end
+
+    --[[ This section is for jokers with special properties e.g. popcorn and wee joker]]
+    if not UNCARDABLE.config.disabled then
+        SMODS.Joker:take_ownership('j_wee', {
+            loc_vars = function(self, info_queue, card)
+                return {vars = {card.ability.extra.chips, card.ability.extra.chip_mod}}
+            end
+        }, true)
+
+        SMODS.Joker:take_ownership("j_popcorn", {
+            atlas = "agglomeration",
+            pos = {x = 47, y = 0},
+            artist_credits = {"8z"},
+        }, true)
+    end
+
+    --end of section
+
+
     animated_jokers = {
         j_lucky_cat = {row = 0, artist = {'heroofyore'}},
         j_smeared = {row = 1, artist = {'heroofyore'}},

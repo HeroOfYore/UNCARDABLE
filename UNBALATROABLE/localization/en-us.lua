@@ -206,6 +206,21 @@ return {
                 "Epicjeong"
             }
             }
+        },
+        Joker = {
+            j_wee={
+                name="I'm so tiny! I'm only 2kb!",
+                text={
+                    "This Joker gains",
+                    "{C:chips}+#2#{} Chips when each",
+                    "played {C:attention}2{} is scored",
+                    "{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips)",
+                },
+                unlock={
+                    "Win a run in {E:1,C:attention}#1#",
+                    "or fewer rounds",
+                },
+            },
         }
     }
 }
