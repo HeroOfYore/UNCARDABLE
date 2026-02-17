@@ -120,6 +120,13 @@
         end
 
         }, true)
+
+        SMODS.Joker:take_ownership("j_hologram", {
+            soul_pos = {x = 24, y = 1, draw = function(card, size_mod, rotate_mod) 
+                local rotate_mod = 0.1 * math.sin(1.219 * G.TIMERS.REAL) + 0.07 * math.sin((G.TIMERS.REAL) * math.pi * 5) * (1 - (G.TIMERS.REAL - math.floor(G.TIMERS.REAL))) ^ 2
+                local size_mod = 1.25
+            end}
+        }, true)
     end
 
     --end of section
@@ -151,6 +158,7 @@
         j_throwback = {row = 22, artist = {'heroofyore'}},
         j_seance = {row = 23, artist = {'heroofyore'}},
         j_campfire = {row = 24, artist = {'heroofyore'}},
+        j_shoot_the_moon = {row = 25, artist = {'heroofyore'}},
     }
     animated_with_soul = {
         j_perkeo = {row = 0, artist = {'guac'}},
@@ -382,6 +390,15 @@
             atlas_table = 'ANIMATION_ATLAS',
             frames = 5,
             fps = 5,
+            px = 71,
+            py = 95
+        }
+            SMODS.Atlas {
+            key = "j_shoot_the_moon_anim",
+            path = "UNSCOOPABLE.png",
+            atlas_table = 'ANIMATION_ATLAS',
+            frames = 28,
+            fps = 10,
             px = 71,
             py = 95
         }
