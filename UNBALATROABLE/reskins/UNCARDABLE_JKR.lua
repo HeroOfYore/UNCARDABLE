@@ -47,6 +47,9 @@
         j_bull = {pos = 44, artist = {'heroofyore'}},
         j_troubadour = {pos = 45, artist = {'epicjeong'}},
         j_dna = {pos = 46, artist = {'murdock'}},
+        j_cartomancer = {pos = 48, artist = {'objitude'}},
+        j_glass = {pos = 49, artist = {'heroofyore'}},
+        
     }
 
 
@@ -63,12 +66,6 @@
             pos = {x = 0 + data.pos, y = 0},
             artist_credits = data.artist,
             soul_pos = {x = 0 + data.pos, y = 1},
-            calculate = function(self, card, context)
-                if data.name == "j_wee" then
-                    loc_txt = {name = "I'm so tiny! I'm only 2kb!"} --- this isn't working, though i'm not sure why at the moment
-                end
-            end
-
         }, true)
 
         end
@@ -152,6 +149,8 @@
         j_astronomer = {row = 20, artist = {'heroofyore'}},
         j_vampire = {row = 21, artist = {'ermywurm'}},
         j_throwback = {row = 22, artist = {'heroofyore'}},
+        j_seance = {row = 23, artist = {'heroofyore'}},
+        j_campfire = {row = 24, artist = {'heroofyore'}},
     }
     animated_with_soul = {
         j_perkeo = {row = 0, artist = {'guac'}},
@@ -365,6 +364,24 @@
             atlas_table = 'ANIMATION_ATLAS',
             frames = 104,
             fps = 10,
+            px = 71,
+            py = 95
+        }
+        SMODS.Atlas{
+            key = "j_seance_anim",
+            path = "UNSCOOPABLE.png",
+            atlas_table = 'ANIMATION_ATLAS',
+            frames = 100,
+            fps = 10,
+            px = 71,
+            py = 95
+        }
+            SMODS.Atlas{
+            key = "j_campfire_anim",
+            path = "UNSCOOPABLE.png",
+            atlas_table = 'ANIMATION_ATLAS',
+            frames = 5,
+            fps = 5,
             px = 71,
             py = 95
         }
