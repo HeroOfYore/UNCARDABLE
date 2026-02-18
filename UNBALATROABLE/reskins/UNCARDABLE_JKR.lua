@@ -159,6 +159,7 @@
         j_seance = {row = 23, artist = {'heroofyore'}},
         j_campfire = {row = 24, artist = {'heroofyore'}},
         j_shoot_the_moon = {row = 25, artist = {'heroofyore'}},
+        j_baron = {row = 26, artist = {'heroofyore'}},
     }
     animated_with_soul = {
         j_perkeo = {row = 0, artist = {'guac'}},
@@ -401,6 +402,15 @@
             fps = 10,
             px = 71,
             py = 95
+        }
+            SMODS.Atlas {
+            key = "j_baron_anim",
+            path = "UNSCOOPABLE.png",
+            atlas_table  = 'ANIMATION_ATLAS',
+            frames = 34,
+            fps = 5,
+            px = 71,
+            py = 95,
         }
     if not UNCARDABLE.config.disabled then
         for jkr, data in pairs(animated_jokers) do
