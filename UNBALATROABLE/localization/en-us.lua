@@ -205,10 +205,10 @@ return {
                     "Fleur"
                 }
             },
-            ['epicjeong'] = {
+            ['epicelle'] = {
                 ['text'] = 
             {
-                "Epicjeong"
+                "Epicelle"
             }
             }
         },

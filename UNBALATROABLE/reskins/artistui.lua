@@ -27,7 +27,7 @@ G.ARGS.LOC_COLOURS['murdock'] = HEX('AC23BD')
 G.ARGS.LOC_COLOURS['8z'] = HEX('506385')
 G.ARGS.LOC_COLOURS['bramble'] = G.C.bramble
 G.ARGS.LOC_COLOURS['birb'] = G.C.birb
-G.ARGS.LOC_COLOURS['epicjeong'] = HEX('15b159')
+G.ARGS.LOC_COLOURS['epicelle'] = HEX('15b159')
 
 function UNCARDABLE_artist_tooltip(_c, info_queue, card, desc_nodes, specific_vars, full_UI_table)
     localize{type = 'descriptions', set = 'UNCARDABLE Artist', key = _c.key, nodes = desc_nodes, vars = specific_vars or _c.vars}
