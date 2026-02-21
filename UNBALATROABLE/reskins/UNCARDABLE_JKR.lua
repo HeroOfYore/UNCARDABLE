@@ -49,6 +49,8 @@
         j_dna = {pos = 46, artist = {'murdock'}},
         j_cartomancer = {pos = 48, artist = {'objitude'}},
         j_glass = {pos = 49, artist = {'heroofyore'}},
+        j_stuntman = {pos = 50, artist = {'fieldofgrass'}},
+        j_four_fingers = {pos = 51, artist = {'ploutre'}},
         
     }
 
@@ -129,6 +131,26 @@
         }, true)
     end
 
+
+    ---SECTION FOR MULTICHOICE JOKERS
+    SMODS.Atlas
+    {
+        key = "multichoice",
+        path = "MULTICHOICE.png",
+        px = 71,
+        py = 95,
+    }
+
+    SMODS.Joker:take_ownership("j_hallucination", {
+        atlas = "multichoice",
+        pos = {x = 0, y = 0},
+        artist_credits = {"heroofyore"},
+        set_sprites = function(self, card, front)
+            local randompos = math.random(0, 2)
+            card.children.center:set_sprite_pos({x = randompos, y = 0})
+        end
+    }, true)
+
     --end of section
 
 
@@ -160,6 +182,8 @@
         j_campfire = {row = 24, artist = {'heroofyore'}},
         j_shoot_the_moon = {row = 25, artist = {'heroofyore'}},
         j_baron = {row = 26, artist = {'heroofyore'}},
+        j_dusk = {row = 27, artist = {'heroofyore'}},
+        j_supernova = {row = 28, artist = {'heroofyore'}},
     }
     animated_with_soul = {
         j_perkeo = {row = 0, artist = {'guac'}},
@@ -412,6 +436,24 @@
             px = 71,
             py = 95,
         }
+        SMODS.Atlas {
+        key = "j_dusk_anim",
+        path = "UNSCOOPABLE.png",
+        atlas_table  = 'ANIMATION_ATLAS',
+        frames = 40,
+        fps = 5,
+        px = 71,
+        py = 95,
+    }
+        SMODS.Atlas {
+        key = "j_supernova_anim",
+        path = "UNSCOOPABLE.png",
+        atlas_table  = 'ANIMATION_ATLAS',
+        frames = 89,
+        fps = 10,
+        px = 71,
+        py = 95,
+    }
     if not UNCARDABLE.config.disabled then
         for jkr, data in pairs(animated_jokers) do
             SMODS["Joker"]:take_ownership(jkr, {atlas = jkr .. "_anim",
