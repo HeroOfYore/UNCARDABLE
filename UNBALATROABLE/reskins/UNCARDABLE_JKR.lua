@@ -156,42 +156,110 @@
 
     animated_jokers = {
         j_lucky_cat = {row = 0, artist = {'heroofyore'}},
-        j_smeared = {row = 1, artist = {'heroofyore'}},
-        j_baseball = {row = 2, artist = {'heroofyore'}},
-        j_ramen = {row = 3, artist = {'heroofyore'}},
-        j_flower_pot = {row = 4, artist = {'heroofyore'}},
-        j_gift = {row = 5, artist = {'heroofyore'}},
-        j_egg = {row = 6, artist = {'heroofyore'}},
-        j_todo_list = {row = 7, artist = {'heroofyore'}},
-        j_odd_todd = {row = 8, artist = {'heroofyore'}},
-        j_burnt = {row = 9, artist = {'heroofyore'}},
-        j_superposition = {row = 10, artist = {'ermywurm'}},
-        j_bloodstone = {row = 11, artist = {'heroofyore'}},
-        j_misprint = {row = 12, artist = {'heroofyore'}},
-        j_constellation = {row = 13, artist = {'heroofyore'}},
-        j_invisible = {row = 14, artist = {'heroofyore'}},
-        j_madness = {row = 15, artist = {'heroofyore'}},
-        j_brainstorm = {row = 16, artist = {'heroofyore'}},
-        j_fibonacci = {row = 17, artist = {'heroofyore'}},
-        j_jolly = {row = 18, artist = {'bramble'}},
-        j_zany = {row = 19, artist = {'bramble'}},
-        j_astronomer = {row = 20, artist = {'heroofyore'}},
-        j_vampire = {row = 21, artist = {'ermywurm'}},
-        j_throwback = {row = 22, artist = {'heroofyore'}},
-        j_seance = {row = 23, artist = {'heroofyore'}},
-        j_campfire = {row = 24, artist = {'heroofyore'}},
-        j_shoot_the_moon = {row = 25, artist = {'heroofyore'}},
-        j_baron = {row = 26, artist = {'heroofyore'}},
-        j_dusk = {row = 27, artist = {'heroofyore'}},
-        j_supernova = {row = 28, artist = {'heroofyore'}},
+        j_gift = {row = 1, artist = {'heroofyore'}},
+        j_odd_todd = {row = 2, artist = {'heroofyore'}},
+        j_brainstorm = {row = 3, artist = {'heroofyore'}},
+
+        j_smeared = {row = 0, artist = {'heroofyore'}},
+        j_ramen = {row = 1, artist = {'heroofyore'}},
+        j_flower_pot = {row = 2, artist = {'heroofyore'}},
+        j_madness = {row = 3, artist = {'heroofyore'}},
+        j_zany = {row = 4, artist = {'bramble'}},
+
+        j_egg = {row = 0, artist = {'heroofyore'}},
+        j_burnt = {row = 1, artist = {'heroofyore'}},
+        j_invisible = {row = 2, artist = {'heroofyore'}},
+
+        j_bloodstone = {row = 0, artist = {'heroofyore'}},
+        j_jolly = {row = 1, artist = {'bramble'}},
+
+        j_constellation = {row = 0, artist = {'heroofyore'}},
+        j_shoot_the_moon = {row = 1, artist = {'heroofyore'}},
+
+        j_baseball = {row = 0, artist = {'heroofyore'}},
+        j_superposition = {row = 1, artist = {'ermywurm'}},
+        j_astronomer = {row = 2, artist = {'heroofyore'}},
+        j_baron = {row = 3, artist = {'heroofyore'}},
+        j_dusk = {row = 4, artist = {'heroofyore'}},
+
+        j_misprint = {row = 0, artist = {'heroofyore'}},
+
+        j_fibonacci = {row = 0, artist = {'heroofyore'}},
+
+        j_vampire = {row = 0, artist = {'ermywurm'}},
+
+        j_supernova = {row = 0, artist = {'heroofyore'}},
+
+        j_throwback = {row = 0, artist = {'heroofyore'}},
+        j_seance = {row = 1, artist = {'heroofyore'}},
+
     }
     animated_with_soul = {
         j_perkeo = {row = 0, artist = {'guac'}},
     }
 
+    --[[ animated_sub_5 = {
+        j_lucky_cat = {row = 0, artist = {'heroofyore'}},
+        j_gift = {row = 1, artist = {'heroofyore'}},
+        j_odd_todd = {row = 2, artist = {'heroofyore'}},
+        j_brainstorm = {row = 3, artist = {'heroofyore'}},
+    }
+
+    animated_sub_10 = {
+        j_smeared = {row = 0, artist = {'heroofyore'}},
+        j_ramen = {row = 1, artist = {'heroofyore'}},
+        j_flower_pot = {row = 2, artist = {'heroofyore'}},
+        j_madness = {row = 3, artist = {'heroofyore'}},
+        j_zany = {row = 4, artist = {'bramble'}},
+
+    }
+
+    animated_sub_15 = {
+        j_egg = {row = 0, artist = {'heroofyore'}},
+        j_burnt = {row = 1, artist = {'heroofyore'}},
+        j_invisible = {row = 2, artist = {'heroofyore'}},
+    }
+    animated_sub_25 = {
+        j_bloodstone = {row = 0, artist = {'heroofyore'}},
+        j_jolly = {row = 1, artist = {'bramble'}},
+    }
+    animated_sub_30 = {
+        j_constellation = {row = 0, artist = {'heroofyore'}},
+        j_shoot_the_moon = {row = 1, artist = {'heroofyore'}},
+    }
+
+    animated_sub_40 = {
+        j_baseball = {row = 0, artist = {'heroofyore'}},
+        j_superposition = {row = 1, artist = {'ermywurm'}},
+        j_astronomer = {row = 2, artist = {'heroofyore'}},
+        j_baron = {row = 3, artist = {'heroofyore'}},
+        j_dusk = {row = 4, artist = {'heroofyore'}},
+    }
+
+    animated_sub_50 = {
+        j_misprint = {row = 0, artist = {'heroofyore'}},
+    }
+    
+    animated_sub_65 = {
+        j_fibonacci = {row = 0, artist = {'heroofyore'}},
+    }
+    animated_sub_80 = {
+        j_vampire = {row = 0, artist = {'ermywurm'}},
+    }
+
+    animated_sub_90 = {
+        j_supernova = {row = 28, artist = {'heroofyore'}},
+    }
+
+    animated_plus_hundred = {
+        j_throwback = {row = 0, artist = {'heroofyore'}},
+        j_seance = {row = 1, artist = {'heroofyore'}},
+    } ]] ---these are all for informational purposes
+
+    
     SMODS.Atlas {
         key = "j_lucky_cat_anim",
-        path = "UNSCOOPABLE.png", 
+        path = "UNFIVEABLE.png", 
         atlas_table = 'ANIMATION_ATLAS',
         frames = 3,
         px = 71, 
@@ -200,7 +268,7 @@
 
     SMODS.Atlas {
         key = "j_smeared_anim",
-        path = "UNSCOOPABLE.png",
+        path = "UNTENABLE.png",
         atlas_table = 'ANIMATION_ATLAS',
         frames = 9,
         px = 71,
@@ -209,7 +277,7 @@
 
     SMODS.Atlas {
         key = "j_baseball_anim",
-        path = "UNSCOOPABLE.png",
+        path = "UNFORTYABLE.png",
         atlas_table = 'ANIMATION_ATLAS',
         frames = 38,
         px = 71,
@@ -218,7 +286,7 @@
 
     SMODS.Atlas {
         key = "j_ramen_anim",
-        path = "UNSCOOPABLE.png",
+        path = "UNTENABLE.png",
         atlas_table  = 'ANIMATION_ATLAS',
         frames = 7,
         fps = 5,
@@ -228,7 +296,7 @@
 
     SMODS.Atlas {
         key = "j_flower_pot_anim",
-        path = "UNSCOOPABLE.png",
+        path = "UNTENABLE.png",
         atlas_table  = 'ANIMATION_ATLAS',
         frames = 8,
         fps = 5,
@@ -238,7 +306,7 @@
 
     SMODS.Atlas{
         key = "j_gift_anim",
-        path = "UNSCOOPABLE.png",
+        path = "UNFIVEABLE.png",
         atlas_table  = 'ANIMATION_ATLAS',
         frames = 5,
         px = 71,
@@ -247,7 +315,7 @@
 
     SMODS.Atlas{
         key = "j_egg_anim",
-        path = "UNSCOOPABLE.png",
+        path = "UNFIFTEENABLE.png",
         atlas_table  = 'ANIMATION_ATLAS',
         frames = 13,
         px = 71,
@@ -256,7 +324,7 @@
 
     SMODS.Atlas{
         key = "j_todo_list_anim",
-        path = "UNSCOOPABLE.png",
+        path = "UNFORTYABLE.png",
         atlas_table  = 'ANIMATION_ATLAS',
         frames = 34,
         px = 71,
@@ -264,7 +332,7 @@
     }
         SMODS.Atlas{
         key = "j_odd_todd_anim",
-        path = "UNSCOOPABLE.png",
+        path = "UNFIVEABLE.png",
         atlas_table  = 'ANIMATION_ATLAS',
         frames = 4,
         fps = 3,
@@ -274,7 +342,7 @@
 
         SMODS.Atlas{
         key = "j_burnt_anim",
-        path = "UNSCOOPABLE.png",
+        path = "UNFIFTEENABLE.png",
         atlas_table  = 'ANIMATION_ATLAS',
         frames = 12,
         fps = 5,
@@ -283,7 +351,7 @@
     }
         SMODS.Atlas{
         key = "j_superposition_anim",
-        path = "UNSCOOPABLE.png",
+        path = "UNFORTYABLE.png",
         atlas_table  = 'ANIMATION_ATLAS',
         frames = 40,
         fps = 14,
@@ -293,7 +361,7 @@
 
         SMODS.Atlas{
         key = "j_bloodstone_anim",
-        path = "UNSCOOPABLE.png",
+        path = "UNTWENTYFIVEABLE.png",
         atlas_table  = 'ANIMATION_ATLAS',
         frames = 22,
         fps = 5,
@@ -302,7 +370,7 @@
     }
         SMODS.Atlas{
             key = "j_misprint_anim",
-            path = "UNSCOOPABLE.png",
+            path = "UNFIFTYABLE.png",
             atlas_table = 'ANIMATION_ATLAS',
             frames = 47,
             fps = 10,
@@ -311,7 +379,7 @@
         }
         SMODS.Atlas{
             key = "j_constellation_anim",
-            path = "UNSCOOPABLE.png",
+            path = "UNTHIRTYABLE.png",
             atlas_table = 'ANIMATION_ATLAS',
             frames = 27,
             fps = 10,
@@ -320,7 +388,7 @@
         }
         SMODS.Atlas{
             key = "j_invisible_anim",
-            path = "UNSCOOPABLE.png",
+            path = "UNFIFTEENABLE.png",
             atlas_table = 'ANIMATION_ATLAS',
             frames = 12,
             fps = 10,
@@ -329,7 +397,7 @@
         }
         SMODS.Atlas{
             key = "j_madness_anim",
-            path = "UNSCOOPABLE.png",
+            path = "UNTENABLE.png",
             atlas_table = 'ANIMATION_ATLAS',
             frames = 10,
             fps = 10,
@@ -338,7 +406,7 @@
         }
         SMODS.Atlas{
             key = "j_brainstorm_anim",
-            path = "UNSCOOPABLE.png",
+            path = "UNFIVEABLE.png",
             atlas_table = 'ANIMATION_ATLAS',
             frames = 4,
             fps = 10,
@@ -347,7 +415,7 @@
         }
         SMODS.Atlas{
             key = "j_fibonacci_anim",
-            path = "UNSCOOPABLE.png",
+            path = "UNSIXTYFIVEABLE.png",
             atlas_table = 'ANIMATION_ATLAS',
             frames = 63,
             fps = 10,
@@ -357,7 +425,7 @@
 
         SMODS.Atlas{
             key = "j_jolly_anim",
-            path = "UNSCOOPABLE.png",
+            path = "UNTWENTYFIVEABLE.png",
             atlas_table = 'ANIMATION_ATLAS',
             frames = 23,
             fps = 10,
@@ -366,7 +434,7 @@
         }
         SMODS.Atlas{
             key = "j_zany_anim",
-            path = "UNSCOOPABLE.png",
+            path = "UNTENABLE.png",
             atlas_table = 'ANIMATION_ATLAS',
             frames = 7,
             fps = 10,
@@ -375,7 +443,7 @@
         }
         SMODS.Atlas{
             key = "j_astronomer_anim",
-            path = "UNSCOOPABLE.png",
+            path = "UNFORTYABLE.png",
             atlas_table = 'ANIMATION_ATLAS',
             frames = 36,
             fps = 30,
@@ -384,7 +452,7 @@
         }
         SMODS.Atlas{
             key = "j_vampire_anim",
-            path = "UNSCOOPABLE.png",
+            path = "UNEIGHTYABLE.png",
             atlas_table = 'ANIMATION_ATLAS',
             frames = 77,
             fps = 10,
@@ -393,7 +461,7 @@
         }
         SMODS.Atlas{
             key = "j_throwback_anim",
-            path = "UNSCOOPABLE.png",
+            path = "UNHUNDREDABLE.png",
             atlas_table = 'ANIMATION_ATLAS',
             frames = 104,
             fps = 10,
@@ -402,7 +470,7 @@
         }
         SMODS.Atlas{
             key = "j_seance_anim",
-            path = "UNSCOOPABLE.png",
+            path = "UNHUNDREDABLE.png",
             atlas_table = 'ANIMATION_ATLAS',
             frames = 100,
             fps = 10,
@@ -411,7 +479,7 @@
         }
             SMODS.Atlas{
             key = "j_campfire_anim",
-            path = "UNSCOOPABLE.png",
+            path = "UNFIVEABLE.png",
             atlas_table = 'ANIMATION_ATLAS',
             frames = 5,
             fps = 5,
@@ -420,7 +488,7 @@
         }
             SMODS.Atlas {
             key = "j_shoot_the_moon_anim",
-            path = "UNSCOOPABLE.png",
+            path = "UNTHIRTYABLE.png",
             atlas_table = 'ANIMATION_ATLAS',
             frames = 28,
             fps = 10,
@@ -429,7 +497,7 @@
         }
             SMODS.Atlas {
             key = "j_baron_anim",
-            path = "UNSCOOPABLE.png",
+            path = "UNFORTYABLE.png",
             atlas_table  = 'ANIMATION_ATLAS',
             frames = 34,
             fps = 5,
@@ -438,7 +506,7 @@
         }
         SMODS.Atlas {
         key = "j_dusk_anim",
-        path = "UNSCOOPABLE.png",
+        path = "UNFORTYABLE.png",
         atlas_table  = 'ANIMATION_ATLAS',
         frames = 40,
         fps = 5,
@@ -447,7 +515,7 @@
     }
         SMODS.Atlas {
         key = "j_supernova_anim",
-        path = "UNSCOOPABLE.png",
+        path = "UNNINETYABLE.png",
         atlas_table  = 'ANIMATION_ATLAS',
         frames = 89,
         fps = 10,
