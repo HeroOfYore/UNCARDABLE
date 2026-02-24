@@ -196,9 +196,45 @@ return {
             ['bramble'] = {
                 ['text'] = 
                 {
-                    "BRAMBLE"
+                    "b"
                 }
             },
+            ['brambleb'] = {
+                ['text'] = 
+                {
+                    "r"
+                }
+            },
+            ['bramblec'] = {
+                ['text'] =
+                {
+                    "a"
+                }
+            },
+            ['brambled'] = {
+                ['text'] =
+                {
+                    "m"
+                }
+            },
+            ['bramblee'] = {
+                ['text'] =
+                {
+                    "b"
+                }
+            },
+            ['bramblef'] = {
+                ['text'] =
+                {
+                    "l"
+                }
+            },
+            ['brambleg'] = {
+                ['text'] =
+                {
+                    "e"
+                }
+            },          
             ['birb'] = {
                 ['text'] =
                 {

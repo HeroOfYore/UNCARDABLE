@@ -52,6 +52,7 @@
         j_stuntman = {pos = 50, artist = {'fieldofgrass'}},
         j_four_fingers = {pos = 51, artist = {'ploutre'}},
         j_walkie_talkie = {pos = 52, artist ={'suvi'}},
+        j_trading = {pos = 53, artist = {'heroofyore'}},
         
     }
 
@@ -160,6 +161,7 @@
         j_gift = {row = 1, artist = {'heroofyore'}},
         j_odd_todd = {row = 2, artist = {'heroofyore'}},
         j_brainstorm = {row = 3, artist = {'heroofyore'}},
+        j_campfire = {row = 4, artist = {'heroofyore'}},
 
         j_smeared = {row = 0, artist = {'heroofyore'}},
         j_ramen = {row = 1, artist = {'heroofyore'}},
@@ -193,6 +195,8 @@
 
         j_throwback = {row = 0, artist = {'heroofyore'}},
         j_seance = {row = 1, artist = {'heroofyore'}},
+
+        j_hit_the_road = {row = 0, artist = {'heroofyore'}},
 
     }
     animated_with_soul = {
@@ -519,6 +523,16 @@
         path = "UNNINETYABLE.png",
         atlas_table  = 'ANIMATION_ATLAS',
         frames = 89,
+        fps = 10,
+        px = 71,
+        py = 95,
+    }
+
+    SMODS.Atlas {
+        key = "j_hit_the_road_anim",
+        path = "UNHITTABLE.png",
+        atlas_table  = 'ANIMATION_ATLAS',
+        frames = 6,
         fps = 10,
         px = 71,
         py = 95,

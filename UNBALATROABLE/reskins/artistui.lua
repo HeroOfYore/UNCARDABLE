@@ -30,7 +30,13 @@ G.ARGS.LOC_COLOURS['stanza'] = G.C.stanza
 G.ARGS.LOC_COLOURS['objitude'] = HEX('FFAABB')
 G.ARGS.LOC_COLOURS['murdock'] = HEX('AC23BD')
 G.ARGS.LOC_COLOURS['8z'] = HEX('506385')
-G.ARGS.LOC_COLOURS['bramble'] = G.C.bramble
+G.ARGS.LOC_COLOURS['bramble'] = HEX('992D22')
+G.ARGS.LOC_COLOURS['brambleb'] = HEX('FFFFFF')
+G.ARGS.LOC_COLOURS['bramblec'] = HEX('992D22')
+G.ARGS.LOC_COLOURS['brambled'] = HEX('FFFFFF')
+G.ARGS.LOC_COLOURS['bramblee'] = HEX('992D22')
+G.ARGS.LOC_COLOURS['bramblef'] = HEX('FFFFFF')
+G.ARGS.LOC_COLOURS['brambleg'] = HEX('992D22')
 G.ARGS.LOC_COLOURS['birb'] = G.C.birb
 G.ARGS.LOC_COLOURS['epicelle'] = HEX('15b159')
 G.ARGS.LOC_COLOURS['fieldofgrass'] = G.C.grass
@@ -146,6 +152,92 @@ function artist_node(artists, first_string)
                 {n=G.UIT.O, config={
                 object = DynaText({string = localize{type = 'raw_descriptions', set = 'UNCARDABLE Artist', key = 'suvic'},
                 colours = {G.ARGS.LOC_COLOURS['suvic'] or G.C.WHITE},
+                bump = true,
+                silent = true,
+                pop_in = 0,
+                pop_in_rate = 4,
+                shadow = true,
+                y_offset = -0.6,
+                scale = 0.27
+                })
+            }}
+            )
+        end
+        if artist == 'bramble' then
+            table.insert(artist_node.nodes,
+                {n=G.UIT.O, config={
+                object = DynaText({string = localize{type = 'raw_descriptions', set = 'UNCARDABLE Artist', key = 'brambleb'},
+                colours = {G.ARGS.LOC_COLOURS['brambleb'] or G.C.WHITE},
+                bump = true,
+                silent = true,
+                pop_in = 0,
+                pop_in_rate = 4,
+                shadow = true,
+                y_offset = -0.6,
+                scale = 0.27
+                })
+            }}
+            )
+            table.insert(artist_node.nodes,
+                {n=G.UIT.O, config={
+                object = DynaText({string = localize{type = 'raw_descriptions', set = 'UNCARDABLE Artist', key = 'bramblec'},
+                colours = {G.ARGS.LOC_COLOURS['bramblec'] or G.C.WHITE},
+                bump = true,
+                silent = true,
+                pop_in = 0,
+                pop_in_rate = 4,
+                shadow = true,
+                y_offset = -0.6,
+                scale = 0.27
+                })
+            }}
+            )
+            table.insert(artist_node.nodes,
+                {n=G.UIT.O, config={
+                object = DynaText({string = localize{type = 'raw_descriptions', set = 'UNCARDABLE Artist', key = 'brambled'},
+                colours = {G.ARGS.LOC_COLOURS['brambled'] or G.C.WHITE},
+                bump = true,
+                silent = true,
+                pop_in = 0,
+                pop_in_rate = 4,
+                shadow = true,
+                y_offset = -0.6,
+                scale = 0.27
+                })
+            }}
+            )
+            table.insert(artist_node.nodes,
+                {n=G.UIT.O, config={
+                object = DynaText({string = localize{type = 'raw_descriptions', set = 'UNCARDABLE Artist', key = 'bramblee'},
+                colours = {G.ARGS.LOC_COLOURS['bramblee'] or G.C.WHITE},
+                bump = true,
+                silent = true,
+                pop_in = 0,
+                pop_in_rate = 4,
+                shadow = true,
+                y_offset = -0.6,
+                scale = 0.27
+                })
+            }}
+            )
+            table.insert(artist_node.nodes,
+                {n=G.UIT.O, config={
+                object = DynaText({string = localize{type = 'raw_descriptions', set = 'UNCARDABLE Artist', key = 'bramblef'},
+                colours = {G.ARGS.LOC_COLOURS['bramblef'] or G.C.WHITE},
+                bump = true,
+                silent = true,
+                pop_in = 0,
+                pop_in_rate = 4,
+                shadow = true,
+                y_offset = -0.6,
+                scale = 0.27
+                })
+            }}
+            )
+            table.insert(artist_node.nodes,
+                {n=G.UIT.O, config={
+                object = DynaText({string = localize{type = 'raw_descriptions', set = 'UNCARDABLE Artist', key = 'brambleg'},
+                colours = {G.ARGS.LOC_COLOURS['brambleg'] or G.C.WHITE},
                 bump = true,
                 silent = true,
                 pop_in = 0,
