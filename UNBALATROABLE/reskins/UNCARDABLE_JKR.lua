@@ -51,6 +51,7 @@
         j_glass = {pos = 49, artist = {'heroofyore'}},
         j_stuntman = {pos = 50, artist = {'fieldofgrass'}},
         j_four_fingers = {pos = 51, artist = {'ploutre'}},
+        j_walkie_talkie = {pos = 52, artist ={'suvi'}},
         
     }
 

@@ -217,6 +217,24 @@ return {
                     "FieldOfGrass"
                 }
             },
+            ['suvi'] = {
+                ['text'] =
+                {
+                    "suvi"
+                }
+            },
+            ['suvib'] = {
+                ['text'] =
+                {
+                    "++"
+                }
+            },
+            ['suvic'] = {
+                ['text'] = 
+                {
+                    ";"
+                }
+            }
         },
         Joker = {
             j_wee={

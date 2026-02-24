@@ -19,6 +19,7 @@ G.C.grass = SMODS.Gradient {
     key = "GRASS",
     colours = {HEX("ffcb00"), HEX("4acd00")}
 }
+
 G.ARGS.LOC_COLOURS['heroofyore'] = G.C.yore
 G.ARGS.LOC_COLOURS['ermywurm'] = HEX('AD7193')
 G.ARGS.LOC_COLOURS['guac'] = HEX('F394FF')
@@ -33,6 +34,9 @@ G.ARGS.LOC_COLOURS['bramble'] = G.C.bramble
 G.ARGS.LOC_COLOURS['birb'] = G.C.birb
 G.ARGS.LOC_COLOURS['epicelle'] = HEX('15b159')
 G.ARGS.LOC_COLOURS['fieldofgrass'] = G.C.grass
+G.ARGS.LOC_COLOURS['suvi'] = HEX('FFF0C9')
+G.ARGS.LOC_COLOURS['suvib'] = HEX('287C88')
+G.ARGS.LOC_COLOURS['suvic'] = HEX('8F8F8F') 
 
 function UNCARDABLE_artist_tooltip(_c, info_queue, card, desc_nodes, specific_vars, full_UI_table)
     localize{type = 'descriptions', set = 'UNCARDABLE Artist', key = _c.key, nodes = desc_nodes, vars = specific_vars or _c.vars}
@@ -109,7 +113,7 @@ function artist_node(artists, first_string)
                 )
             end
         end
-    table.insert(artist_node.nodes,
+        table.insert(artist_node.nodes,
             {n=G.UIT.O, config={
                 object = DynaText({string = localize{type = 'raw_descriptions', set = 'UNCARDABLE Artist', key = artist},
                 colours = {G.ARGS.LOC_COLOURS[artist] or G.C.WHITE},
@@ -123,6 +127,36 @@ function artist_node(artists, first_string)
                 })
             }}
         )
+        if artist == 'suvi' then
+            table.insert(artist_node.nodes,
+                {n=G.UIT.O, config={
+                object = DynaText({string = localize{type = 'raw_descriptions', set = 'UNCARDABLE Artist', key = 'suvib'},
+                colours = {G.ARGS.LOC_COLOURS['suvib'] or G.C.WHITE},
+                bump = true,
+                silent = true,
+                pop_in = 0,
+                pop_in_rate = 4,
+                shadow = true,
+                y_offset = -0.6,
+                scale = 0.27
+                })
+            }}
+            )
+            table.insert(artist_node.nodes,
+                {n=G.UIT.O, config={
+                object = DynaText({string = localize{type = 'raw_descriptions', set = 'UNCARDABLE Artist', key = 'suvic'},
+                colours = {G.ARGS.LOC_COLOURS['suvic'] or G.C.WHITE},
+                bump = true,
+                silent = true,
+                pop_in = 0,
+                pop_in_rate = 4,
+                shadow = true,
+                y_offset = -0.6,
+                scale = 0.27
+                })
+            }}
+            )
+        end
     end
     return artist_node
 end
