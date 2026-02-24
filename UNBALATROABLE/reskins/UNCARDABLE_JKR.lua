@@ -167,14 +167,14 @@
         j_ramen = {row = 1, artist = {'heroofyore'}},
         j_flower_pot = {row = 2, artist = {'heroofyore'}},
         j_madness = {row = 3, artist = {'heroofyore'}},
-        j_zany = {row = 4, artist = {'bramble'}},
+        j_zany = {row = 4, artist = {'m7bramble'}},
 
         j_egg = {row = 0, artist = {'heroofyore'}},
         j_burnt = {row = 1, artist = {'heroofyore'}},
         j_invisible = {row = 2, artist = {'heroofyore'}},
 
         j_bloodstone = {row = 0, artist = {'heroofyore'}},
-        j_jolly = {row = 1, artist = {'bramble'}},
+        j_jolly = {row = 1, artist = {'m7bramble'}},
 
         j_constellation = {row = 0, artist = {'heroofyore'}},
         j_shoot_the_moon = {row = 1, artist = {'heroofyore'}},

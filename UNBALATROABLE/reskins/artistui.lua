@@ -30,13 +30,13 @@ G.ARGS.LOC_COLOURS['stanza'] = G.C.stanza
 G.ARGS.LOC_COLOURS['objitude'] = HEX('FFAABB')
 G.ARGS.LOC_COLOURS['murdock'] = HEX('AC23BD')
 G.ARGS.LOC_COLOURS['8z'] = HEX('506385')
-G.ARGS.LOC_COLOURS['bramble'] = HEX('992D22')
-G.ARGS.LOC_COLOURS['brambleb'] = HEX('FFFFFF')
-G.ARGS.LOC_COLOURS['bramblec'] = HEX('992D22')
-G.ARGS.LOC_COLOURS['brambled'] = HEX('FFFFFF')
-G.ARGS.LOC_COLOURS['bramblee'] = HEX('992D22')
-G.ARGS.LOC_COLOURS['bramblef'] = HEX('FFFFFF')
-G.ARGS.LOC_COLOURS['brambleg'] = HEX('992D22')
+G.ARGS.LOC_COLOURS['m7bramble1'] = HEX('992D22')
+G.ARGS.LOC_COLOURS['m7bramble2'] = HEX('FFFFFF')
+G.ARGS.LOC_COLOURS['m7bramble3'] = HEX('992D22')
+G.ARGS.LOC_COLOURS['m7bramble4'] = HEX('FFFFFF')
+G.ARGS.LOC_COLOURS['m7bramble5'] = HEX('992D22')
+G.ARGS.LOC_COLOURS['m7bramble6'] = HEX('FFFFFF')
+G.ARGS.LOC_COLOURS['m7bramble7'] = HEX('992D22')
 G.ARGS.LOC_COLOURS['birb'] = G.C.birb
 G.ARGS.LOC_COLOURS['epicelle'] = HEX('15b159')
 G.ARGS.LOC_COLOURS['fieldofgrass'] = G.C.grass
@@ -119,6 +119,27 @@ function artist_node(artists, first_string)
                 )
             end
         end
+        if string.sub(artist, 1, 1) == "m" then
+            print(artist)
+            local index = tonumber(string.sub(artist, 2, 2))
+            print(index)
+            for i = 1, index, 1 do
+                table.insert(artist_node.nodes,
+                {n=G.UIT.O, config={
+                    object = DynaText({string = localize{type = 'raw_descriptions', set = 'UNCARDABLE Artist', key = artist .. i},
+                    colours = {G.ARGS.LOC_COLOURS[artist.. i] or G.C.WHITE},
+                    bump = true,
+                    silent = true,
+                    pop_in = 0,
+                    pop_in_rate = 4,
+                    shadow = true,
+                    y_offset = -0.6,
+                    scale = 0.27
+                    })
+                }}
+            )
+            end
+        else
         table.insert(artist_node.nodes,
             {n=G.UIT.O, config={
                 object = DynaText({string = localize{type = 'raw_descriptions', set = 'UNCARDABLE Artist', key = artist},
@@ -133,6 +154,7 @@ function artist_node(artists, first_string)
                 })
             }}
         )
+        end
         if artist == 'suvi' then
             table.insert(artist_node.nodes,
                 {n=G.UIT.O, config={
@@ -163,7 +185,7 @@ function artist_node(artists, first_string)
             }}
             )
         end
-        if artist == 'bramble' then
+        --[[if artist == 'bramble' then
             table.insert(artist_node.nodes,
                 {n=G.UIT.O, config={
                 object = DynaText({string = localize{type = 'raw_descriptions', set = 'UNCARDABLE Artist', key = 'brambleb'},
@@ -248,7 +270,7 @@ function artist_node(artists, first_string)
                 })
             }}
             )
-        end
+        end]]--
     end
     return artist_node
 end
