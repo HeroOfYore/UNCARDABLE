@@ -53,6 +53,7 @@
         j_four_fingers = {pos = 51, artist = {'ploutre'}},
         j_walkie_talkie = {pos = 52, artist ={'suvi'}},
         j_trading = {pos = 53, artist = {'heroofyore'}},
+        j_flash = {pos = 54, artist = {'heroofyore'}},
         
     }
 
@@ -197,6 +198,7 @@
         j_seance = {row = 1, artist = {'heroofyore'}},
 
         j_hit_the_road = {row = 0, artist = {'heroofyore'}},
+        j_stone = {row = 0, artist = {'ploutre'}}
 
     }
     animated_with_soul = {
@@ -534,6 +536,15 @@
         atlas_table  = 'ANIMATION_ATLAS',
         frames = 6,
         fps = 10,
+        px = 71,
+        py = 95,
+    }
+    SMODS.Atlas {
+        key = "j_stone_anim",
+        path = "UNINTERROGATABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 20,
+        fps = 5,
         px = 71,
         py = 95,
     }
