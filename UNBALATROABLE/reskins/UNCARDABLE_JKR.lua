@@ -198,7 +198,11 @@
         j_seance = {row = 1, artist = {'heroofyore'}},
 
         j_hit_the_road = {row = 0, artist = {'heroofyore'}},
-        j_stone = {row = 0, artist = {'ploutre'}}
+        j_stone = {row = 0, artist = {'ploutre'}},
+
+        j_reserved_parking = {row = 0, artist= {'heroofyore'}},
+
+        j_droll = {row = 0, artist = {'m7bramble', 'heroofyore'}},
 
     }
     animated_with_soul = {
@@ -545,6 +549,24 @@
         atlas_table = 'ANIMATION_ATLAS',
         frames = 20,
         fps = 5,
+        px = 71,
+        py = 95,
+    }
+        SMODS.Atlas {
+        key = "j_reserved_parking_anim",
+        path = "UNRESTABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 64,
+        fps = 10,
+        px = 71,
+        py = 95,
+    }
+    SMODS.Atlas {
+        key = "j_droll_anim",
+        path = "UNPINKABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 13,
+        fps = 10,
         px = 71,
         py = 95,
     }
