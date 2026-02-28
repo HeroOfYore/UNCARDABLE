@@ -54,6 +54,7 @@
         j_walkie_talkie = {pos = 52, artist ={'suvi'}},
         j_trading = {pos = 53, artist = {'heroofyore'}},
         j_flash = {pos = 54, artist = {'heroofyore'}},
+        j_juggler = {pos = 55, artist = {'ploutre'}},
         
     }
 
@@ -203,6 +204,7 @@
         j_reserved_parking = {row = 0, artist= {'heroofyore'}},
 
         j_droll = {row = 0, artist = {'m7bramble', 'heroofyore'}},
+        j_onyx_agate = {row = 0, artist = {'heroofyore'}},
 
     }
     animated_with_soul = {
@@ -567,6 +569,15 @@
         atlas_table = 'ANIMATION_ATLAS',
         frames = 13,
         fps = 10,
+        px = 71,
+        py = 95,
+    }
+    SMODS.Atlas {
+        key = "j_onyx_agate_anim",
+        path = "UNLIGHTABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 193,
+        fps = 20,
         px = 71,
         py = 95,
     }
