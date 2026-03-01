@@ -193,43 +193,43 @@ return {
                     "8Z"
                 }
             },
-            ['m7bramble1'] = {
+            ['$7bramble1'] = {
                 ['text'] = 
                 {
                     "b"
                 }
             },
-            ['m7bramble2'] = {
+            ['$7bramble2'] = {
                 ['text'] = 
                 {
                     "r"
                 }
             },
-            ['m7bramble3'] = {
+            ['$7bramble3'] = {
                 ['text'] =
                 {
                     "a"
                 }
             },
-            ['m7bramble4'] = {
+            ['$7bramble4'] = {
                 ['text'] =
                 {
                     "m"
                 }
             },
-            ['m7bramble5'] = {
+            ['$7bramble5'] = {
                 ['text'] =
                 {
                     "b"
                 }
             },
-            ['m7bramble6'] = {
+            ['$7bramble6'] = {
                 ['text'] =
                 {
                     "l"
                 }
             },
-            ['m7bramble7'] = {
+            ['$7bramble7'] = {
                 ['text'] =
                 {
                     "e"

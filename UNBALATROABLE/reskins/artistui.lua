@@ -30,13 +30,13 @@ G.ARGS.LOC_COLOURS['stanza'] = G.C.stanza
 G.ARGS.LOC_COLOURS['objitude'] = HEX('FFAABB')
 G.ARGS.LOC_COLOURS['murdock'] = HEX('AC23BD')
 G.ARGS.LOC_COLOURS['8z'] = HEX('506385')
-G.ARGS.LOC_COLOURS['m7bramble1'] = HEX('992D22')
-G.ARGS.LOC_COLOURS['m7bramble2'] = HEX('FFFFFF')
-G.ARGS.LOC_COLOURS['m7bramble3'] = HEX('992D22')
-G.ARGS.LOC_COLOURS['m7bramble4'] = HEX('FFFFFF')
-G.ARGS.LOC_COLOURS['m7bramble5'] = HEX('992D22')
-G.ARGS.LOC_COLOURS['m7bramble6'] = HEX('FFFFFF')
-G.ARGS.LOC_COLOURS['m7bramble7'] = HEX('992D22')
+G.ARGS.LOC_COLOURS['$7bramble1'] = HEX('992D22')
+G.ARGS.LOC_COLOURS['$7bramble2'] = HEX('FFFFFF')
+G.ARGS.LOC_COLOURS['$7bramble3'] = HEX('992D22')
+G.ARGS.LOC_COLOURS['$7bramble4'] = HEX('FFFFFF')
+G.ARGS.LOC_COLOURS['$7bramble5'] = HEX('992D22')
+G.ARGS.LOC_COLOURS['$7bramble6'] = HEX('FFFFFF')
+G.ARGS.LOC_COLOURS['$7bramble7'] = HEX('992D22')
 G.ARGS.LOC_COLOURS['birb'] = G.C.birb
 G.ARGS.LOC_COLOURS['epicelle'] = HEX('15b159')
 G.ARGS.LOC_COLOURS['fieldofgrass'] = G.C.grass
@@ -119,7 +119,7 @@ function artist_node(artists, first_string)
                 )
             end
         end
-        if string.sub(artist, 1, 1) == "m" then
+        if string.sub(artist, 1, 1) == "$" then
             print(artist)
             local index = tonumber(string.sub(artist, 2, 2))
             print(index)

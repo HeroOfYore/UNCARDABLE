@@ -169,14 +169,14 @@
         j_ramen = {row = 1, artist = {'heroofyore'}},
         j_flower_pot = {row = 2, artist = {'heroofyore'}},
         j_madness = {row = 3, artist = {'heroofyore'}},
-        j_zany = {row = 4, artist = {'m7bramble'}},
+        j_zany = {row = 4, artist = {'$7bramble'}},
 
         j_egg = {row = 0, artist = {'heroofyore'}},
         j_burnt = {row = 1, artist = {'heroofyore'}},
         j_invisible = {row = 2, artist = {'heroofyore'}},
 
         j_bloodstone = {row = 0, artist = {'heroofyore'}},
-        j_jolly = {row = 1, artist = {'m7bramble'}},
+        j_jolly = {row = 1, artist = {'$7bramble'}},
 
         j_constellation = {row = 0, artist = {'heroofyore'}},
         j_shoot_the_moon = {row = 1, artist = {'heroofyore'}},
@@ -203,7 +203,7 @@
 
         j_reserved_parking = {row = 0, artist= {'heroofyore'}},
 
-        j_droll = {row = 0, artist = {'m7bramble', 'heroofyore'}},
+        j_droll = {row = 0, artist = {'$7bramble', 'heroofyore'}},
         j_onyx_agate = {row = 0, artist = {'heroofyore'}},
 
     }
