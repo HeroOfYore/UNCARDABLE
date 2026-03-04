@@ -294,6 +294,14 @@ return {
                     "round played",
                 },
             },
+            j_loyalty_card = {
+                name = "Prison Records",
+                text = {
+                    "{X:red, C:white} X#1# {} Mult every",
+                    "{C:attention}#2#{} hands played",
+                    "{C:inactive}#3#",
+                },
+            },
         }
     }
 }

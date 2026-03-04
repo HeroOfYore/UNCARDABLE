@@ -55,6 +55,7 @@
         j_trading = {pos = 53, artist = {'heroofyore'}},
         j_flash = {pos = 54, artist = {'heroofyore'}},
         j_juggler = {pos = 55, artist = {'ploutre'}},
+        j_loyalty = {pos = 56, artist = {'heroofyore'}},
         
     }
 
@@ -81,6 +82,12 @@
     SMODS.Atlas {
         key = "multistage",
         path = "MULTISTAGE.png",
+        px = 71,
+        py = 95
+    }
+    SMODS.Atlas {
+        key = "unrecordable",
+        path = "UNRECORDABLE.png",
         px = 71,
         py = 95
     }
@@ -125,8 +132,43 @@
             end
         end
 
+
         }, true)
 
+        SMODS.Joker:take_ownership("j_loyalty_card", {
+            atlas = "unrecordable",
+            pos = {x = 0, y = 0},
+            artist_credits = {"heroofyore"},
+            config = { extra = {Xmult = 4, every = 5, loyalty_remaining = 5} },
+            loc_vars = function(self, info_queue, card)
+                return {
+                    vars = {
+                        card.ability.extra.Xmult,
+                        card.ability.extra.every + 1,
+                        localize {type = 'variable', key = (card.ability.extra.loyalty_remaining == 0 and 'loyalty_active' or 'loyalty_inactive'), vars = {card.ability.extra.loyalty_remaining} }        
+                    }
+                }
+            end,
+            calculate = function(self, card, context)
+                if context.joker_main then 
+                    card.ability.extra.loyalty_remaining = (card.ability.extra.every - 1 - (G.GAME.hands_played - card.ability.hands_played_at_create)) %
+                    (card.ability.extra.every + 1)
+                    card.children.center:set_sprite_pos({x = 5 - card.ability.extra.loyalty_remaining, y = 0})
+                    if not context.blueprint then
+                        if card.ability.extra.loyalty_remaining == 0 then
+                            local eval = function(card) return card.ability.extra.loyalty_remaining == 0 and not G.RESET_JIGGLES end
+                            juice_card_until(card, eval, true)
+                        end
+                    end
+                    if card.ability.extra.loyalty_remaining == card.ability.extra.every then
+                        return {
+                            xmult = card.ability.extra.Xmult
+                        }
+                    end
+                end
+            end
+
+        }, true)
         SMODS.Joker:take_ownership("j_hologram", {
             soul_pos = {x = 24, y = 1, draw = function(card, size_mod, rotate_mod) 
                 local rotate_mod = 0.1 * math.sin(1.219 * G.TIMERS.REAL) + 0.07 * math.sin((G.TIMERS.REAL) * math.pi * 5) * (1 - (G.TIMERS.REAL - math.floor(G.TIMERS.REAL))) ^ 2
