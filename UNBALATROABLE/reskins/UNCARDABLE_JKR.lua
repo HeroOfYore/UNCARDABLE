@@ -250,6 +250,10 @@
 
         j_rocket = {row = 0, artist = {'heroofyore'}},
 
+        j_splash = {row = 0, artist = {'heroofyore'}},
+        
+        j_drivers_license = {row = 0, artist = {'heroofyore'}},
+
     }
     animated_with_soul = {
         j_perkeo = {row = 0, artist = {'guac'}},
@@ -625,12 +629,31 @@
         px = 71,
         py = 95,
     }
-        SMODS.Atlas {
+    SMODS.Atlas {
         key = "j_rocket_anim",
         path = "UNARRESTABLE.png",
         atlas_table = 'ANIMATION_ATLAS',
         frames = 8,
         fps = 10,
+        px = 71,
+        py = 95,
+    }
+    SMODS.Atlas {
+        key = "j_splash_anim",
+        path = "UNRAMENABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 38,
+        fps = 10,
+        px = 71,
+        py = 95,
+    }
+
+    SMODS.Atlas {
+        key = "j_drivers_license_anim",
+        path = "UNTRILLABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 12,
+        fps = 5,
         px = 71,
         py = 95,
     }
