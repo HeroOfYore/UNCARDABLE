@@ -253,6 +253,8 @@
         j_splash = {row = 0, artist = {'heroofyore'}},
         
         j_drivers_license = {row = 0, artist = {'heroofyore'}},
+    
+        j_duo = {row = 0, artist = {'heroofyore'}},
 
     }
     animated_with_soul = {
@@ -654,6 +656,16 @@
         atlas_table = 'ANIMATION_ATLAS',
         frames = 12,
         fps = 5,
+        px = 71,
+        py = 95,
+    }
+
+    SMODS.Atlas {
+        key = "j_duo_anim",
+        path = "UNTWINABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 32,
+        fps = 10,
         px = 71,
         py = 95,
     }
