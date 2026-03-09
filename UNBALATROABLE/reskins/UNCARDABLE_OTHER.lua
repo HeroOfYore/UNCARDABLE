@@ -35,3 +35,62 @@
          end
       end
    }, true)
+
+   SMODS.PokerHand:take_ownership('Two Pair', 
+   {
+      modify_display_text = function(self, _cards, scoring_hand)
+         local women = true;
+         for j = 1, #scoring_hand do
+            local rank = SMODS.Ranks[scoring_hand[j].base.value]
+            local suit = scoring_hand[j].base.suit
+            women = rank and women and (rank.key == "Queen" or suit == "Hearts" and rank.key == "King" or suit  == "Spades" and rank.key == "King" or suit == "Diamonds" and rank.key == "King")
+         end
+         if women then
+            return self.key .. ' Yuri'
+         end
+      end
+   }, true)
+
+   SMODS.PokerHand:take_ownership('Three of a Kind', {
+      modify_display_text = function(self, _cards, scoring_hand)
+         local women = true;
+         for j = 1, #scoring_hand do
+            local rank = SMODS.Ranks[scoring_hand[j].base.value]
+            local suit = scoring_hand[j].base.suit
+            women = rank and women and (rank.key == "Queen" or suit == "Hearts" and rank.key == "King" or suit  == "Spades" and rank.key == "King" or suit == "Diamonds" and rank.key == "King")
+         end
+         if women then
+            return self.key .. ' Yuri'
+         end
+      end
+   }, true)
+
+   SMODS.PokerHand:take_ownership('Four of a Kind', {
+      modify_display_text = function(self, _cards, scoring_hand)
+         local women = true;
+         for j = 1, #scoring_hand do
+            local rank = SMODS.Ranks[scoring_hand[j].base.value]
+            local suit = scoring_hand[j].base.suit
+            women = rank and women and (rank.key == "Queen" or suit == "Hearts" and rank.key == "King" or suit  == "Spades" and rank.key == "King" or suit == "Diamonds" and rank.key == "King")
+         end
+         if women then
+            return self.key .. ' Yuri'
+         end
+      end
+   }, true)
+
+   SMODS.PokerHand:take_ownership('High Card', {
+      modify_display_text = function(self, _cards, scoring_hand)
+         local women = true;
+         for j = 1, #scoring_hand do
+            local rank = SMODS.Ranks[scoring_hand[j].base.value]
+            local suit = scoring_hand[j].base.suit
+            women = rank and women and (rank.key == "Jack" and suit == "Spades")
+         end
+         if women then
+            return self.key .. ' Octave'
+         end
+      end
+   }, true)
+
+   
