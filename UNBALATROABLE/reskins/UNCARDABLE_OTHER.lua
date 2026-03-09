@@ -71,7 +71,7 @@
          for j = 1, #scoring_hand do
             local rank = SMODS.Ranks[scoring_hand[j].base.value]
             local suit = scoring_hand[j].base.suit
-            women = rank and women and (rank.key == "Queen" or suit == "Hearts" and rank.key == "King" or suit  == "Spades" and rank.key == "King" or suit == "Diamonds" and rank.key == "King")
+            women = rank and women and (rank.key == "Queen" or suit ~= "Clubs" and rank.key == "King") 
          end
          if women then
             return self.key .. ' Yuri'

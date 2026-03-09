@@ -185,7 +185,7 @@ return {
             ["Flush Five"]="Flush Five",
             ["Flush House"]="Flush House",
             ["Four of a Kind"]="Four of a Kind",
-            ["Four of a Kind"]="Polycule",
+            ["Four of a Kind Yuri"]="Polycule",
             ["Full House"]="Full House",
             ["High Card"]="High Card",
             ["High Card Octave"] = "Octave",
