@@ -9,3 +9,14 @@
       loc_txt = {name = "{C:mult}Amogus{}"},
       boss_colour = HEX("FFFFBB"),
    }, true)
+
+   SMODS.PokerHand:take_ownership('Straight',
+   {
+      example = {
+         {'S_Q', true},
+         {'S_J', true},
+         {'H_T', true},
+         {'C_9', true},
+         {'D_8', true},
+      },
+   }, true)

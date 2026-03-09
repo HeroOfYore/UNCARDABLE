@@ -98,7 +98,7 @@ return {
                 "{E:1}zzzzzzz",
             },
 
---space here for more custom loss quips
+        --space here for more custom loss quips
             uncaradble_custom_wq1 = {
                 "I'm Beat and",
                 "I'm posting.",
@@ -129,7 +129,71 @@ return {
         },
         v_dictionary = {
             a_mult_minus="-#1# Mult",
-        }
+        },
+        poker_hand_descriptions={
+            ["Five of a Kind"]={
+                "5 cards with the same rank",
+            },
+            Flush={
+                "5 cards that share the same suit",
+            },
+            ["Flush Five"]={
+                "5 cards with the same rank and suit",
+            },
+            ["Flush House"]={
+                "A Three of a Kind and a Pair with",
+                "all cards sharing the same suit",
+            },
+            ["Four of a Kind"]={
+                "4 cards with the same rank. They may",
+                "be played with 1 other unscored card",
+            },
+            ["Full House"]={
+                "A Three of a Kind and a Pair",
+            },
+            ["High Card"]={
+                "If the played hand is not any of the above",
+                "hands, only the highest ranked card scores",
+            },
+            Pair={
+                "2 cards that share the same rank. They may",
+                "be played with up to 3 other unscored cards",
+            },
+            ["Royal Flush"]={
+                "5 cards in a row (consecutive ranks) with",
+                "all cards sharing the same suit",
+            },
+            Straight={
+                "5 cards in a row (consecutive ranks, any suit)",
+            },
+            ["Straight Flush"]={
+                "5 cards in a row (consecutive ranks) with",
+                "all cards sharing the same suit",
+            },
+            ["Three of a Kind"]={
+                "3 cards with the same rank. They may be",
+                "played with up to 2 other unscored cards",
+            },
+            ["Two Pair"]={
+                "2 pairs of cards with different ranks, may",
+                "be played with 1 other unscored card",
+            },
+        },
+        poker_hands={            
+            ["Five of a Kind"]="Five of a Kind",
+            Flush="Flush",
+            ["Flush Five"]="Flush Five",
+            ["Flush House"]="Flush House",
+            ["Four of a Kind"]="Four of a Kind",
+            ["Full House"]="Full House",
+            ["High Card"]="High Card",
+            Pair="Pair",
+            ["Royal Flush"]="Royal Flush",
+            Straight="Lesbian",
+            ["Straight Flush"]="Lesbian Flush",
+            ["Three of a Kind"]="Three of a Kind",
+            ["Two Pair"]="Two Pair",
+    },
     },
     ["descriptions"]={
         ["UNCARDABLE Artist"] = {
@@ -273,6 +337,56 @@ return {
             }
         },
         Joker = {
+             j_four_fingers={
+                name="Four Fingers",
+                text={
+                    "All {C:attention}Flushes{} and",
+                    "{C:attention}Lesbians{} can be",
+                    "made with {C:attention}4{} cards",
+                },
+            },
+            j_loyalty_card = {
+                name = "Prison Records",
+                text = {
+                    "{X:red, C:white} X#1# {} Mult every",
+                    "{C:attention}#2#{} hands played",
+                    "{C:inactive}#3#",
+                },
+            },            
+            j_popcorn = {
+                name = "Procrastination",
+                text={
+                    "{C:mult}+#1#{} Mult",
+                    "{C:mult}-#2#{} Mult per",
+                    "round played",
+                },
+            },
+            j_runner={
+                name="Runner",
+                text={
+                    "Gains {C:chips}+#2#{} Chips",
+                    "if played hand",
+                    "contains a {C:attention}Lesbian{}",
+                    "{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips)",
+                },
+            },
+            j_shortcut={
+                name="Shortcut",
+                text={
+                    "Allows {C:attention}Lesbians{} to be",
+                    "made with gaps of {C:attention}1 rank",
+                    "{C:inactive}(ex: {C:attention}10 8 6 5 3{C:inactive})",
+                },
+            },
+            j_superposition={
+                name="Superposition",
+                text={
+                    "Create a {C:tarot}Tarot{} card if",
+                    "poker hand contains an",
+                    "{C:attention}Ace{} and a {C:attention}Lesbian{}",
+                    "{C:inactive}(Must have room)",
+                },
+            },
             j_wee={
                 name="I'm so tiny! I'm only 2kb!",
                 text={
@@ -286,22 +400,8 @@ return {
                     "or fewer rounds",
                 },
             },
-            j_popcorn = {
-                name = "Procrastination",
-                text={
-                    "{C:mult}+#1#{} Mult",
-                    "{C:mult}-#2#{} Mult per",
-                    "round played",
-                },
-            },
-            j_loyalty_card = {
-                name = "Prison Records",
-                text = {
-                    "{X:red, C:white} X#1# {} Mult every",
-                    "{C:attention}#2#{} hands played",
-                    "{C:inactive}#3#",
-                },
-            },
+
+
         }
     }
 }
