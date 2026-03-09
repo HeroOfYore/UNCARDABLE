@@ -20,3 +20,17 @@
          {'D_8', true},
       },
    }, true)
+
+   SMODS.PokerHand:take_ownership('Pair',
+   {
+      modify_display_text = function(self, _cards, scoring_hand)
+         local queens = true;
+         for j = 1, #scoring_hand do 
+            local rank = SMODS.Ranks[scoring_hand[j].base.value]
+            queens = rank and queens and (rank.key == "Queen")
+         end
+         if queens then
+            return self.key .. ' Yuri'
+         end
+      end
+   }, true)
