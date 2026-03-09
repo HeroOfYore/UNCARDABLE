@@ -27,7 +27,8 @@
          local queens = true;
          for j = 1, #scoring_hand do 
             local rank = SMODS.Ranks[scoring_hand[j].base.value]
-            queens = rank and queens and (rank.key == "Queen")
+            local suit = scoring_hand[j].base.suit
+            queens = rank and queens and (rank.key == "Queen" or suit == "Hearts" and rank.key == "King" or suit  == "Spades" and rank.key == "King" or suit == "Diamonds" and rank.key == "King")
          end
          if queens then
             return self.key .. ' Yuri'
