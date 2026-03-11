@@ -56,6 +56,7 @@
         j_flash = {pos = 54, artist = {'heroofyore'}},
         j_juggler = {pos = 55, artist = {'ploutre'}},
         j_loyalty = {pos = 56, artist = {'heroofyore'}},
+        j_seeing_double = {pos = 57, artist = {'ploutre'}},
         
     }
 
@@ -255,6 +256,10 @@
         j_drivers_license = {row = 0, artist = {'heroofyore'}},
     
         j_duo = {row = 0, artist = {'heroofyore'}},
+        j_trio = {row = 0, artist = {'heroofyore'}},
+        j_family = {row = 0, artist = {'heroofyore'}},
+        j_order = {row = 0, artist = {'heroofyore'}},
+        j_tribe = {row = 0, artist = {'heroofyore'}},
 
     }
     animated_with_soul = {
@@ -665,6 +670,42 @@
         path = "UNTWINABLE.png",
         atlas_table = 'ANIMATION_ATLAS',
         frames = 32,
+        fps = 10,
+        px = 71,
+        py = 95,
+    }
+    SMODS.Atlas {
+        key = "j_trio_anim",
+        path = "UNOMFABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 34,
+        fps = 10,
+        px = 71,
+        py = 95,
+    }
+    SMODS.Atlas {
+        key = "j_family_anim",
+        path = "UNBANDABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 17,
+        fps = 10,
+        px = 71,
+        py = 95,
+    }
+    SMODS.Atlas {
+        key = "j_order_anim",
+        path = "UNHARMABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 32,
+        fps = 10,
+        px = 71,
+        py = 95,
+    }
+    SMODS.Atlas {
+        key = "j_tribe_anim",
+        path = "UNBEATABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 130,
         fps = 10,
         px = 71,
         py = 95,
