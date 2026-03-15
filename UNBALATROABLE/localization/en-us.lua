@@ -345,7 +345,13 @@ return {
                 {
                     "Yuki (Angle)"
                 }
-            }
+            },
+            ['grimp'] = {
+                ['text'] =
+                {
+                    "Grimp the Melted Chimp"
+                }
+            },
         },
         Joker = {
              j_four_fingers={

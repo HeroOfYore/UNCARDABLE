@@ -59,6 +59,9 @@
         j_drunkard = {pos = 57, artist = {'ploutre'}},
         j_certificate = {pos = 58, artist = {'yuki'}},
         j_credit_card = {pos = 59, artist = {'ploutre'}},
+        j_square = {pos = 60, artist = {'ploutre'}},
+        j_shortcut = {pos = 61, artist = {'heroofyore'}},
+        j_blackboard = {pos = 62, artist = {'grimp'}},
         
     }
 
