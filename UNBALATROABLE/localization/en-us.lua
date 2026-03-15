@@ -191,14 +191,14 @@ return {
             ["High Card Octave"] = "Octave",
             Pair="Pair",
             ["Pair Yuri"] = "Yuri",
-            ["Two Pair Yuri"] = "Open Relationship",
             ["Royal Flush"]="Royal Flush",
             Straight="Lesbian",
             ["Straight Flush"]="Sapphic Flush",
             ["Three of a Kind"]="Three of a Kind",
             ["Three of a Kind Yuri"]="Polycule",
             ["Two Pair"]="Two Pair",
-    },
+            ["Two Pair Yuri"] = "Open Relationship",
+        },
     },
     ["descriptions"]={
         ["UNCARDABLE Artist"] = {
@@ -338,6 +338,12 @@ return {
                 ['text'] = 
                 {
                     ";"
+                }
+            },
+            ['yuki'] = {
+                ['text'] = 
+                {
+                    "Yuki (Angle)"
                 }
             }
         },

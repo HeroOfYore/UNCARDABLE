@@ -43,6 +43,7 @@ G.ARGS.LOC_COLOURS['fieldofgrass'] = G.C.grass
 G.ARGS.LOC_COLOURS['suvi'] = HEX('FFF0C9')
 G.ARGS.LOC_COLOURS['suvib'] = HEX('287C88')
 G.ARGS.LOC_COLOURS['suvic'] = HEX('8F8F8F') 
+G.ARGS.LOC_COLOURS['yuki'] = HEX('FFB3FF')
 
 function UNCARDABLE_artist_tooltip(_c, info_queue, card, desc_nodes, specific_vars, full_UI_table)
     localize{type = 'descriptions', set = 'UNCARDABLE Artist', key = _c.key, nodes = desc_nodes, vars = specific_vars or _c.vars}

@@ -55,8 +55,10 @@
         j_trading = {pos = 53, artist = {'heroofyore'}},
         j_flash = {pos = 54, artist = {'heroofyore'}},
         j_juggler = {pos = 55, artist = {'ploutre'}},
-        j_loyalty = {pos = 56, artist = {'heroofyore'}},
-        j_seeing_double = {pos = 57, artist = {'ploutre'}},
+        j_seeing_double = {pos = 56, artist = {'ploutre'}},
+        j_drunkard = {pos = 57, artist = {'ploutre'}},
+        j_certificate = {pos = 58, artist = {'yuki'}},
+        j_credit_card = {pos = 59, artist = {'ploutre'}},
         
     }
 
@@ -198,6 +200,8 @@
         end
     }, true)
 
+
+
     --end of section
 
 
@@ -260,6 +264,8 @@
         j_family = {row = 0, artist = {'heroofyore'}},
         j_order = {row = 0, artist = {'heroofyore'}},
         j_tribe = {row = 0, artist = {'heroofyore'}},
+
+        j_raised_fist = {row = 0, artist = {'heroofyore'}},
 
     }
     animated_with_soul = {
@@ -707,6 +713,15 @@
         atlas_table = 'ANIMATION_ATLAS',
         frames = 130,
         fps = 10,
+        px = 71,
+        py = 95,
+    }
+        SMODS.Atlas {
+        key = "j_raised_fist_anim",
+        path = "UNENDABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 130,
+        fps = 20,
         px = 71,
         py = 95,
     }
