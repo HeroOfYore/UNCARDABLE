@@ -104,6 +104,12 @@
         px = 71,
         py = 95,
     }
+    SMODS.Atlas{
+        key = "unmaidable",
+        path = "UNMAIDABLE.png",
+        px = 71,
+        py = 95,
+    }
         
     if not UNCARDABLE.config.disabled then
         SMODS.Joker:take_ownership('j_wee', {
@@ -145,7 +151,6 @@
                 }
             end
         end
-
 
         }, true)
 
@@ -224,6 +229,15 @@
             end}
         }, true)
 
+        SMODS.Joker:take_ownership("j_crafty", {
+            atlas = "unmaidable",
+            pos = {x = 0, y = 0},
+            artist_credits = {"ploutre"},
+            set_sprites = function(self, card, front)
+                local randompos = math.random(0, 4)
+                card.children.center:set_sprite_pos({x = randompos, y = 0})
+            end
+        }, true)
     end
 
   
