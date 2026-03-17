@@ -58,7 +58,7 @@
         j_seeing_double = {pos = 56, artist = {'ploutre'}},
         j_drunkard = {pos = 57, artist = {'ploutre'}},
         j_certificate = {pos = 58, artist = {'yuki'}},
-        j_credit_card = {pos = 59, artist = {'ploutre'}},
+        --j_credit_card = {pos = 59, artist = {'ploutre'}},
         j_square = {pos = 60, artist = {'ploutre'}},
         j_shortcut = {pos = 61, artist = {'heroofyore'}},
         j_blackboard = {pos = 62, artist = {'grimp'}},
@@ -97,6 +97,14 @@
         px = 71,
         py = 95
     }
+    SMODS.Atlas
+    {
+        key = "uncashable",
+        path = "UNCASHABLE.png",
+        px = 71,
+        py = 95,
+    }
+        
     if not UNCARDABLE.config.disabled then
         SMODS.Joker:take_ownership('j_wee', {
             loc_vars = function(self, info_queue, card)
@@ -175,14 +183,50 @@
             end
 
         }, true)
+
+        SMODS.Joker:take_ownership("j_credit_card",  {
+            atlas = "uncashable",
+            pos = {x = 0, y = 0},
+            artist_credits = {"ploutre"},
+            config = { extra = 0, extran = { bankrupt_at = 20, spritenum = 0}},
+            loc_vars = function(self, info_queue, card)
+                return { vars = { card.ability.extran.bankrupt_at } }
+            end,
+            add_to_deck = function(self, card, from_debuff)
+                G.GAME.bankrupt_at = G.GAME.bankrupt_at - card.ability.extran.bankrupt_at
+            end,
+            remove_from_deck = function(self, card, from_debuff)
+                G.GAME.bankrupt_at = G.GAME.bankrupt_at + card.ability.extran.bankrupt_at
+            end,
+
+            calculate = function(self, card, context)
+                if context.ease_dollars then
+                    if G.GAME.dollars >= 0 then
+                        card.ability.extran.spritenum = 0
+                        return {
+                            card.children.center:set_sprite_pos({x = 0, y = 0})
+                        }
+                    end
+                    else if G.GAME.dollars < 0 then
+                        card.ability.extran.spritenum = G.GAME.dollars * -1
+                        return {
+                            card.children.center:set_sprite_pos({x = card.ability.extran.spritenum, y = 0})
+                        }
+                    end
+                end
+            end
+        }, true)
+
         SMODS.Joker:take_ownership("j_hologram", {
             soul_pos = {x = 24, y = 1, draw = function(card, size_mod, rotate_mod) 
                 local rotate_mod = 0.1 * math.sin(1.219 * G.TIMERS.REAL) + 0.07 * math.sin((G.TIMERS.REAL) * math.pi * 5) * (1 - (G.TIMERS.REAL - math.floor(G.TIMERS.REAL))) ^ 2
                 local size_mod = 1.25
             end}
         }, true)
+
     end
 
+  
 
     ---SECTION FOR MULTICHOICE JOKERS
     SMODS.Atlas
