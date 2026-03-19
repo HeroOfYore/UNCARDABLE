@@ -243,11 +243,26 @@ local UNCARDABLEConfigTab = function()
 	right_settings = { n = G.UIT.C, config = { align = "tl", padding = 0.05 }, nodes = {} }
 	config = { n = G.UIT.R, config = { align = "tm", padding = 0 }, nodes = { left_settings, right_settings } }
 	unbal_nodes[#unbal_nodes + 1] = config
+    unbal_nodes[#unbal_nodes + 1] = UIBox_button({
+        colour = G.C.yore,
+        button = "total_reskins",
+        label = {localize("uncard_skins")},
+        minw = 5.0,
+        minh = 1.7,
+        scale = 0.7, 
+        id = "reskinned_jokers"
+    })
     unbal_nodes[#unbal_nodes + 1] = create_toggle({
         label = "Disable Reskinned Jokers (requires restart to activate)",
         active_colour = HEX("E01BDE"),
         ref_table = UNCARDABLE.config,
         ref_value = "disabled",
+    })
+    unbal_nodes[#unbal_nodes + 1] = create_toggle({
+        label = "Enable chipispis. Probably requires restart",
+        active_colour = HEX("E01BDE"),
+        ref_table = UNCARDABLE.config,
+        ref_value = "chipispis",
     })
     return {
 		n = G.UIT.ROOT,

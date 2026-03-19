@@ -93,4 +93,7 @@
       end
    }, true)
 
-   
+   if UNCARDABLE.config.chipispis then
+
+   end
+

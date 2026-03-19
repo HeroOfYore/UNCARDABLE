@@ -126,6 +126,10 @@ return {
             uncardable_and = " and ",
             msg_eaten = "all gone",
 
+            --ui stuff
+            uncard_chips = "chipispis",
+            uncard_skins = "Reskin Selection",
+
         },
         v_dictionary = {
             a_mult_minus="-#1# Mult",
