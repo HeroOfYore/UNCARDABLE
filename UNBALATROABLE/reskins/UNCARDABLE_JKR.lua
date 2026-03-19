@@ -62,6 +62,8 @@
         j_square = {pos = 60, artist = {'ploutre'}},
         j_shortcut = {pos = 61, artist = {'heroofyore'}},
         j_blackboard = {pos = 62, artist = {'grimp'}},
+        j_pareidolia = {pos = 63, artist = {'stanza'}},
+        j_ancient = {pos = 64, artist = {'murdock'}},
         
     }
 
@@ -327,6 +329,10 @@
         j_tribe = {row = 0, artist = {'heroofyore'}},
 
         j_raised_fist = {row = 0, artist = {'heroofyore'}},
+
+        j_mystic_summit = {row = 0, artist = {'heroofyore'}},
+        j_erosion = {row = 0, artist = {'heroofyore'}},
+        j_arrowhead = {row = 0, artist = {'heroofyore'}},
 
     }
     animated_with_soul = {
@@ -783,6 +789,33 @@
         atlas_table = 'ANIMATION_ATLAS',
         frames = 130,
         fps = 20,
+        px = 71,
+        py = 95,
+    }
+        SMODS.Atlas {
+        key = "j_mystic_summit_anim",
+        path = "UNTONICABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 20,
+        fps = 5,
+        px = 71,
+        py = 95,
+    }
+        SMODS.Atlas {
+        key = "j_erosion_anim",
+        path = "UNTREEABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 20,
+        fps = 5,
+        px = 71,
+        py = 95,
+    }
+        SMODS.Atlas {
+        key = "j_arrowhead_anim",
+        path = "UNBELIEVABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 67,
+        fps = 8,
         px = 71,
         py = 95,
     }
