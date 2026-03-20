@@ -64,7 +64,8 @@
         j_blackboard = {pos = 62, artist = {'grimp'}},
         j_pareidolia = {pos = 63, artist = {'stanza'}},
         j_ancient = {pos = 64, artist = {'murdock'}},
-        
+        j_midas = {pos = 65, artist = {'heroofyore'}},
+
     }
 
 
@@ -280,6 +281,7 @@
         j_flower_pot = {row = 2, artist = {'heroofyore'}},
         j_madness = {row = 3, artist = {'heroofyore'}},
         j_zany = {row = 4, artist = {'$7bramble'}},
+        j_todo_list = {row = 0, artist = {'heroofyore'}},
 
         j_egg = {row = 0, artist = {'heroofyore'}},
         j_burnt = {row = 1, artist = {'heroofyore'}},
@@ -333,6 +335,8 @@
         j_mystic_summit = {row = 0, artist = {'heroofyore'}},
         j_erosion = {row = 0, artist = {'heroofyore'}},
         j_arrowhead = {row = 0, artist = {'heroofyore'}},
+
+        j_red_card = {row = 0, artist = {'heroofyore'}},
 
     }
     animated_with_soul = {
@@ -465,9 +469,10 @@
 
     SMODS.Atlas{
         key = "j_todo_list_anim",
-        path = "UNFORTYABLE.png",
+        path = "UNJOURNALABLE.png",
         atlas_table  = 'ANIMATION_ATLAS',
         frames = 34,
+        fps = 10,
         px = 71,
         py = 95,
     }
@@ -816,6 +821,15 @@
         atlas_table = 'ANIMATION_ATLAS',
         frames = 67,
         fps = 8,
+        px = 71,
+        py = 95,
+    }
+        SMODS.Atlas {
+        key = "j_red_card_anim",
+        path = "UNSKIPPABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 68,
+        fps = 10,
         px = 71,
         py = 95,
     }
