@@ -64,7 +64,7 @@
         j_blackboard = {pos = 62, artist = {'grimp'}},
         j_pareidolia = {pos = 63, artist = {'stanza'}},
         j_ancient = {pos = 64, artist = {'murdock'}},
-        j_midas = {pos = 65, artist = {'heroofyore'}},
+        j_midas_mask = {pos = 65, artist = {'heroofyore'}},
 
     }
 
@@ -113,6 +113,8 @@
         px = 71,
         py = 95,
     }
+
+
         
     if not UNCARDABLE.config.disabled then
         SMODS.Joker:take_ownership('j_wee', {
@@ -259,7 +261,7 @@
         pos = {x = 0, y = 0},
         artist_credits = {"heroofyore"},
         set_sprites = function(self, card, front)
-            local randompos = math.random(0, 2)
+            local randompos = math.random(0, 3)
             card.children.center:set_sprite_pos({x = randompos, y = 0})
         end
     }, true)

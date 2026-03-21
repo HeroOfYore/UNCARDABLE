@@ -122,9 +122,7 @@ function artist_node(artists, first_string)
             end
         end
         if string.sub(artist, 1, 1) == "$" then
-            print(artist)
             local index = tonumber(string.sub(artist, 2, 2))
-            print(index)
             for i = 1, index, 1 do
                 table.insert(artist_node.nodes,
                 {n=G.UIT.O, config={

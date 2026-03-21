@@ -93,7 +93,33 @@
       end
    }, true)
 
-   if UNCARDABLE.config.chipispis then
 
-   end
 
+      if UNCARDABLE.config.chipispis then
+         print("REPLACING")
+         function SMODS.current_mod.process_loc_text()
+            print("TWICE")
+            G.localization.descriptions.Edition.e_foil.text[1] = string.gsub(G.localization.descriptions.Edition.e_foil.text[1], " chips", " chipispis")
+            G.localization.descriptions.Blind.bl_flint.text[1] = string.gsub(G.localization.descriptions.Blind.bl_flint.text[1], " Chips", " Chipispis")
+            G.localization.descriptions.Back.b_plasma.text[1] = string.gsub(G.localization.descriptions.Back.b_plasma.text[1], "Chips", "Chipispis")
+            for pos, locstring in pairs(G.localization.descriptions.Joker) do
+               --print(locstring)
+               print(pos)
+               for text, lstring in pairs(G.localization.descriptions.Joker[pos].text) do
+                  print(lstring, text)
+                  G.localization.descriptions.Joker[pos].text[text] = string.gsub(lstring, "Chips", "Chipispis")
+
+               end
+            end
+            for pos, locstring in pairs(G.localization.descriptions.Planet) do
+               for text, lstring in pairs(G.localization.descriptions.Planet[pos].text) do
+                  G.localization.descriptions.Planet[pos].text[text] = string.gsub(lstring, " chips", " chipispis")
+               end
+            end 
+            for pos, locstring in pairs(G.localization.descriptions.Other) do
+               for text, lstring in pairs(G.localization.descriptions.Other[pos].text) do
+                    G.localization.descriptions.Other[pos].text[text] = string.gsub(lstring, " chips", " chipispis")
+               end
+            end 
+         end
+      end
