@@ -65,6 +65,7 @@
         j_pareidolia = {pos = 63, artist = {'stanza'}},
         j_ancient = {pos = 64, artist = {'murdock'}},
         j_midas_mask = {pos = 65, artist = {'heroofyore'}},
+        j_banner = {pos = 66, artist = {'heroofyore'}},
 
     }
 
@@ -340,6 +341,7 @@
         j_arrowhead = {row = 0, artist = {'heroofyore'}},
 
         j_red_card = {row = 0, artist = {'heroofyore'}},
+        j_burglar = {row = 0, artist = {'heroofyore'}},
 
     }
     animated_with_soul = {
@@ -832,6 +834,15 @@
         path = "UNSKIPPABLE.png",
         atlas_table = 'ANIMATION_ATLAS',
         frames = 68,
+        fps = 10,
+        px = 71,
+        py = 95,
+    }
+        SMODS.Atlas {
+        key = "j_burglar_anim",
+        path = "UNSTEALABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 124,
         fps = 10,
         px = 71,
         py = 95,
