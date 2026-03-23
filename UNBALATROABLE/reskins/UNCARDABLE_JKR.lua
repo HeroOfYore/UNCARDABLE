@@ -125,38 +125,39 @@
 
         SMODS.Joker:take_ownership("j_popcorn", {
             atlas = "multistage",
+            name = "uncardable_popcorn",
             pos = {x = 0, y = 0},
             artist_credits = {"8z"},
-            config = {extra = {mult_loss = 4, mult = 20, cardpos = 0} },
+            config = {extra = 0, extran = {mult_loss = 4, mult = 20, cardpos = 0}},
             loc_vars = function(self, info_queue, card)
-                return { vars = { card.ability.extra.mult, card.ability.extra.mult_loss } }
+                return { vars = { card.ability.extran.mult, card.ability.extran.mult_loss } }
             end,
             calculate = function(self, card, context)
-            if context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint then
-                if card.ability.extra.mult - card.ability.extra.mult_loss <= 0 then
-                    SMODS.destroy_cards(card, nil, nil, true)
+                if context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint then
+                    if card.ability.extran.mult - card.ability.extran.mult_loss <= 0 then
+                        SMODS.destroy_cards(card, nil, nil, true)
+                        return {
+                            message = localize('msg_eaten'),
+                            colour = G.C.RED
+                        }
+                    else
+                        card.ability.extran.mult = card.ability.extran.mult - card.ability.extran.mult_loss 
+                        card.ability.extran.cardpos = card.ability.extran.cardpos + 1
+                        return
+                        {
+                            message = localize{type = 'variable', key = 'a_mult_minus', vars = {card.ability.extran.mult_loss}},
+                            colour = G.C.MULT, 
+                            card.children.center:set_sprite_pos({x = card.ability.extran.cardpos, y = 0})
+                        }
+                    end
+                end
+                if context.joker_main then
                     return {
-                        message = localize('msg_eaten'),
-                        colour = G.C.RED
-                    }
-                else
-                    card.ability.extra.mult = card.ability.extra.mult - card.ability.extra.mult_loss 
-                    card.ability.extra.cardpos = card.ability.extra.cardpos + 1
-                    return
-                    {
-                        message = localize{type = 'variable', key = 'a_mult_minus', vars = {card.ability.extra.mult_loss}},
-                        colour = G.C.MULT, 
-                        card.children.center:set_sprite_pos({x = card.ability.extra.cardpos, y = 0})
+                        mult = card.ability.extran.mult
                     }
                 end
+                return nil, true
             end
-            if context.joker_main then
-                return {
-                    mult = card.ability.extra.mult
-                }
-            end
-        end
-
         }, true)
 
         SMODS.Joker:take_ownership("j_loyalty_card", {
