@@ -342,6 +342,8 @@
 
         j_red_card = {row = 0, artist = {'heroofyore'}},
         j_burglar = {row = 0, artist = {'heroofyore'}},
+        j_wrathful_joker = {row = 0, artist = {'heroofyore'}},
+
 
     }
     animated_with_soul = {
@@ -843,6 +845,15 @@
         path = "UNSTEALABLE.png",
         atlas_table = 'ANIMATION_ATLAS',
         frames = 124,
+        fps = 10,
+        px = 71,
+        py = 95,
+    }
+        SMODS.Atlas {
+        key = "j_wrathful_joker_anim",
+        path = "UNBEARABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 89,
         fps = 10,
         px = 71,
         py = 95,
