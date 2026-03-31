@@ -9,6 +9,7 @@ function ease_dollars(mod, x)
 end
 
 G.FUNCS.total_reskins = function(e)
+	G.uncard_prev_collec = "total_reskins"
     G.FUNCS.overlay_menu({
         definition = UNCARDABLE_create_UIBox_your_collection_content_sets(),
     })
@@ -182,3 +183,54 @@ function UNCARDABLE.generic_card(center, x, y)
 	return card
 end
 
+
+local card_click_ref = Card.click
+function Card:click()
+	card_click_ref(self)
+	if G.your_collection then
+		for k, v in pairs(G.your_collection) do
+			if
+				self.area == v
+				and G.ACTIVE_MOD_UI
+			then
+				print(self.config.center)
+				UNCARDABLE.gameset_config_ui(self.config.center)
+			end
+		end
+	end
+end
+
+function UNCARDABLE.gameset_config_ui(center)
+
+	G.SETTINGS.paused = true
+	G.your_collection = {}
+	G.your_collection[1] = CardArea(
+		G.ROOM.T.x + 0.2 * G.ROOM.T.w / 2,
+		G.ROOM.T.h,
+		5.3 * G.CARD_W,
+		1.03 * G.CARD_H,
+		{ card_limit = 5, type = "title", highlight_limit = 0, collection = true }
+	)
+	local deck_tables = {
+		n = G.UIT.R,
+		config = { align = "cm", padding = 0, no_fill = true },
+		nodes = {
+			{ n = G.UIT.O, config = { object = G.your_collection[1]}},
+		},
+	}
+
+	local args = {
+		back_func = G.uncard_prev_collec,
+		contents = {
+			{
+				n = G.UIT.R,
+				config = {align = "cm", minw = 2.0, padding = 0.1, r = 0.1, colour = G.C.BLACK, emboss = 0.05},
+				nodes = { deck_tables},
+			},
+		},	
+	}
+	local configbox = create_UIBox_generic_options(args)
+	G.FUNCS.overlay_menu({
+		definition = configbox,
+	})
+end
