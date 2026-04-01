@@ -1,5 +1,5 @@
 
-    jokers = {
+    G.UNCARDABLE_jokers1 = {
         j_8_ball = {pos = 0, artist = {'heroofyore'}},
         j_mr_bones = {pos = 1, artist = {'heroofyore'}},
         j_sixth_sense = {pos = 2, artist = {'heroofyore'}},
@@ -69,17 +69,27 @@
 
     }
 
+    G.UNCARDABLE_jokers2 = {
+        j_drunkard = {pos = 0, artist = {'yuki'}},
+    }
+
 
 
     SMODS.Atlas {
-        key = "agglomeration",
-        path = "AGGLOMERATION.png",
+        key = "agglomeration1",
+        path = "AGGLOMERATION1.png",
         px = 71, 
         py = 95
     }
+    SMODS.Atlas {
+        key = "agglomeration2",
+        path = "AGGLOMERATION2.png",
+        px = 71,
+        py = 95,
+    }
     if not UNCARDABLE.config.disabled then
-        for jkr, data in pairs(jokers) do
-            SMODS["Joker"]:take_ownership(jkr, {atlas = "agglomeration",
+        for jkr, data in pairs(G.UNCARDABLE_jokers1) do
+            SMODS["Joker"]:take_ownership(jkr, {atlas = "agglomeration1",
             pos = {x = 0 + data.pos, y = 0},
             artist_credits = data.artist,
             soul_pos = {x = 0 + data.pos, y = 1},
@@ -241,8 +251,24 @@
             pos = {x = 0, y = 0},
             artist_credits = {"ploutre"},
             set_sprites = function(self, card, front)
-                local randompos = math.random(0, 4)
-                card.children.center:set_sprite_pos({x = randompos, y = 0})
+                local randomposweighted = math.random(0, 110)
+                local pos
+                if randomposweighted < 30 then
+                    pos = 0
+                end
+                if randomposweighted < 60 and randomposweighted >= 30 then
+                    pos = 1
+                end
+                if randomposweighted < 90 and randomposweighted >= 60 then
+                    pos = 2
+                end
+                if randomposweighted < 100 and randomposweighted >= 90 then
+                    pos = 3
+                end
+                if randomposweighted < 110 and randomposweighted >= 100 then
+                    pos = 4
+                end
+                card.children.center:set_sprite_pos({x = pos, y = 0})
             end
         }, true)
     end

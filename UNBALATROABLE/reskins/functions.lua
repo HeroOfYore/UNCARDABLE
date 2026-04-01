@@ -201,7 +201,7 @@ function Card:click()
 end
 
 function UNCARDABLE.gameset_config_ui(center)
-
+	print(center.key)
 	G.SETTINGS.paused = true
 	G.your_collection = {}
 	G.your_collection[1] = CardArea(
@@ -219,6 +219,22 @@ function UNCARDABLE.gameset_config_ui(center)
 		},
 	}
 
+	local skins = {}
+	skins[#skins+1] = G.UNCARDABLE_jokers1[center.key]
+	if G.UNCARDABLE_jokers2[center.key] ~= nil then
+		skins[#skins+1] = G.UNCARDABLE_jokers2[center.key]
+	end
+	--print(skins[1].pos, skins[2])
+	for i = 1, #skins do
+		print(skins[i].pos, "uncardable_agglomeration"..i, skins[i].artist[1])
+		local card = Card(G.ROOM.T.x + 0.2 * G.ROOM.T.w / 2, G.ROOM.T.y, G.CARD_W, G.CARD_H, nil, G.P_CENTERS[center.key])
+		card.children.center.atlas = G.ASSET_ATLAS["uncardable_agglomeration"..i]
+		card.children.center:set_sprite_pos({x = skins[i].pos, y = 0})
+		card.children.center.artist_credits = skins[i].artist
+		G.your_collection[1]:emplace(card)
+
+	end
+	INIT_COLLECTION_CARD_ALERTS()
 	local args = {
 		back_func = G.uncard_prev_collec,
 		contents = {
