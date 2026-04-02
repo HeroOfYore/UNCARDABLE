@@ -227,10 +227,14 @@ function UNCARDABLE.gameset_config_ui(center)
 	--print(skins[1].pos, skins[2])
 	for i = 1, #skins do
 		print(skins[i].pos, "uncardable_agglomeration"..i, skins[i].artist[1])
-		local card = Card(G.ROOM.T.x + 0.2 * G.ROOM.T.w / 2, G.ROOM.T.y, G.CARD_W, G.CARD_H, nil, G.P_CENTERS[center.key])
+		local dummycenter = UNCARDABLE.deep_copy(center)
+		print(dummycenter.key)
+		local card = Card(G.ROOM.T.x + 0.2 * G.ROOM.T.w / 2, G.ROOM.T.y, G.CARD_W, G.CARD_H, nil, dummycenter)
+		
 		card.children.center.atlas = G.ASSET_ATLAS["uncardable_agglomeration"..i]
 		card.children.center:set_sprite_pos({x = skins[i].pos, y = 0})
-		card.children.center.artist_credits = skins[i].artist
+		local obj = card.config.center or (card.config.tag and G.P_TAGS[card.config.tag.key])
+		obj.artist_credits = skins[i].artist
 		G.your_collection[1]:emplace(card)
 
 	end
@@ -249,4 +253,20 @@ function UNCARDABLE.gameset_config_ui(center)
 	G.FUNCS.overlay_menu({
 		definition = configbox,
 	})
+end
+
+function UNCARDABLE.deep_copy(curr, seen)
+	if type(curr) ~= "table" then
+		return curr
+	end
+	if seen and seen[curr] then
+		return seen[curr]
+	end
+	local s = seen or {}
+	local res = setmetatable({}, getmetatable(curr))
+	s[curr] = res
+	for k, v in pairs(curr) do
+		res[UNCARDABLE.deep_copy(k, s)] = UNCARDABLE.deep_copy(v, s)
+	end
+	return res
 end
