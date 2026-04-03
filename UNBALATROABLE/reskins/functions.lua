@@ -238,6 +238,9 @@ function UNCARDABLE.gameset_config_ui(center)
 		G.your_collection[1]:emplace(card)
 
 	end
+	for i = 1, #skins do --add buttons
+		
+	end
 	INIT_COLLECTION_CARD_ALERTS()
 	local args = {
 		back_func = G.uncard_prev_collec,
