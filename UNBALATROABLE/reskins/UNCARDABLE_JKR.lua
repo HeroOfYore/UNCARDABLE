@@ -37,7 +37,7 @@
         j_joker = {pos = 34, artist = {'guac'}},
         j_ring_master = {pos = 35, artist = {'ploutre'}},
         j_mime = {pos = 36, artist = {'heroofyore'}},
-        j_even_steven = {pos = 37, artist = {'murdock'}},
+        --j_even_steven = {pos = 37, artist = {'murdock'}},
         j_sock_and_buskin = {pos = 38, artist = {'8z'}},
         j_steel_joker = {pos = 39, artist={'stanza'}},
         j_to_the_moon = {pos = 40, artist={'birb'}},
@@ -66,6 +66,7 @@
         j_ancient = {pos = 64, artist = {'murdock'}},
         j_midas_mask = {pos = 65, artist = {'heroofyore'}},
         j_banner = {pos = 66, artist = {'heroofyore'}},
+        j_oops = {pos = 67, artist = {'murdock'}},
 
     }
 
@@ -111,8 +112,7 @@
         px = 71,
         py = 95
     }
-    SMODS.Atlas
-    {
+    SMODS.Atlas{
         key = "uncashable",
         path = "UNCASHABLE.png",
         px = 71,
@@ -369,6 +369,11 @@
         j_red_card = {row = 0, artist = {'heroofyore'}},
         j_burglar = {row = 0, artist = {'heroofyore'}},
         j_wrathful_joker = {row = 0, artist = {'heroofyore'}},
+        j_card_sharp = {row = 0, artist = {'heroofyore'}},
+        j_even_steven = {row = 0, artist = {'murdock'}},
+        j_chaos = {row = 0, artist = {'heroofyore'}},
+        j_gluttenous_joker = {row = 0, artist = {'heroofyore'}},
+        j_wily = {row = 0, artist = {'heroofyore'}},
 
 
     }
@@ -880,6 +885,60 @@
         path = "UNBEARABLE.png",
         atlas_table = 'ANIMATION_ATLAS',
         frames = 89,
+        fps = 10,
+        px = 71,
+        py = 95,
+    }
+        SMODS.Atlas {
+        key = "j_card_sharp_anim",
+        path = "UNDJABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 43,
+        fps = 10,
+        px = 71,
+        py = 95,
+    }
+        SMODS.Atlas {
+        key = "j_even_steven_anim",
+        path = "UNSEWERABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 5,
+        fps = 3,
+        px = 71,
+        py = 95,
+    }
+        SMODS.Atlas {
+        key = "j_chaos_anim",
+        path = "UNPRISONBALLABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 57,
+        fps = 10,
+        px = 71,
+        py = 95,
+    }
+        SMODS.Atlas {
+        key = "j_chaos_anim",
+        path = "UNPRISONBALLABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 57,
+        fps = 10,
+        px = 71,
+        py = 95,
+    }
+        SMODS.Atlas {
+        key = "j_gluttenous_joker_anim",
+        path = "UNCREAMABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 29,
+        fps = 5,
+        px = 71,
+        py = 95,
+    }
+        SMODS.Atlas {
+        key = "j_wily_anim",
+        path = "UNLAVABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 47,
         fps = 10,
         px = 71,
         py = 95,
