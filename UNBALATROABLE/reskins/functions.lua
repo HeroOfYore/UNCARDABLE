@@ -258,6 +258,32 @@ function UNCARDABLE.gameset_config_ui(center)
 	})
 end
 
+function UNCARDABLE.gameset(card, center)
+	if not center then
+		if not card then
+			return G.PROFILES[G.SETTINGS.profile].uncardable_gameset
+		end
+	center = card.config and card.config.center or card.effect and card.effect.center or card
+	end
+	if card.force_gameset then
+		return card.force_gameset
+	end
+	if center.force_gameset then
+		return center.force_gameset
+	end
+	
+end
+
+function Card:uncardable_set_gameset(center, gameset)
+	if
+		G.PROFILES[G.SETTINGS.profile].uncardable_gameset[center.key] == gameset
+	then
+		return
+	end
+	G.PROFILES[G.SETTINGS.profile].uncardable_gameset[center.key] = gameset
+	G:save_progress()
+end
+
 function UNCARDABLE.deep_copy(curr, seen)
 	if type(curr) ~= "table" then
 		return curr
