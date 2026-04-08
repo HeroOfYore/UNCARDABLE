@@ -90,12 +90,22 @@
     }
     if not UNCARDABLE.config.disabled then
         for jkr, data in pairs(G.UNCARDABLE_jokers1) do
-            SMODS["Joker"]:take_ownership(jkr, {atlas = "agglomeration1",
-            pos = {x = 0 + data.pos, y = 0},
-            artist_credits = data.artist,
-            soul_pos = {x = 0 + data.pos, y = 1},
-        }, true)
-
+            print(G.PROFILES[G.SETTINGS.profile].uncardable_alternates[jkr])
+            if G.PROFILES[G.SETTINGS.profile].uncardable_alternates[jkr] ~= nil then
+                local otherdata = G.UNCARDABLE_jokers2[jkr]
+                print(otherdata, "winning")
+                SMODS["Joker"]:take_ownership(jkr, {atlas = G.PROFILES[G.SETTINGS.profile].uncardable_alternates[jkr],
+                pos = {x = 0 + otherdata.pos, y = 0},
+                artist_credits = otherdata.artist,
+                soul_pos = {x = 0 + data.pos, y = 1},
+                }, true)
+            else
+                SMODS["Joker"]:take_ownership(jkr, {atlas = "agglomeration1",
+                pos = {x = 0 + data.pos, y = 0},
+                artist_credits = data.artist,
+                soul_pos = {x = 0 + data.pos, y = 1},
+                }, true)
+            end
         end
     end
 

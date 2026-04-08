@@ -192,15 +192,20 @@ function Card:click()
 			if
 				self.area == v
 				and G.ACTIVE_MOD_UI
+				and G.ACTIVE_MOD_UI.id == "UNCARDABLE"
 			then
-				print(self.config.center)
-				UNCARDABLE.gameset_config_ui(self.config.center)
+				print("starting")
+				if self.alternate_select then
+					print("true")
+					Card.uncardable_set_alternate(self, self.config.center, self.config.center.force_alternate)
+				end
+				UNCARDABLE.alternate_config_ui(self.config.center)
 			end
 		end
 	end
 end
 
-function UNCARDABLE.gameset_config_ui(center)
+function UNCARDABLE.alternate_config_ui(center)
 	print(center.key)
 	G.SETTINGS.paused = true
 	G.your_collection = {}
@@ -228,18 +233,17 @@ function UNCARDABLE.gameset_config_ui(center)
 	for i = 1, #skins do
 		print(skins[i].pos, "uncardable_agglomeration"..i, skins[i].artist[1])
 		local dummycenter = UNCARDABLE.deep_copy(center)
+		dummycenter.force_alternate = "uncardable_agglomeration" .. i
 		print(dummycenter.key)
 		local card = Card(G.ROOM.T.x + 0.2 * G.ROOM.T.w / 2, G.ROOM.T.y, G.CARD_W, G.CARD_H, nil, dummycenter)
 		
 		card.children.center.atlas = G.ASSET_ATLAS["uncardable_agglomeration"..i]
 		card.children.center:set_sprite_pos({x = skins[i].pos, y = 0})
+		card.alternate_select = true
 		local obj = card.config.center or (card.config.tag and G.P_TAGS[card.config.tag.key])
 		obj.artist_credits = skins[i].artist
 		G.your_collection[1]:emplace(card)
 
-	end
-	for i = 1, #skins do --add buttons
-		
 	end
 	INIT_COLLECTION_CARD_ALERTS()
 	local args = {
@@ -258,29 +262,33 @@ function UNCARDABLE.gameset_config_ui(center)
 	})
 end
 
-function UNCARDABLE.gameset(card, center)
+function UNCARDABLE.alternates(card, center)
 	if not center then
 		if not card then
-			return G.PROFILES[G.SETTINGS.profile].uncardable_gameset
+			return G.PROFILES[G.SETTINGS.profile].uncardable_alternates
 		end
 	center = card.config and card.config.center or card.effect and card.effect.center or card
 	end
-	if card.force_gameset then
-		return card.force_gameset
+	if card.force_alternate then
+		return card.force_alternate
 	end
-	if center.force_gameset then
-		return center.force_gameset
+	if center.force_alternate then
+		return center.force_alternate
 	end
 	
 end
 
-function Card:uncardable_set_gameset(center, gameset)
+function Card:uncardable_set_alternate(center, alternate)
+	print(alternate)
+	if G.PROFILES[G.SETTINGS.profile].uncardable_alternates == nil then
+		G.PROFILES[G.SETTINGS.profile].uncardable_alternates = {}
+	end
 	if
-		G.PROFILES[G.SETTINGS.profile].uncardable_gameset[center.key] == gameset
+		G.PROFILES[G.SETTINGS.profile].uncardable_alternates[center.key] == alternate
 	then
 		return
 	end
-	G.PROFILES[G.SETTINGS.profile].uncardable_gameset[center.key] = gameset
+	G.PROFILES[G.SETTINGS.profile].uncardable_alternates[center.key] = alternate
 	G:save_progress()
 end
 
