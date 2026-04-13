@@ -17,6 +17,8 @@ assert(SMODS.load_file('reskins/UNCARDABLE_OTHER.lua'))()
 -----------------------------
 ----------------------------
 
+
+
 ranks = {"Jack", "Queen", "King"}
 
 SMODS.Atlas {

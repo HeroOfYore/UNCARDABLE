@@ -36,7 +36,7 @@
         j_cloud_9 = {pos = 33, artist = {'ploutre'}},
         j_joker = {pos = 34, artist = {'guac'}},
         j_ring_master = {pos = 35, artist = {'ploutre'}},
-        j_mime = {pos = 36, artist = {'heroofyore'}},
+        --j_mime = {pos = 36, artist = {'heroofyore'}},
         --j_even_steven = {pos = 37, artist = {'murdock'}},
         j_sock_and_buskin = {pos = 38, artist = {'8z'}},
         j_steel_joker = {pos = 39, artist={'stanza'}},
@@ -88,6 +88,11 @@
         px = 71,
         py = 95,
     }
+
+    if G.PROFILES[G.SETTINGS.profile].uncardable_alternates == nil then
+	    G.PROFILES[G.SETTINGS.profile].uncardable_alternates = {}
+    end
+
     if not UNCARDABLE.config.disabled then
         for jkr, data in pairs(G.UNCARDABLE_jokers1) do
             print(G.PROFILES[G.SETTINGS.profile].uncardable_alternates[jkr])
@@ -384,6 +389,7 @@
         j_chaos = {row = 0, artist = {'heroofyore'}},
         j_gluttenous_joker = {row = 0, artist = {'heroofyore'}},
         j_wily = {row = 0, artist = {'heroofyore'}},
+        j_mime = {row = 0, artist = {'heroofyore'}},
 
 
     }
@@ -927,15 +933,6 @@
         py = 95,
     }
         SMODS.Atlas {
-        key = "j_chaos_anim",
-        path = "UNPRISONBALLABLE.png",
-        atlas_table = 'ANIMATION_ATLAS',
-        frames = 57,
-        fps = 10,
-        px = 71,
-        py = 95,
-    }
-        SMODS.Atlas {
         key = "j_gluttenous_joker_anim",
         path = "UNCREAMABLE.png",
         atlas_table = 'ANIMATION_ATLAS',
@@ -949,6 +946,15 @@
         path = "UNLAVABLE.png",
         atlas_table = 'ANIMATION_ATLAS',
         frames = 47,
+        fps = 10,
+        px = 71,
+        py = 95,
+    }
+        SMODS.Atlas {
+        key = "j_mime_anim",
+        path = "UNMIRRORABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 144,
         fps = 10,
         px = 71,
         py = 95,
