@@ -7,10 +7,18 @@
 --UNBALATROABLE.path = mod_path
 --UNBALATROABLE_config = SMODS.current_mod.config
 UNCARDABLE = SMODS.current_mod
+
+if next(SMODS.find_mod("malverk")) then
+    maloaded = true
+    print("MALVERK DETECTED")
+    assert(SMODS.load_file('reskins/malcompat'))()
+end
 --assert(SMODS.load_file("config.lua"))()
 ----UNBALATROABLE_config.gameset_toggle = true;
 assert(SMODS.load_file('reskins/functions.lua'))()
-assert(SMODS.load_file('reskins/UNCARDABLE_JKR.lua'))()
+if not maloaded then
+    assert(SMODS.load_file('reskins/UNCARDABLE_JKR.lua'))()
+end
 assert(SMODS.load_file('reskins/artistui.lua'))()
 assert(SMODS.load_file('reskins/quipadds.lua'))()
 assert(SMODS.load_file('reskins/UNCARDABLE_OTHER.lua'))()
