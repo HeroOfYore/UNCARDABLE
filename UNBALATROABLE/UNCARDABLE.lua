@@ -7,6 +7,7 @@
 --UNBALATROABLE.path = mod_path
 --UNBALATROABLE_config = SMODS.current_mod.config
 UNCARDABLE = SMODS.current_mod
+maloaded = false
 
 if next(SMODS.find_mod("malverk")) then
     maloaded = true
