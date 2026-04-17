@@ -12,7 +12,7 @@ maloaded = false
 if next(SMODS.find_mod("malverk")) then
     maloaded = true
     print("MALVERK DETECTED")
-    assert(SMODS.load_file('reskins/malcompat'))()
+    assert(SMODS.load_file('reskins/malcompat.lua'))()
 end
 --assert(SMODS.load_file("config.lua"))()
 ----UNBALATROABLE_config.gameset_toggle = true;
