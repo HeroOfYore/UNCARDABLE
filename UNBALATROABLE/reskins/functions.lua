@@ -307,3 +307,16 @@ function UNCARDABLE.deep_copy(curr, seen)
 	end
 	return res
 end
+
+function UNCARDABLE.create_overlay(content)
+	G.OVERLAY_MENU = UIBox{
+		definition = content,
+		config = {offset = {x = 0, y = 0}, align = 'cm', parent = G.OVERLAY}
+	}
+end
+function UNCARDABLE.TN_note()
+	local text_display = {
+		{n = G.UIT.R, config = {align = "cm", padding = 0.0, color = {0.1, 0.1, 0.1, 1}},
+	nodes = {{n = G.UIT.T, config = {text = "TN: It should be all caps or no caps", scale = 0.6, colour = G.ARGS.LOC_COLOURS["MUSTARD"]}}}}
+	}
+end

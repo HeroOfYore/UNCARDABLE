@@ -20,6 +20,7 @@ G.C.grass = SMODS.Gradient {
     colours = {HEX("ffcb00"), HEX("4acd00")}
 }
 
+
 G.ARGS.LOC_COLOURS['heroofyore'] = G.C.yore
 G.ARGS.LOC_COLOURS['ermywurm'] = HEX('AD7193')
 G.ARGS.LOC_COLOURS['guac'] = HEX('F394FF')
@@ -45,6 +46,8 @@ G.ARGS.LOC_COLOURS['suvib'] = HEX('287C88')
 G.ARGS.LOC_COLOURS['suvic'] = HEX('8F8F8F') 
 G.ARGS.LOC_COLOURS['yuki'] = HEX('FFB3FF')
 G.ARGS.LOC_COLOURS['grimp'] = HEX('C30606')
+
+G.ARGS.LOC_COLOURS['MUSTARD'] = HEX('c4a00e')
 
 function UNCARDABLE_artist_tooltip(_c, info_queue, card, desc_nodes, specific_vars, full_UI_table)
     localize{type = 'descriptions', set = 'UNCARDABLE Artist', key = _c.key, nodes = desc_nodes, vars = specific_vars or _c.vars}

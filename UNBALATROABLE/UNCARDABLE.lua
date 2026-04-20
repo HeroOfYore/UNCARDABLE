@@ -270,10 +270,16 @@ local UNCARDABLEConfigTab = function()
         ref_value = "disabled",
     })
     unbal_nodes[#unbal_nodes + 1] = create_toggle({
-        label = "Enable chipispis. Probably requires restart",
+        label = "Enable chipispis mode. Probably requires restart",
         active_colour = HEX("E01BDE"),
         ref_table = UNCARDABLE.config,
         ref_value = "chipispis",
+    })
+    unbal_nodes[#unbal_nodes + 1] = create_toggle({
+        label = "Enable random chipispis. Requires chipispis mode on.",
+        active_colour = HEX("E01BDE"),
+        ref_table = UNCARDABLE.config,
+        ref_value ="chipnumsis",
     })
     return {
 		n = G.UIT.ROOT,
