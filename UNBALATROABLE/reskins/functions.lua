@@ -40,7 +40,7 @@ function UNCARDABLE_create_UIBox_your_collection_content_sets()
 	for k, v in pairs(G.P_CENTER_POOLS.Joker) do
 		if not v.original_mod then
 			table.insert(joker_pool, v)
-			print(v.key)
+			--print(v.key)
 		end
 		--print(v.original_mod.id)
 	end
@@ -114,7 +114,7 @@ function UNCARDABLE_create_UIBox_your_collection_current_set()
 
 	joker_pool = {}
 	for j = 1, #G.P_CENTER_POOLS.Joker do
-		print(G.P_CENTER_POOLS.Joker[j].name)
+		--print(G.P_CENTER_POOLS.Joker[j].name)
 	end
 
 	local joker_options = {}
@@ -225,19 +225,49 @@ function UNCARDABLE.alternate_config_ui(center)
 	}
 
 	local skins = {}
+	local animated_skins = {}
+	local startingvalue = 0
+	local skinstartpoint = 0
 	skins[#skins+1] = G.UNCARDABLE_jokers1[center.key]
+	if G.UNCARDABLE_jokers1[center.key] == nil then
+		skinstartpoint = skinstartpoint + 1
+	end
 	if G.UNCARDABLE_jokers2[center.key] ~= nil then
 		skins[#skins+1] = G.UNCARDABLE_jokers2[center.key]
 	end
+	if G.UNCARDABLE_jokers3[center.key] ~= nil then
+		skins[#skins+1] = G.UNCARDABLE_jokers3[center.key]
+	end
+
+	if G.UNCARDABLE_animated_jokers[center.key] ~= nil then
+		animated_skins[#animated_skins+1] = G.UNCARDABLE_animated_jokers[center.key]
+		startingvalue = startingvalue + 1
+	end
+	print("skinnum: " .. #skins)
 	--print(skins[1].pos, skins[2])
+	for i = 1, #animated_skins do
+		print(animated_skins[i].row)
+		local dummycenter = UNCARDABLE.deep_copy(center)
+		dummycenter.force_alternate = animated_skins[i].anim
+		local card = Card(G.ROOM.T.x + 0.2 * G.ROOM.T.w / 2, G.ROOM.T.y, G.CARD_W, G.CARD_H, nil, dummycenter)
+		--print(G.ANIMATION_ATLAS["uncardable_" .. animated_skins[i].anim])
+		--card.children.center:remove()
+		--card.children.center = SMODS.create_sprite(card.T.x, card.T.y, card.T.w, card.T.h, G.ANIMATION_ATLAS["uncardable_"..animated_skins[i].anim], {x = 0, y = animated_skins[i].row})
+		card.children.center.atlas = G.ANIMATION_ATLAS["uncardable_".. animated_skins[i].anim]
+		--card.children.center:set_sprite_pos({x = 0, y = animated_skins[i].row})
+		card.alternate_select = true
+		local obj = card.config.center or (card.config.tag and G.P_TAGS[card.config.tabs.key])
+		obj.artist_credits = animated_skins[i].artist
+		G.your_collection[1]:emplace(card)
+	end
 	for i = 1, #skins do
 		print(skins[i].pos, "uncardable_agglomeration"..i, skins[i].artist[1])
 		local dummycenter = UNCARDABLE.deep_copy(center)
-		dummycenter.force_alternate = "uncardable_agglomeration" .. i
+		dummycenter.force_alternate = "agglomeration" .. i + skinstartpoint
 		print(dummycenter.key)
 		local card = Card(G.ROOM.T.x + 0.2 * G.ROOM.T.w / 2, G.ROOM.T.y, G.CARD_W, G.CARD_H, nil, dummycenter)
 		
-		card.children.center.atlas = G.ASSET_ATLAS["uncardable_agglomeration"..i]
+		card.children.center.atlas = G.ASSET_ATLAS["uncardable_agglomeration"..i+skinstartpoint]
 		card.children.center:set_sprite_pos({x = skins[i].pos, y = 0})
 		card.alternate_select = true
 		local obj = card.config.center or (card.config.tag and G.P_TAGS[card.config.tag.key])
@@ -245,6 +275,7 @@ function UNCARDABLE.alternate_config_ui(center)
 		G.your_collection[1]:emplace(card)
 
 	end
+
 	INIT_COLLECTION_CARD_ALERTS()
 	local args = {
 		back_func = G.uncard_prev_collec,

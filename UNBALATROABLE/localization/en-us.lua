@@ -356,6 +356,12 @@ return {
                     "Grimp the Melted Chimp"
                 }
             },
+            ['feesh'] = {
+                ['text'] =
+                {
+                    "Feeeshies"
+                }
+            },
         },
         Joker = {
              j_four_fingers={

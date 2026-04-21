@@ -72,8 +72,14 @@
 
     G.UNCARDABLE_jokers2 = {
         j_drunkard = {pos = 0, artist = {'yuki'}},
+        j_jolly = {pos = 1, artist = {'grimp'}},
+        j_mad = {pos = 2, artist = {'feesh'}},
     }
 
+    G.UNCARDABLE_jokers3 = {
+        j_jolly = {pos = 0, artist = {'grimp'}},
+
+    }
 
 
     SMODS.Atlas {
@@ -88,12 +94,19 @@
         px = 71,
         py = 95,
     }
+    SMODS.Atlas {
+        key = "agglomeration3",
+        path = "AGGLOMERATION3.png",
+        px = 71,
+        py = 95,
+    }
 
     if G.PROFILES[G.SETTINGS.profile].uncardable_alternates == nil then
 	    G.PROFILES[G.SETTINGS.profile].uncardable_alternates = {}
     end
 
     if not UNCARDABLE.config.disabled then
+        
         for jkr, data in pairs(G.UNCARDABLE_jokers1) do
             print(G.PROFILES[G.SETTINGS.profile].uncardable_alternates[jkr])
             if G.PROFILES[G.SETTINGS.profile].uncardable_alternates[jkr] ~= nil then
@@ -105,6 +118,8 @@
                 soul_pos = {x = 0 + data.pos, y = 1},
                 }, true)
             else
+                local totalskinnum = 0
+                
                 SMODS["Joker"]:take_ownership(jkr, {atlas = "agglomeration1",
                 pos = {x = 0 + data.pos, y = 0},
                 artist_credits = data.artist,
@@ -314,82 +329,83 @@
     --end of section
 
 
-    animated_jokers = {
-        j_lucky_cat = {row = 0, artist = {'heroofyore'}},
-        j_gift = {row = 1, artist = {'heroofyore'}},
-        j_odd_todd = {row = 2, artist = {'heroofyore'}},
-        j_brainstorm = {row = 3, artist = {'heroofyore'}},
-        j_campfire = {row = 4, artist = {'heroofyore'}},
+    G.UNCARDABLE_animated_jokers = {
+        j_lucky_cat = {row = 0, artist = {'heroofyore'}, anim = "j_lucky_cat_anim"},
+        j_gift = {row = 1, artist = {'heroofyore'}, anim = "j_gift_anim"},
+        j_odd_todd = {row = 2, artist = {'heroofyore'}, anim = "j_odd_todd_anim"},
+        j_brainstorm = {row = 3, artist = {'heroofyore'}, anim = "j_brainstorm_anim"},
+        j_campfire = {row = 4, artist = {'heroofyore'}, anim = "j_campfire_anim"},
 
-        j_smeared = {row = 0, artist = {'heroofyore'}},
-        j_ramen = {row = 1, artist = {'heroofyore'}},
-        j_flower_pot = {row = 2, artist = {'heroofyore'}},
-        j_madness = {row = 3, artist = {'heroofyore'}},
-        j_zany = {row = 4, artist = {'$7bramble'}},
-        j_todo_list = {row = 0, artist = {'heroofyore'}},
+        j_smeared = {row = 0, artist = {'heroofyore'}, anim = "j_smeared_anim"},
+        j_ramen = {row = 1, artist = {'heroofyore'}, anim = "j_ramen_anim"},
+        j_flower_pot = {row = 2, artist = {'heroofyore'}, anim = "j_flower_pot_anim"},
+        j_madness = {row = 3, artist = {'heroofyore'}, anim = "j_madness_anim"},
+        j_zany = {row = 4, artist = {'$7bramble'}, anim = "j_zany_anim"},
+        j_todo_list = {row = 0, artist = {'heroofyore'}, anim = "j_todo_list_anim"},
 
-        j_egg = {row = 0, artist = {'heroofyore'}},
-        j_burnt = {row = 1, artist = {'heroofyore'}},
-        j_invisible = {row = 2, artist = {'heroofyore'}},
+        j_egg = {row = 0, artist = {'heroofyore'}, anim = "j_egg_anim"},
+        j_burnt = {row = 1, artist = {'heroofyore'}, anim = "j_burnt_anim"},
+        j_invisible = {row = 2, artist = {'heroofyore'}, anim = "j_invisible_anim"},
 
-        j_bloodstone = {row = 0, artist = {'heroofyore'}},
-        j_jolly = {row = 1, artist = {'$7bramble'}},
+        j_bloodstone = {row = 0, artist = {'heroofyore'}, anim = "j_bloodstone_anim"},
+        j_jolly = {row = 1, artist = {'$7bramble'}, anim = "j_jolly_anim"},
 
-        j_constellation = {row = 0, artist = {'heroofyore'}},
-        j_shoot_the_moon = {row = 1, artist = {'heroofyore'}},
+        j_constellation = {row = 0, artist = {'heroofyore'}, anim = "j_constellation_anim"},
+        j_shoot_the_moon = {row = 1, artist = {'heroofyore'}, anim = "j_shoot_the_moon_anim"},
 
-        j_baseball = {row = 0, artist = {'heroofyore'}},
-        j_superposition = {row = 1, artist = {'ermywurm'}},
-        j_astronomer = {row = 2, artist = {'heroofyore'}},
-        j_baron = {row = 3, artist = {'heroofyore'}},
-        j_dusk = {row = 4, artist = {'heroofyore'}},
+        j_baseball = {row = 0, artist = {'heroofyore'}, anim = "j_baseball_anim"},
+        j_superposition = {row = 1, artist = {'ermywurm'}, anim = "j_superposition_anim"},
+        j_astronomer = {row = 2, artist = {'heroofyore'}, anim = "j_astronomer_anim"},
+        j_baron = {row = 3, artist = {'heroofyore'}, anim = "j_baron_anim"},
+        j_dusk = {row = 4, artist = {'heroofyore'}, anim = "j_dusk_anim"},
 
-        j_misprint = {row = 0, artist = {'heroofyore'}},
+        j_misprint = {row = 0, artist = {'heroofyore'}, anim = "j_misprint_anim"},
 
-        j_fibonacci = {row = 0, artist = {'heroofyore'}},
+        j_fibonacci = {row = 0, artist = {'heroofyore'}, anim = "j_fibonacci_anim"},
 
-        j_vampire = {row = 0, artist = {'ermywurm'}},
+        j_vampire = {row = 0, artist = {'ermywurm'}, anim = "j_vampire_anim"},
 
-        j_supernova = {row = 0, artist = {'heroofyore'}},
+        j_supernova = {row = 0, artist = {'heroofyore'}, anim = "j_supernova_anim"},
 
-        j_throwback = {row = 0, artist = {'heroofyore'}},
-        j_seance = {row = 1, artist = {'heroofyore'}},
+        j_throwback = {row = 0, artist = {'heroofyore'}, anim = "j_throwback_anim"},
+        j_seance = {row = 1, artist = {'heroofyore'}, anim = "j_seance_anim"},
 
-        j_hit_the_road = {row = 0, artist = {'heroofyore'}},
-        j_stone = {row = 0, artist = {'ploutre'}},
+        j_hit_the_road = {row = 0, artist = {'heroofyore'}, anim = "j_hit_the_road_anim"},
+        j_stone = {row = 0, artist = {'ploutre'}, anim = "j_stone_anim"},
 
-        j_reserved_parking = {row = 0, artist= {'heroofyore'}},
+        j_reserved_parking = {row = 0, artist= {'heroofyore'}, anim = "j_reserved_parking_anim"},
 
-        j_droll = {row = 0, artist = {'$7bramble', 'heroofyore'}},
-        j_onyx_agate = {row = 0, artist = {'heroofyore'}},
+        j_droll = {row = 0, artist = {'$7bramble', 'heroofyore'}, anim = "j_droll_anim"},
+        j_onyx_agate = {row = 0, artist = {'heroofyore'}, anim = "j_onyx_agate_anim"},
 
-        j_rocket = {row = 0, artist = {'heroofyore'}},
+        j_rocket = {row = 0, artist = {'heroofyore'}, anim = "j_rocket_anim"},
 
-        j_splash = {row = 0, artist = {'heroofyore'}},
+        j_splash = {row = 0, artist = {'heroofyore'}, anim = "j_splash_anim"},
         
-        j_drivers_license = {row = 0, artist = {'heroofyore'}},
+        j_drivers_license = {row = 0, artist = {'heroofyore'}, anim = "j_drivers_license_anim"},
     
-        j_duo = {row = 0, artist = {'heroofyore'}},
-        j_trio = {row = 0, artist = {'heroofyore'}},
-        j_family = {row = 0, artist = {'heroofyore'}},
-        j_order = {row = 0, artist = {'heroofyore'}},
-        j_tribe = {row = 0, artist = {'heroofyore'}},
+        j_duo = {row = 0, artist = {'heroofyore'}, anim = "j_duo_anim"},
+        j_trio = {row = 0, artist = {'heroofyore'}, anim = "j_trio_anim"},
+        j_family = {row = 0, artist = {'heroofyore'}, anim = "j_family_anim"},
+        j_order = {row = 0, artist = {'heroofyore'}, anim = "j_order_anim"},
+        j_tribe = {row = 0, artist = {'heroofyore'}, anim = "j_tribe_anim"},
 
-        j_raised_fist = {row = 0, artist = {'heroofyore'}},
+        j_raised_fist = {row = 0, artist = {'heroofyore'}, anim ="j_raised_fist_anim"},
 
-        j_mystic_summit = {row = 0, artist = {'heroofyore'}},
-        j_erosion = {row = 0, artist = {'heroofyore'}},
-        j_arrowhead = {row = 0, artist = {'heroofyore'}},
+        j_mystic_summit = {row = 0, artist = {'heroofyore'}, anim = "j_mystic_summit_anim"},
+        j_erosion = {row = 0, artist = {'heroofyore'}, anim = "j_erosion_anim"},
+        j_arrowhead = {row = 0, artist = {'heroofyore'}, anim ="j_arrowhead_anim"},
 
-        j_red_card = {row = 0, artist = {'heroofyore'}},
-        j_burglar = {row = 0, artist = {'heroofyore'}},
-        j_wrathful_joker = {row = 0, artist = {'heroofyore'}},
-        j_card_sharp = {row = 0, artist = {'heroofyore'}},
-        j_even_steven = {row = 0, artist = {'murdock'}},
-        j_chaos = {row = 0, artist = {'heroofyore'}},
-        j_gluttenous_joker = {row = 0, artist = {'heroofyore'}},
-        j_wily = {row = 0, artist = {'heroofyore'}},
-        j_mime = {row = 0, artist = {'heroofyore'}},
+        j_red_card = {row = 0, artist = {'heroofyore'}, anim = "j_red_card_anim"},
+        j_burglar = {row = 0, artist = {'heroofyore'}, anim = "j_burglar_anim"},
+        j_wrathful_joker = {row = 0, artist = {'heroofyore'}, anim = "j_wrathful_joker_anim"},
+        j_card_sharp = {row = 0, artist = {'heroofyore'}, anim = "j_card_sharp_anim"},
+        j_even_steven = {row = 0, artist = {'murdock'}, anim = "j_even_steven_anim"},
+        j_chaos = {row = 0, artist = {'heroofyore'}, anim = "j_chaos_anim"},
+        j_gluttenous_joker = {row = 0, artist = {'heroofyore'}, anim = "j_gluttenous_joker_anim"},
+        j_wily = {row = 0, artist = {'heroofyore'}, anim = "j_wily_anim"},
+        j_mime = {row = 0, artist = {'heroofyore'}, anim = "j_mime_anim"},
+        j_mad = {row = 0, artist = {'murdock'}, anim = "j_mad_anim"},
 
 
     }
@@ -959,24 +975,75 @@
         px = 71,
         py = 95,
     }
+    SMODS.Atlas {
+        key = "j_mad_anim",
+        path = "UNHOLDABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 12,
+        fps = 10,
+        px = 71,
+        py = 95,
+    }
     if not UNCARDABLE.config.disabled then
-        for jkr, data in pairs(animated_jokers) do
+        for jkr, data in pairs(G.UNCARDABLE_animated_jokers) do
             SMODS["Joker"]:take_ownership(jkr, {atlas = jkr .. "_anim",
             pos = {x = 0, y = 0 + data.row},
             artist_credits = data.artist,
             --soul_pos = {x = 0, y = 1}
         }, true)
         end
+        local joker_pool = {}
+        for l, v in pairs(G.P_CENTER_POOLS.Joker) do
+            if not v.original_mod then
+                table.insert(joker_pool, v)
+            end
+        end
+        for jkr, data in pairs(joker_pool) do
+            print(data.key, " is currently being checked")
+            if G.PROFILES[G.SETTINGS.profile].uncardable_alternates[data.key] ~= nil then
+                local checkagainst = G.PROFILES[G.SETTINGS.profile].uncardable_alternates[data.key]
+                print(checkagainst, " ", data.key)
+                --local jokerdeclare, count = string.gsub(checkagainst, "_anim", "")
+                local position
+                local isAnimated = false
+                if checkagainst == "agglomeration1" or checkagainst == "uncardable_agglomeration1" then
+                    position = G.UNCARDABLE_jokers1[data.key]
+                    print(position.pos)
+                elseif checkagainst == "agglomeration2" or checkagainst == "uncardable_agglomeration2" then
+                    position = G.UNCARDABLE_jokers2[data.key]
+                
+                elseif checkagainst == "agglomeration3" or checkagainst == "uncardable_agglomeration3"  then
+                    position = G.UNCARDABLE_jokers3[data.key]
+                else
+                    position = G.UNCARDABLE_animated_jokers[data.key]
+                    isAnimated = true
+                    SMODS["Joker"]:take_ownership(data.key, {atlas = G.PROFILES[G.SETTINGS.profile].uncardable_alternates[data.key],
+                    pos = {x = 0, y = 0 + position.row},
+                    artist_credits = position.artist,
+                }, true)
+                end
+                
+                if isAnimated == false then
+                    print(position.pos)
+                    SMODS["Joker"]:take_ownership(data.key, {atlas = G.PROFILES[G.SETTINGS.profile].uncardable_alternates[data.key],
+                    pos = {x = 0 + position.pos, y = 0},
+                    artist_credits = position.artist,
+                    soul_pos = {x = 0 + position.pos, y = 1},
+                    }, true)
+                end
+            end
+        end
     end
-        SMODS.Atlas{
-            key = "j_perkeo_anim",
-            path = "UNLEGENDABLE.png",
-            atlas_table = 'ANIMATION_ATLAS',
-            frames = 108,
-            fps = 60,
-            px = 71,
-            py = 95
-        }
+    SMODS.Atlas{
+        key = "j_perkeo_anim",
+        path = "UNLEGENDABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 108,
+        fps = 60,
+        px = 71,
+        py = 95
+    }
+    
     if not UNCARDABLE.config.disabled then
         for jkr, data in pairs(animated_with_soul) do
             SMODS["Joker"]:take_ownership(jkr, {atlas = jkr .. "_anim",

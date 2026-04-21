@@ -136,7 +136,7 @@ end
                --print(locstring)
                --print(pos)
                for text, lstring in pairs(G.localization.descriptions.Joker[pos].text) do
-                  G.localization.descriptions.Joker[pos].text[text] = string.gsub(lstring, "Chips", ispis)
+                  G.localization.descriptions.Joker[pos].text[text] = string.gsub(lstring, "Chips", "chipispis")
                end
             end
             for pos, locstring in pairs(G.localization.descriptions.Planet) do
