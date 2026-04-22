@@ -1126,4 +1126,6 @@
         }, true)
     end
 
- 
+function UNCARDABLE.UNCARD_REINIT_SPRITES() 
+	init_localization()
+end

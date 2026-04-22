@@ -59,7 +59,7 @@ function UNCARDABLE_create_UIBox_your_collection_content_sets()
 	for i = 1, #G.your_collection do
 		for j = 1, 5 do
 			local center = joker_pool[indexnum]
-			print(center.key, #G.your_collection, joker_pool[indexnum].key)
+			--print(center.key, #G.your_collection, joker_pool[indexnum].key)
 			local card = Card(G.your_collection[i].T.x + G.your_collection[i].T.w / 2, G.your_collection[i].T.y, G.CARD_W,G.CARD_H,nil, G.P_CENTERS[center.key])
 			
 			G.your_collection[i]:emplace(card)
@@ -251,9 +251,10 @@ function UNCARDABLE.alternate_config_ui(center)
 		dummycenter.force_alternate = animated_skins[i].anim
 		local card = Card(G.ROOM.T.x + 0.2 * G.ROOM.T.w / 2, G.ROOM.T.y, G.CARD_W, G.CARD_H, nil, dummycenter)
 		--print(G.ANIMATION_ATLAS["uncardable_" .. animated_skins[i].anim])
-		--card.children.center:remove()
-		--card.children.center = SMODS.create_sprite(card.T.x, card.T.y, card.T.w, card.T.h, G.ANIMATION_ATLAS["uncardable_"..animated_skins[i].anim], {x = 0, y = animated_skins[i].row})
-		card.children.center.atlas = G.ANIMATION_ATLAS["uncardable_".. animated_skins[i].anim]
+		card.children.center:remove()
+		card.children.center = SMODS.create_sprite(card.T.x, card.T.y, card.T.w, card.T.h, G.ANIMATION_ATLAS["uncardable_" .. animated_skins[i].anim], {x = 0, y = animated_skins[i].row})
+		card.children.center:set_role({major = card, role_type = 'Glued', draw_major = card})
+		--card.children.center.atlas = G.ANIMATION_ATLAS["uncardable_".. animated_skins[i].anim]
 		--card.children.center:set_sprite_pos({x = 0, y = animated_skins[i].row})
 		card.alternate_select = true
 		local obj = card.config.center or (card.config.tag and G.P_TAGS[card.config.tabs.key])
@@ -262,13 +263,17 @@ function UNCARDABLE.alternate_config_ui(center)
 	end
 	for i = 1, #skins do
 		print(skins[i].pos, "uncardable_agglomeration"..i, skins[i].artist[1])
+		print(skins[i].pos, skins[i], skinstartpoint, "agglomeration"..i+skinstartpoint)
 		local dummycenter = UNCARDABLE.deep_copy(center)
 		dummycenter.force_alternate = "agglomeration" .. i + skinstartpoint
 		print(dummycenter.key)
 		local card = Card(G.ROOM.T.x + 0.2 * G.ROOM.T.w / 2, G.ROOM.T.y, G.CARD_W, G.CARD_H, nil, dummycenter)
 		
-		card.children.center.atlas = G.ASSET_ATLAS["uncardable_agglomeration"..i+skinstartpoint]
-		card.children.center:set_sprite_pos({x = skins[i].pos, y = 0})
+		card.children.center:remove()
+		card.children.center = SMODS.create_sprite(G.ROOM.T.x + 0.2 * G.ROOM.T.w, G.ROOM.T.y, G.CARD_W, G.CARD_H, G.ASSET_ATLAS["uncardable_agglomeration"..i+skinstartpoint], {x = 0 + skins[i].pos, y = 0})
+		card.children.center:set_role({major = card, role_type = 'Glued', draw_major = card})
+		--card.children.center.atlas = G.ASSET_ATLAS["uncardable_agglomeration" .. i+skinstartpoint]
+		--card.children.center:set_sprite_pos({x = 0 + skins[i].pos, y = 0})
 		card.alternate_select = true
 		local obj = card.config.center or (card.config.tag and G.P_TAGS[card.config.tag.key])
 		obj.artist_credits = skins[i].artist
@@ -314,13 +319,13 @@ function Card:uncardable_set_alternate(center, alternate)
 	if G.PROFILES[G.SETTINGS.profile].uncardable_alternates == nil then
 		G.PROFILES[G.SETTINGS.profile].uncardable_alternates = {}
 	end
-	if
-		G.PROFILES[G.SETTINGS.profile].uncardable_alternates[center.key] == alternate
+	if G.PROFILES[G.SETTINGS.profile].uncardable_alternates[center.key] == alternate
 	then
 		return
 	end
 	G.PROFILES[G.SETTINGS.profile].uncardable_alternates[center.key] = alternate
 	G:save_progress()
+	UNCARDABLE.UNCARD_REINIT_SPRITES()
 end
 
 function UNCARDABLE.deep_copy(curr, seen)
