@@ -315,7 +315,7 @@ function UNCARDABLE.alternates(card, center)
 end
 
 function Card:uncardable_set_alternate(center, alternate)
-	print(alternate)
+	print("alternate: ", alternate, ", self: ", self)
 	if G.PROFILES[G.SETTINGS.profile].uncardable_alternates == nil then
 		G.PROFILES[G.SETTINGS.profile].uncardable_alternates = {}
 	end
@@ -355,4 +355,12 @@ function UNCARDABLE.TN_note()
 		{n = G.UIT.R, config = {align = "cm", padding = 0.0, color = {0.1, 0.1, 0.1, 1}},
 	nodes = {{n = G.UIT.T, config = {text = "TN: It should be all caps or no caps", scale = 0.6, colour = G.ARGS.LOC_COLOURS["MUSTARD"]}}}}
 	}
+end
+
+local set_spritesref = Card.set_sprites
+function Card:set_sprites(center, front)
+	set_spritesref(self, center, front)
+	if center then 
+		print(center.atlas)
+	end
 end

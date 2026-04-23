@@ -74,6 +74,7 @@
         j_drunkard = {pos = 0, artist = {'yuki'}},
         j_jolly = {pos = 1, artist = {'grimp'}},
         j_mad = {pos = 2, artist = {'feesh'}},
+        j_hack = {pos = 3, artist = {'stanza'}},
     }
 
     G.UNCARDABLE_jokers3 = {
@@ -109,7 +110,7 @@
         
         for jkr, data in pairs(G.UNCARDABLE_jokers1) do
             print(G.PROFILES[G.SETTINGS.profile].uncardable_alternates[jkr])
-            if G.PROFILES[G.SETTINGS.profile].uncardable_alternates[jkr] ~= nil then
+            --[[if G.PROFILES[G.SETTINGS.profile].uncardable_alternates[jkr] ~= nil then
                 local otherdata = G.UNCARDABLE_jokers2[jkr]
                 print(otherdata, "winning")
                 SMODS["Joker"]:take_ownership(jkr, {atlas = G.PROFILES[G.SETTINGS.profile].uncardable_alternates[jkr],
@@ -117,7 +118,7 @@
                 artist_credits = otherdata.artist,
                 soul_pos = {x = 0 + data.pos, y = 1},
                 }, true)
-            else
+            else]]--
                 local totalskinnum = 0
                 
                 SMODS["Joker"]:take_ownership(jkr, {atlas = "agglomeration1",
@@ -125,7 +126,7 @@
                 artist_credits = data.artist,
                 soul_pos = {x = 0 + data.pos, y = 1},
                 }, true)
-            end
+            --end
         end
     end
 
@@ -406,6 +407,7 @@
         j_wily = {row = 0, artist = {'heroofyore'}, anim = "j_wily_anim"},
         j_mime = {row = 0, artist = {'heroofyore'}, anim = "j_mime_anim"},
         j_mad = {row = 0, artist = {'murdock'}, anim = "j_mad_anim"},
+        j_hack = {row = 0, artist = {'heroofyore'}, anim = "j_hack_anim"},
 
 
     }
@@ -984,6 +986,15 @@
         px = 71,
         py = 95,
     }
+        SMODS.Atlas {
+        key = "j_hack_anim",
+        path = "UNDIRTABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 45,
+        fps = 10,
+        px = 71,
+        py = 95,
+    }
     if not UNCARDABLE.config.disabled then
         for jkr, data in pairs(G.UNCARDABLE_animated_jokers) do
             SMODS["Joker"]:take_ownership(jkr, {atlas = jkr .. "_anim",
@@ -1127,5 +1138,58 @@
     end
 
 function UNCARDABLE.UNCARD_REINIT_SPRITES() 
-	init_localization()
+	local joker_pool = {}
+    print("reinitializing")
+    for l, v in pairs(G.P_CENTERS) do
+                local isj, count = string.gsub(l, "j_", "j_")
+        if not v.original_mod and count == 1 then
+            table.insert(joker_pool, v)
+        end
+    end
+    for jkr, data in pairs(joker_pool) do
+        print(data.key, " is currently being checked")
+        if G.PROFILES[G.SETTINGS.profile].uncardable_alternates[data.key] ~= nil then
+            local checkagainst = G.PROFILES[G.SETTINGS.profile].uncardable_alternates[data.key]
+            print(checkagainst, " ", data.key)
+            --local jokerdeclare, count = string.gsub(checkagainst, "_anim", "")
+            local position
+            local isAnimated = false
+            if checkagainst == "agglomeration1" or checkagainst == "uncardable_agglomeration1" then
+                position = G.UNCARDABLE_jokers1[data.key]
+                print(position.pos)
+            elseif checkagainst == "agglomeration2" or checkagainst == "uncardable_agglomeration2" then
+                position = G.UNCARDABLE_jokers2[data.key]
+            
+            elseif checkagainst == "agglomeration3" or checkagainst == "uncardable_agglomeration3"  then
+                position = G.UNCARDABLE_jokers3[data.key]
+            else
+                position = G.UNCARDABLE_animated_jokers[data.key]
+                --G.P_CENTERS[data.key]:remove()
+                print(position.row, "uncardable_"..G.PROFILES[G.SETTINGS.profile].uncardable_alternates[data.key])
+                isAnimated = true
+                --G.P_CENTERS[data.key] = SMODS.create_sprite(G.ROOM.T.x + 0.2 * G.ROOM.T.w, G.ROOM.T.y, G.CARD_W, G.CARD_H, G.ANIMATION_ATLAS["uncardable_"..G.PROFILES[G.SETTINGS.profile].uncardable_alternates[data.key]], {x = 0, y = 0 + position.row})
+                SMODS["Joker"]:take_ownership(data.key, {atlas = "uncardable_"..G.PROFILES[G.SETTINGS.profile].uncardable_alternates[data.key],
+                pos = {x = 0, y = 0 + position.row},
+                unlocked = true,
+                discovered = true,
+                artist_credits = position.artist,
+                }, true)
+            end
+            
+            if isAnimated == false then
+                print(position.pos, "uncardable_"..G.PROFILES[G.SETTINGS.profile].uncardable_alternates[data.key], data.key)
+                --G.P_CENTERS[data.key]:remove()
+                --G.P_CENTERS[data.key] = SMODS.create_sprite(G.ROOM.T.x + 0.2 * G.ROOM.T.w, G.ROOM.T.y, G.CARD_W, G.CARD_H, G.ASSET_ATLAS["uncardable_"..G.PROFILES[G.SETTINGS.profile].uncardable_alternates[data.key]], { x = 0 + position.pos, y = 0})
+                --G.P_CENTERS[data.key].unlocked = true
+                --G.P_CENTERS[data.key].discovered = true
+                SMODS["Joker"]:take_ownership(data.key, {atlas = "uncardable_"..G.PROFILES[G.SETTINGS.profile].uncardable_alternates[data.key],
+                pos = {x = 0 + position.pos, y = 0},
+                unlocked = true,
+                discovered = true,
+                artist_credits = position.artist,
+                soul_pos = {x = 0 + position.pos, y = 1},
+                }, true)
+            end
+        end
+    end
 end
