@@ -31,6 +31,13 @@ assert(SMODS.load_file('reskins/UNCARDABLE_OTHER.lua'))()
 ranks = {"Jack", "Queen", "King"}
 
 SMODS.Atlas {
+    key = 'balatro',
+    path = 'uncardalogo.png',
+    px = 333,
+    py = 216,
+    prefix_config = {key = false}
+}
+SMODS.Atlas {
     key = 'unbeataspades',
     px = 71,
     py = 95,
@@ -300,4 +307,24 @@ SMODS.current_mod.config_tab = UNCARDABLEConfigTab
 
 G.FUNCS.close_initial_config = function()
     SMODS.save_mod_config(UNCARDABLE)
+end
+
+
+
+
+local game_main_menu_ref = Game.main_menu
+function Game:main_menu(change_context)
+    local ret = game_main_menu_ref(self, change_context)
+    G.SPLASH_BACK:define_draw_steps({
+        {
+            shader = "splash",
+            send = {
+                { name = "time", ref_table = G.TIMERS, ref_value = "REAL_SHADER"},
+                { name = "vort_speed", val = 0.4 },
+                { name = "colour_1", ref_table = G.C, ref_value = "splashpink"},
+                {name = "colour_2", ref_table = G.C, ref_value = "splashblue"},
+            },
+        },
+    })
+    return ret
 end

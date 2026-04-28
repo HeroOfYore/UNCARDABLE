@@ -19,7 +19,14 @@ G.C.grass = SMODS.Gradient {
     key = "GRASS",
     colours = {HEX("ffcb00"), HEX("4acd00")}
 }
-
+G.C.splashpink = SMODS.Gradient {
+    key = "SPPINK",
+    colours = {HEX("ff6bda"), HEX("ffbae8")}
+}
+G.C.splashblue = SMODS.Gradient {
+    key = "SPBLUE",
+    colours = {HEX("4F81FF"), HEX("062880")}
+}
 
 G.ARGS.LOC_COLOURS['heroofyore'] = G.C.yore
 G.ARGS.LOC_COLOURS['ermywurm'] = HEX('AD7193')
