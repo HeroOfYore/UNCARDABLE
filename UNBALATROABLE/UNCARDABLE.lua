@@ -315,6 +315,19 @@ end
 local game_main_menu_ref = Game.main_menu
 function Game:main_menu(change_context)
     local ret = game_main_menu_ref(self, change_context)
+
+    local newcard = Card(
+			G.title_top.T.x,
+			G.title_top.T.y,
+			G.CARD_W,
+			G.CARD_H,
+			G.P_CARDS.empty,
+			G.P_CENTERS.c_base,
+			{ bypass_discovery_center = true }
+		)
+            G.title_top:emplace(newcard)
+    newcard.no_ui = true
+    newcard.states.visible = false
     G.SPLASH_BACK:define_draw_steps({
         {
             shader = "splash",
