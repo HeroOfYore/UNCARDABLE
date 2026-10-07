@@ -26,6 +26,7 @@ assert(SMODS.load_file('reskins/artistui.lua'))()
 assert(SMODS.load_file('reskins/quipadds.lua'))()
 assert(SMODS.load_file('reskins/UNCARDABLE_OTHER.lua'))()
 assert(SMODS.load_file('reskins/UNCARDABLE_VOUCHER.lua'))()
+assert(SMODS.load_file('reskins/palettes.lua'))()
 -----------------------------
 ----------------------------
 
@@ -148,6 +149,7 @@ SMODS.DeckSkin({
     },
     pos_style = 'collab'
 })
+
 -----------------------------
 -----------------------------
 

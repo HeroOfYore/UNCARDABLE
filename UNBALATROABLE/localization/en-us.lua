@@ -130,7 +130,17 @@ return {
             --ui stuff
             uncard_chips = "chipispis",
             uncard_skins = "Reskin Selection",
-
+            
+            uncard_palettes={
+                'Default',
+                'Trans Rights',
+                'V/S',
+                'Quaver',
+                'Shrimp',
+                "Sforzando",
+                "Clef",
+                "Treble",
+            },
         },
         v_dictionary = {
             a_mult_minus="-#1# Mult",
