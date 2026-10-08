@@ -133,6 +133,9 @@ return {
             
             uncard_palettes={
                 'Default',
+                'UNBEATABLE Default',
+                'Inverted',
+                'Creamsicle',
                 'Trans Rights',
                 'V/S',
                 'Quaver',
