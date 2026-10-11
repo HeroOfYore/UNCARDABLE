@@ -4,4 +4,5 @@ return {
     ["chipnumsis"] = false;
     ["tarotoriginal"] = false;
     palette_num = 1,
+    ["whitetext"] = false;
 }
