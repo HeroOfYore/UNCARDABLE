@@ -206,7 +206,7 @@ function Card:click()
 end
 
 function UNCARDABLE.alternate_config_ui(center)
-	print(center.key)
+	--print(center.key)
 	G.SETTINGS.paused = true
 	G.your_collection = {}
 	G.your_collection[1] = CardArea(
@@ -361,6 +361,6 @@ local set_spritesref = Card.set_sprites
 function Card:set_sprites(center, front)
 	set_spritesref(self, center, front)
 	if center then 
-		print(center.atlas)
+		--print(center.atlas)
 	end
 end

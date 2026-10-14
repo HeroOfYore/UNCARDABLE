@@ -194,6 +194,9 @@ return {
                 'Twindrill(Light)',
                 "Treble",
                 'RJ',
+                'Octave',
+                'Octave (Darkmode)',
+                'DORU_TEST',
             },
         },
         v_dictionary = {

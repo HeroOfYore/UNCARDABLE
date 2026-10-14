@@ -5,4 +5,5 @@ return {
     ["tarotoriginal"] = false;
     palette_num = 1,
     ["whitetext"] = false;
+    ["PALETTE_MANIA"] = false;
 }

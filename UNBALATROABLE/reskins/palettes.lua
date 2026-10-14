@@ -18,11 +18,31 @@
 	end
 end]]
 
+
+G.C.DORU_GRADIENT = SMODS.Gradient{
+ key = "DORU_GRADIENT",
+ colours = {HEX("bcffb9"), HEX("4bf0ff")}
+}
+G.C.Noire = SMODS.Gradient{
+	key = "Noire",
+	colours = {HEX("000000"), HEX("FFFFFF")}
+}
+
+SMODS.Atlas {
+	key = 'PALETTE_SPRITES',
+	px = 25,
+	py = 25,
+	disable_mipmap = true;
+	path = 'PALETTE_SPRITES.png'
+}
+
+
+
 SMODS.current_mod.extra_tabs = function()
 
     return {
                 {
-                    label = 'Test Palette page',
+                    label = 'Palettes',
                     tab_definition_function = function()
                     return {n = G.UIT.ROOT, config = {
                             emboss = 0.05,
@@ -41,7 +61,21 @@ SMODS.current_mod.extra_tabs = function()
 								current_option = UNCARDABLE.config.palette_num,
 								opt_callback = "uncardable_change_palette",
 								ref_table = UNCARDABLE.config,
-								ref_value = "palette_num"
+								ref_value = "palette_num",
+								no_pips = true,
+								mid = SMODS.GUI.dropdown_select({
+									id = "uncardable_palette_dropdown",
+									options = localize('uncard_palettes'),
+									minw = 5,
+									scale = 0.5,
+									align = "cm",
+									option_align = "cm",
+									ref_table = UNCARDABLE.config,
+									ref_value = "palette_num",
+									callback = "uncardable_palette_drop_change",
+									close_on_select = true,
+									max_menu_h = 3,
+								})
 							}),
 							create_toggle(
 								{
@@ -50,17 +84,58 @@ SMODS.current_mod.extra_tabs = function()
 									ref_table = UNCARDABLE.config,
 									ref_value = "whitetext",
 								}
-							)
+							),
+							create_toggle(
+								{
+									label = "Enable PALETTE MANIA. at your own risk",
+									active_colour = HEX("E01BDE"),
+									ref_table = UNCARDABLE.config,
+									ref_value = "PALETTE_MANIA",
+								}
+							),
+							UNCARDABLE.embedded_ui_sprite()
                         }}
                 end,
                 },
         }
 end
 
+function UNCARDABLE.embedded_ui_sprite()
+	G.uncardable_config_sprite = SMODS.create_sprite(400, 400, 4, 4, G.ASSET_ATLAS["uncardable_PALETTE_SPRITES"], {x = UNCARDABLE.config.palette_num, y = 0})
+	local uiEX =
+	{
+		n = G.UIT.R,
+		config = {align = "cm", padding = 0.07, no_fill = true},
+		nodes = {
+			{n = G.UIT.O, config = {object = G.uncardable_config_sprite}}
+		}
+	}
+	return uiEX
+end
+
 G.FUNCS.uncardable_change_palette = function(color)
+	print(UNCARDABLE.config.palette_num)
 	UNCARDABLE.config.palette_num = color.to_key
+	print(UNCARDABLE.config.palette_num)
+
+	G.uncardable_config_sprite:set_sprite_pos({x=UNCARDABLE.config.palette_num, y = 0})
+	--UNCARDABLE.embedded_ui_sprite()
 	Blind:change_colour(G.C.BLUE)
 	--UNCARDABLE.uncardable_change_ui()
+end
+
+G.FUNCS.uncardable_palette_drop_change = function(e)
+	--print(e.config.args_table.options)
+	local chosenPos
+	for key, value in pairs(e.config.args_table.options) do
+		if value == e.config.value
+		then
+			chosenPos = key
+		end
+	end
+	UNCARDABLE.config.palette_num = chosenPos 
+	G.uncardable_config_sprite:set_sprite_pos({x=UNCARDABLE.config.palette_num, y = 0})
+	Blind:change_colour(G.C.BLUE)
 end
 
 function UNCARDABLE.apply_main_colour(color)
@@ -720,6 +795,37 @@ function Blind:change_colour(blind_col)
 		then
 			ease_colour(G.C.UI.TEXT_LIGHT, HEX("151318"))
 		end
+	elseif UNCARDABLE.config.palette_num == 63 -- Octave
+	then
+		UNCARDABLE.apply_main_colour(HEX("FFD0DF"))
+		UNCARDABLE.apply_dark_and_mult_colour(HEX("c37293"))
+		ease_colour(G.C.DYN_UI.BOSS_MAIN, HEX("6DB68C"))
+		ease_colour(G.C.DYN_UI.BOSS_DARK, HEX("C2E0F0"))
+		if(UNCARDABLE.config.whitetext == false)
+		then
+			ease_colour(G.C.UI.TEXT_LIGHT, HEX("4C2838"))
+		end
+	elseif UNCARDABLE.config.palette_num == 64 -- Octave (Darkmode)
+	then
+		UNCARDABLE.apply_main_colour(HEX("c37293"))
+		UNCARDABLE.apply_dark_and_mult_colour(HEX("6DB68C"))
+		ease_colour(G.C.DYN_UI.BOSS_MAIN, HEX("FFD0DF"))
+		G.C.DYN_UI.BOSS_DARK = HEX("4C2838")
+		if UNCARDABLE.config.whitetext == false
+		then
+			ease_colour(G.C.UI.TEXT_LIGHT, HEX("C2E0F0"))
+		end
+	elseif UNCARDABLE.config.palette_num == 65 -- Noire
+	then
+		UNCARDABLE.apply_main_colour(HEX("c37293"))
+		UNCARDABLE.apply_dark_and_mult_colour(HEX("6DB68C"))
+		ease_colour(G.C.DYN_UI.BOSS_MAIN, HEX("FFD0DF"))
+		ease_colour(G.C.DYN_UI.BOSS_DARK, HEX("4C2838"))
+		G.C.DYN_UI.BOSS_DARK = G.C.Noire
+		if UNCARDABLE.config.whitetext == false
+		then
+			ease_colour(G.C.UI.TEXT_LIGHT, HEX("C2E0F0"))
+		end
 	--[[elseif UNCARDABLE.config.palette_num == 9
 	then
 		ease_colour(G.C.DYN_UI.MAIN, HEX("70d9ff")) --border and behind Small Blind text
@@ -736,6 +842,12 @@ function Blind:change_colour(blind_col)
 		--G.C.UI.TEXT_DARK = HEX("ff97b0") -- i have literally no idea
 		--G.C.UI.TEXT_INACTIVE = HEX("ff97b0") --sets the colours for the "Play Hand" and "Discard" when not in use
 		--G.C.WHITE = HEX("ff97b0") -- does change everything. but also tints the entire god damn screen.]]
+	end
+	if UNCARDABLE.config.PALETTE_MANIA == true
+	then
+		--print("changing palette")
+		local randompal = math.random(1, 65)
+		UNCARDABLE.config.palette_num = randompal
 	end
 end
 
@@ -926,6 +1038,15 @@ function Game:start_run(args)
 		elseif UNCARDABLE.config.palette_num == 61
 		then
 			G.C.WHITE = HEX("646d7c")
+		elseif UNCARDABLE.config.palette_num == 62
+		then
+			G.C.WHITE = HEX("151318")
+		elseif UNCARDABLE.config.palette_num == 63
+		then
+			G.C.WHITE = HEX("4C2838")
+		elseif UNCARDABLE.config.palette_num == 64
+		then
+			G.C.WHITE = HEX("C2E0F0")
 		end
 	end
 	local ret = blind_text_col(self, args)
@@ -1117,6 +1238,15 @@ function Game:update(dt)
 		elseif UNCARDABLE.config.palette_num == 61
 		then
 			G.C.WHITE = HEX("646d7c")
+		elseif UNCARDABLE.config.palette_num == 62
+		then
+			G.C.WHITE = HEX("151318")
+		elseif UNCARDABLE.config.palette_num == 63
+		then
+			G.C.WHITE = HEX("4C2838")
+		elseif UNCARDABLE.config.palette_num == 64
+		then
+			G.C.WHITE = HEX("C2E0F0")
 		end
 	end
 	local ret = update_col(self, dt)
