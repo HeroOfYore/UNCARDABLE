@@ -299,6 +299,12 @@ local UNCARDABLEConfigTab = function()
         ref_table = UNCARDABLE.config,
         ref_value = "tarotoriginal",
     })
+    unbal_nodes[#unbal_nodes + 1] = create_toggle({
+        label = "Reduce animations (prevents red/white issue)",
+        active_colour = HEX("E01BDE"),
+        ref_table = UNCARDABLE.config,
+        ref_value = "reduced_anims",
+    })
     return {
 		n = G.UIT.ROOT,
 		config = {

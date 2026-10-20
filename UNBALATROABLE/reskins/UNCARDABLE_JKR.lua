@@ -515,6 +515,14 @@
         j_perkeo = {row = 0, artist = {'guac'}},
     }
 
+    G.UNCARDABLE_reduced_animation = {
+        j_raised_fist = {row = 0, artist = {'heroofyore'}, anim = "j_raised_fist_reduced_anim"},
+        j_lusty_joker = {row = 0, artist = {'heroofyore'}, anim = "j_lusty_joker_reduced_anim"},
+        j_mime = {row = 0, artist = {'heroofyore'}, anim = "j_mime_reduced_anim"},
+        j_burglar = {row = 0, artist = {'heroofyore'}, anim = "j_burglar_reduced_anim"},
+        j_onyx_agate = {row = 0, artist = {'heroofyore'}, anim = "j_onyx_agate_reduced_anim"},
+        j_tribe = {row = 0, artist = {'heroofyore'}, anim = "j_tribe_reduced_anim"},
+    }
     --[[ animated_sub_5 = {
         j_lucky_cat = {row = 0, artist = {'heroofyore'}},
         j_gift = {row = 1, artist = {'heroofyore'}},
@@ -1205,6 +1213,62 @@
             px = 71,
             py = 95,
         }
+        --divide for reduced animations. 
+        SMODS.Atlas{
+            key = "j_lusty_joker_reduced_anim",
+            path = "UNDISTRACTABLE_REDUCED.png",
+            atlas_table = 'ANIMATION_ATLAS',
+            frames = 99,
+            fps = 10,
+            px = 71,
+            py = 95,
+        }
+
+        SMODS.Atlas {
+            key = "j_mime_reduced_anim",
+            path = "UNMIRRORABLE_REDUCED.png",
+            atlas_table = 'ANIMATION_ATLAS',
+            frames = 110,
+            fps = 10,
+            px = 71,
+            py = 95,
+        }
+            SMODS.Atlas {
+            key = "j_tribe_reduced_anim",
+            path = "UNBEATABLE_REDUCED.png",
+            atlas_table = 'ANIMATION_ATLAS',
+            frames = 109,
+            fps = 10,
+            px = 71,
+            py = 95,
+        }
+            SMODS.Atlas {
+            key = "j_raised_fist_reduced_anim",
+            path = "UNENDABLE_reduced.png",
+            atlas_table = 'ANIMATION_ATLAS',
+            frames = 109,
+            fps = 20,
+            px = 71,
+            py = 95,
+        }
+            SMODS.Atlas {
+            key = "j_burglar_reduced_anim",
+            path = "UNSTEALABLE_REDUCED.png",
+            atlas_table = 'ANIMATION_ATLAS',
+            frames = 110,
+            fps = 10,
+            px = 71,
+            py = 95,
+        }
+            SMODS.Atlas {
+            key = "j_onyx_agate_reduced_anim",
+            path = "UNLIGHTABLE_REDUCED.png",
+            atlas_table = 'ANIMATION_ATLAS',
+            frames = 107,
+            fps = 10,
+            px = 71,
+            py = 95,
+        }
         
     if not UNCARDABLE.config.disabled then
         for jkr, data in pairs(G.UNCARDABLE_animated_jokers) do
@@ -1302,6 +1366,14 @@
                         }, true)
                     end
                 end
+            end
+        end
+        if UNCARDABLE.config.reduced_anims then
+            for jkr, data in pairs(G.UNCARDABLE_reduced_animation) do
+                SMODS["Joker"]:take_ownership(jkr, {atlas = jkr .. "_reduced_anim",
+                pos = {x = 0, y = 0},
+                artist_credits = data.artist,
+            }, true)
             end
         end
     end
