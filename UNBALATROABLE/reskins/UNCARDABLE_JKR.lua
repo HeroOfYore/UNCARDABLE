@@ -389,9 +389,9 @@
     SMODS.Joker:take_ownership("j_hallucination", {
         atlas = "multichoice",
         pos = {x = 0, y = 0},
-        artist_credits = {"heroofyore"},
+        artist_credits = {"heroofyore", "guac"},
         set_sprites = function(self, card, front)
-            local randompos = math.random(0, 3)
+            local randompos = math.random(0, 4)
             card.children.center:set_sprite_pos({x = randompos, y = 0})
         end
     }, true)
