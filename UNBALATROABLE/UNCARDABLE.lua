@@ -152,6 +152,115 @@ SMODS.DeckSkin({
     pos_style = 'collab'
 })
 
+SMODS.Atlas {
+    key = 'unniraspades',
+    px = 71,
+    py = 95,
+    disable_mipmap = true;
+    path = 'UNNIRASPADESLC.png'
+}
+
+SMODS.Atlas {
+    key = 'unniraspades_hc',
+    px = 71,
+    py = 95,
+    disable_mipmap = true;
+    path = 'UNNIRASPADESHC.png'
+}
+
+SMODS.Atlas {
+    key = 'unnirahearts',
+    px = 71,
+    py = 95,
+    disable_mipmap = true;
+    path = 'UNNIRAHEARTSLC.png'
+}
+SMODS.Atlas {
+    key = 'unnirahearts_hc',
+    px = 71,
+    py = 95,
+    disable_mipmap = true;
+    path = 'UNNIRAHEARTSHC.png'
+}
+
+SMODS.Atlas {
+    key = 'unniraclubs',
+    px = 71,
+    py = 95,
+    disable_mipmap = true;
+    path = 'UNNIRACLUBSLC.png'
+}
+SMODS.Atlas {
+    key = 'unniraclubs_hc',
+    px = 71,
+    py = 95,
+    disable_mipmap = true;
+    path = 'UNNIRACLUBSHC.png'
+}
+
+SMODS.Atlas {
+    key = 'unniradiamonds',
+    px = 71,
+    py = 95,
+    disable_mipmap = true;
+    path = 'UNNIRADIAMONDSLC.png'
+}
+SMODS.Atlas {
+    key = 'unniradiamonds_hc',
+    px = 71,
+    py = 95,
+    disable_mipmap = true;
+    path = 'UNNIRADIAMONDSHC.png'
+}
+
+SMODS.DeckSkin ({
+    key = 'UnniraSpades',
+    suit = "Spades",
+    ranks = ranks,
+    lc_atlas = 'unniraspades',
+    hc_atlas = 'unniraspades_hc',
+    loc_txt = {
+        ['en-us'] = 'UNNIRABLE'
+    },
+    pos_style = 'collab'
+})
+
+SMODS.DeckSkin({
+    key = 'UnniraHearts',
+    suit = "Hearts",
+    ranks = ranks,
+    lc_atlas = 'unnirahearts',
+    hc_atlas = 'unnirahearts_hc',
+    loc_txt = {
+        ['en-us'] = 'UNNIRABLE',
+    },
+    pos_style = 'collab'
+})
+
+SMODS.DeckSkin({
+    key = 'UnniraClubs',
+    suit = "Clubs",
+    ranks = ranks,
+    lc_atlas = 'unniraclubs',
+    hc_atlas = 'unniraclubs_hc',
+    loc_txt = {
+        ['en-us'] = 'UNNIRABLE',
+    },
+    pos_style = 'collab'
+})
+
+SMODS.DeckSkin({
+    key = 'UnniraDiamonds',
+    suit = "Diamonds",
+    ranks = ranks,
+    lc_atlas = 'unniradiamonds',
+    hc_atlas = 'unniradiamonds_hc',
+    loc_txt = {
+        ['en-us'] = 'UNNIRABLE',
+    },
+    pos_style = 'collab'
+})
+
 -----------------------------
 -----------------------------
 
