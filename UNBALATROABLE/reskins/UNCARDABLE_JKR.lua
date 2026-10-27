@@ -71,6 +71,7 @@
         j_half = {pos = 69, artist = {'heroofyore'}},
         j_marble = {pos = 70, artist = {'heroofyore'}},
         j_clever = {pos = 71, artist = {'heroofyore'}},
+        j_green_joker = {pos = 72, artist = {'guac'}},
 
     }
 
@@ -80,6 +81,7 @@
         j_mad = {pos = 2, artist = {'feesh'}},
         j_hack = {pos = 3, artist = {'stanza'}},
         j_certificate = {pos = 4, artist = {'heroofyore'}},
+        j_green_joker = {pos = 5, artist = {'stanza'}},
     }
 
     G.UNCARDABLE_jokers3 = {
