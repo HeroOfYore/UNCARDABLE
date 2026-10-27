@@ -5,6 +5,16 @@ G.UNCARDABLE_DECKS = {
     b_green = {pos = 3, artist = {"guac"}},
     b_black = {pos = 4, artist = {"guac"}},
     b_magic = {pos = 5, artist = {"guac"}},
+    -- b_nebula = {pos = 6, artist = {"tentative"}},
+    -- b_ghost = {pos = 7, artist = {"tentative"}},
+    -- b_abandoned = {pos = 8, artist = {"tentative"}},
+    -- b_checkered = {pos = 9, artist = {"tentative"}},
+    -- b_zodiac = {pos = 10, artist = {"tentative"}},
+    -- b_painted = {pos = 11, artist = {"tentative"}},
+    -- b_anaglyph = {pos = 12, artist = {"tentative"}},
+    -- b_plasma = {pos = 12, artist = {"tentative"}},
+    -- b_erratic = {pos = 13, artist = {"tentative"}},
+    -- b_challenge = {pos = 14, artist = {"tentative"}},
 }
 
 SMODS.Atlas {
