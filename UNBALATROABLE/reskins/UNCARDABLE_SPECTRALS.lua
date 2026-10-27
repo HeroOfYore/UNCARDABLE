@@ -14,6 +14,7 @@ G.UNCARDABLE_SPECTRALS = {
     c_trance = {artist = {'heroofyore'}, anim = "c_trance_anim"},
     c_medium = {artist = {'heroofyore'}, anim = "c_medium_anim"},
     c_cryptid = {artist = {'heroofyore'}, anim = "c_cryptid_anim"},
+    c_black_hole = {artist = {'guac'}, anim = "c_black_hole_anim"},
 
 }
 
@@ -183,6 +184,16 @@ SMODS.Atlas {
     path = "UNSPECTRABLE/UNSHOREABLE_POCO.png",
     atlas_table = "ANIMATION_ATLAS",
     frames = 24,
+    fps = 10,
+    px = 71,
+    py = 95, 
+}
+
+SMODS.Atlas {
+    key = "c_black_hole_anim",
+    path = "UNSPECTRABLE/UNBLACKHOLEABLE.png",
+    atlas_table = "ANIMATION_ATLAS",
+    frames = 21,
     fps = 10,
     px = 71,
     py = 95, 
