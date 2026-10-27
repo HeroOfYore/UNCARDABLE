@@ -4,6 +4,7 @@ G.UNCARDABLE_DECKS = {
     b_yellow = {pos = 2, artist = {"guac"}},
     b_green = {pos = 3, artist = {"guac"}},
     b_black = {pos = 4, artist = {"guac"}},
+    b_magic = {pos = 5, artist = {"guac"}},
 }
 
 SMODS.Atlas {
