@@ -514,7 +514,7 @@
         j_blue_joker = {row = 0, artist = {'heroofyore'}, anim = "j_blue_joker_anim"},
         j_lusty_joker = {row = 0, artist = {'heroofyore'}, anim = "j_lusty_joker_anim"},
         j_perkeo = {row = 0, artist = {'guac'}, anim = "j_perkeo_anim"},
-        j_canio = {row = 0, artist = {'guac'}, anim = "j_canio_anim"},
+        j_caino = {row = 0, artist = {'guac'}, anim = "j_caino_anim"},
     }
 
 
@@ -1216,6 +1216,24 @@
             px = 71,
             py = 95,
         }
+        SMODS.Atlas{
+            key = "j_caino_anim",
+            path = "UNUWUABLE.png",
+            atlas_table = 'ANIMATION_ATLAS',
+            frames = 108,
+            fps = 60,
+            px = 71,
+            py = 95
+        }
+        SMODS.Atlas{
+            key = "j_perkeo_anim",
+            path = "UNLEGENDABLE.png",
+            atlas_table = 'ANIMATION_ATLAS',
+            frames = 108,
+            fps = 60,
+            px = 71,
+            py = 95
+        }
         --divide for reduced animations. 
         SMODS.Atlas{
             key = "j_lusty_joker_reduced_anim",
@@ -1381,30 +1399,9 @@
             end
         end
     end
-    SMODS.Atlas{
-        key = "j_perkeo_anim",
-        path = "UNLEGENDABLE.png",
-        atlas_table = 'ANIMATION_ATLAS',
-        frames = 108,
-        fps = 60,
-        px = 71,
-        py = 95
 
 
-    }
-
-    SMODS.Atlas{
-        key = "j_canio_anim",
-        path = "UNUWUABLE.png",
-        atlas_table = 'ANIMATION_ATLAS',
-        frames = 108,
-        fps = 60,
-        px = 71,
-        py = 95
-
-
-    }
-    
+--    }
                 
         --[[SMODS.Joker:take_ownership('j_wee', {
             loc_vars = function(self, info_queue, card)
