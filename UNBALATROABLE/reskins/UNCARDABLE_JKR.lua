@@ -1441,7 +1441,7 @@
 
             end,
         }, true)]]
-    end
+
 
     SMODS.Atlas {
         key = "SHOOTABLE",
