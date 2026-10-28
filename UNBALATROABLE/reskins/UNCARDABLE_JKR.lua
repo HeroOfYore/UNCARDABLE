@@ -513,10 +513,8 @@
         j_rough_gem = {row = 0, artist = {'heroofyore'}, anim = "j_rough_gem_anim"},
         j_blue_joker = {row = 0, artist = {'heroofyore'}, anim = "j_blue_joker_anim"},
         j_lusty_joker = {row = 0, artist = {'heroofyore'}, anim = "j_lusty_joker_anim"},
-    }
-    animated_with_soul = {
-        j_perkeo = {row = 0, artist = {'guac'}},
-        j_canio = {row = 0, artist = {'guac'}},
+        j_perkeo = {row = 0, artist = {'guac'}, anim = "j_perkeo_anim"},
+        j_canio = {row = 0, artist = {'guac'}, anim = "j_canio_anim"},
     }
 
     G.UNCARDABLE_reduced_animation = {
