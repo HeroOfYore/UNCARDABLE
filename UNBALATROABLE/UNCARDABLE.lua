@@ -29,6 +29,8 @@ assert(SMODS.load_file('reskins/UNCARDABLE_VOUCHER.lua'))()
 assert(SMODS.load_file('reskins/UNCARDABLE_TAGS.lua'))()
 assert(SMODS.load_file('reskins/palettes.lua'))()
 assert(SMODS.load_file('reskins/UNCARDABLE_DECK.lua'))()
+assert(SMODS.load_file('reskins/UNCARDABLE_BOOSTER.lua'))()
+assert(SMODS.load_file('reskins/UNCARDABLE_SPECTRALS.lua'))()
 -----------------------------
 ----------------------------
 
