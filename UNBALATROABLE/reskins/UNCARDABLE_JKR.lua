@@ -516,6 +516,7 @@
     }
     animated_with_soul = {
         j_perkeo = {row = 0, artist = {'guac'}},
+        j_canio = {row = 0, artist = {'guac'}},
     }
 
     G.UNCARDABLE_reduced_animation = {
@@ -1388,6 +1389,20 @@
         fps = 60,
         px = 71,
         py = 95
+
+
+    }
+
+    SMODS.Atlas{
+        key = "j_canio_anim",
+        path = "UNUWUABLE.png",
+        atlas_table = 'ANIMATION_ATLAS',
+        frames = 108,
+        fps = 60,
+        px = 71,
+        py = 95
+
+
     }
     
     if not UNCARDABLE.config.disabled then
