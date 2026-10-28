@@ -82,6 +82,7 @@
         j_hack = {pos = 3, artist = {'stanza'}},
         j_certificate = {pos = 4, artist = {'heroofyore'}},
         j_green_joker = {pos = 5, artist = {'stanza'}},
+        j_throwback = {pos = 6, artist = {'stanza'}},
     }
 
     G.UNCARDABLE_jokers3 = {
