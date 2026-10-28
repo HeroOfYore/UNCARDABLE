@@ -1,4 +1,14 @@
 
+SMODS.Atlas{
+	key = "RANDOM_SELECT",
+	path = "UNRANDOMABLE.png",
+	atlas_table ="ANIMATION_ATLAS",
+	frames = 9,
+	fps = 10,
+	px = 71,
+	py = 95,
+}
+
 
 local base_ease_dollars = ease_dollars
 function ease_dollars(mod, x)
@@ -243,6 +253,17 @@ function UNCARDABLE.alternate_config_ui(center)
 		animated_skins[#animated_skins+1] = G.UNCARDABLE_animated_jokers[center.key]
 		startingvalue = startingvalue + 1
 	end
+	
+	local randomcenter = UNCARDABLE.deep_copy(center)
+	randomcenter.force_alternate = nil
+	local randomcard = Card(G.ROOM.T.x + 0.2 * G.ROOM.T.w / 2, G.ROOM.T.y, G.CARD_W, G.CARD_H, nil, randomcenter)
+	randomcard.children.center:remove()
+	randomcard.children.center = SMODS.create_sprite(randomcard.T.x, randomcard.T.y, randomcard.T.w, randomcard.T.h, G.ANIMATION_ATLAS["uncardable_RANDOM_SELECT"], {x=0, y=0})
+	randomcard.children.center:set_role({major = randomcard, role_type = 'Glued', draw_major = randomcard})
+	randomcard.alternate_select = true
+	local randomobj = randomcard.config.center or (randomcard.config.tag and G.P_TAGS[randomcard.config.tabs.key])
+	randomobj.artist_credits = {"heroofyore"}
+	G.your_collection[1]:emplace(randomcard)
 	print("skinnum: " .. #skins)
 	--print(skins[1].pos, skins[2])
 	for i = 1, #animated_skins do

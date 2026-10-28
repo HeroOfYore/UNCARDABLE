@@ -517,6 +517,7 @@
         j_canio = {row = 0, artist = {'guac'}, anim = "j_canio_anim"},
     }
 
+
     G.UNCARDABLE_reduced_animation = {
         j_raised_fist = {row = 0, artist = {'heroofyore'}, anim = "j_raised_fist_reduced_anim"},
         j_lusty_joker = {row = 0, artist = {'heroofyore'}, anim = "j_lusty_joker_reduced_anim"},
@@ -1290,7 +1291,7 @@
             print(data.key, " is currently being checked")
             if G.PROFILES[G.SETTINGS.profile].uncardable_alternates[data.key] ~= nil then
                 local checkagainst = G.PROFILES[G.SETTINGS.profile].uncardable_alternates[data.key]
-                print(checkagainst, " ", data.key)
+                --print(checkagainst, " ", data.key)
                 --local jokerdeclare, count = string.gsub(checkagainst, "_anim", "")
                 local position
                 local isAnimated = false
@@ -1320,6 +1321,7 @@
                     }, true)
                 end
             else
+                print("CHOOSING RANDOM")
                 local possibleSkins = 0
                 local skinType = {}
                 local state = {}
@@ -1349,9 +1351,9 @@
                     skinType[#skinType+1] = G.UNCARDABLE_animated_jokers
                     atlastable[#atlastable+1] = G.UNCARDABLE_animated_jokers[data.key].anim
 	            end
-                print("ps: ", possibleSkins, " ", skinType[chosen])
                 if possibleSkins ~= 0 then
                     local chosen = math.random(1, possibleSkins)
+                    print("ps: ", possibleSkins, " num: ", chosen)
                     if state[chosen] == "Static" then
                         SMODS["Joker"]:take_ownership(data.key, {
                             atlas = atlastable[chosen],
