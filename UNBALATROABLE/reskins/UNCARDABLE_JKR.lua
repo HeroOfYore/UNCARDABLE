@@ -1405,15 +1405,6 @@
 
     }
     
-    if not UNCARDABLE.config.disabled then
-        for jkr, data in pairs(animated_with_soul) do
-            SMODS["Joker"]:take_ownership(jkr, {atlas = jkr .. "_anim",
-            pos = {x = 0, y = 0 + data.row},
-            artist_credits = data.artist,
-            soul_pos = {x = 0, y = 1 + data.row},
-        }, true)
-        end
-
                 
         --[[SMODS.Joker:take_ownership('j_wee', {
             loc_vars = function(self, info_queue, card)
