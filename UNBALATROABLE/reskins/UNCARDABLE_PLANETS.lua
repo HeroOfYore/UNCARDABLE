@@ -138,13 +138,15 @@ SMODS.Atlas {
 
 if not UNCARDABLE.config.disabled then
     for planet, data in pairs(G.UNCARDABLE_planets) do
-        SMODS["Consumable"]:take_ownership(planet, {atlas = planet .. "_anim",
-        pos = {x = 0, y = 0},
+        local randompos = math.random(0, data.variants - 1)
+        SMODS["Consumable"]:take_ownership(planet, {
+        atlas = planet .. "_anim",
+        pos = {x = 0, y = 0 + randompos},
         artist_credits = {"guac"},
-        set_sprites = function(self, card, front)
-            local randompos = math.random(0, data.variants - 1)
-            card.children.center:set_sprite_pos({x = 0, y = randompos})
-        end
+        --set_sprites = function(self, card, front)
+        --    card.children.center:set_sprite_pos{x = 0, y = randompos}
+        --    print("randompos chosen: ", randompos)
+        --end
     }, true)
     end
 
