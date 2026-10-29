@@ -56,6 +56,7 @@ G.ARGS.LOC_COLOURS['grimp'] = HEX('C30606')
 G.ARGS.LOC_COLOURS['feesh'] = HEX('FF6665')
 G.ARGS.LOC_COLOURS['MUSTARD'] = HEX('c4a00e')
 G.ARGS.LOC_COLOURS['nonexistante'] = HEX('6A8FCD')
+G.ARGS.LOC_COLOURS['ribbown'] = HEX('E000DB')
 
 function UNCARDABLE_artist_tooltip(_c, info_queue, card, desc_nodes, specific_vars, full_UI_table)
     localize{type = 'descriptions', set = 'UNCARDABLE Artist', key = _c.key, nodes = desc_nodes, vars = specific_vars or _c.vars}

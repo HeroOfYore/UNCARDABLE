@@ -298,6 +298,12 @@ return {
                     "Guacamole Sean",
                 }
             },
+            ['ribbown'] = {
+                ['text'] =
+                {
+                    "RIBBOWN!",
+                }
+            },
             ['sonata'] = {
                 ['text'] =
                 {

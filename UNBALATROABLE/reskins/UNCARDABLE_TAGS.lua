@@ -2,6 +2,7 @@
 G.UNCARDABLE_TAGS = {
     tag_rare = {row = 0, artist = {"heroofyore"}, anim = "tag_rare_anim"},
     tag_uncommon = {row = 0, artist = {"guac"}, anim = "tag_uncommon_anim"},
+    tag_boss = {row = 0, artist = {"ribbown", "guac"}, anim = "tag_boss_anim"},
 }
 
 SMODS.Atlas {
@@ -20,6 +21,16 @@ SMODS.Atlas {
     atlas_table = "ANIMATION_ATLAS",
     frames = 13,
     fps = 10,
+    px = 34,
+    py = 34,
+}
+
+SMODS.Atlas {
+    key = "tag_boss_anim",
+    path = "TAGS/UNBOSSABLE.png",
+    atlas_table = "ANIMATION_ATLAS",
+    frames = 75,
+    fps = 60,
     px = 34,
     py = 34,
 }
