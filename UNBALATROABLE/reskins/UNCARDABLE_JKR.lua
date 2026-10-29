@@ -513,10 +513,10 @@
         j_rough_gem = {row = 0, artist = {'heroofyore'}, anim = "j_rough_gem_anim"},
         j_blue_joker = {row = 0, artist = {'heroofyore'}, anim = "j_blue_joker_anim"},
         j_lusty_joker = {row = 0, artist = {'heroofyore'}, anim = "j_lusty_joker_anim"},
+        j_perkeo = {row = 0, artist = {'guac'}, anim = "j_perkeo_anim"},
+        j_caino = {row = 0, artist = {'guac'}, anim = "j_caino_anim"},
     }
-    animated_with_soul = {
-        j_perkeo = {row = 0, artist = {'guac'}},
-    }
+
 
     G.UNCARDABLE_reduced_animation = {
         j_raised_fist = {row = 0, artist = {'heroofyore'}, anim = "j_raised_fist_reduced_anim"},
@@ -1216,6 +1216,24 @@
             px = 71,
             py = 95,
         }
+        SMODS.Atlas{
+            key = "j_caino_anim",
+            path = "UNUWUABLE.png",
+            atlas_table = 'ANIMATION_ATLAS',
+            frames = 108,
+            fps = 60,
+            px = 71,
+            py = 95
+        }
+        SMODS.Atlas{
+            key = "j_perkeo_anim",
+            path = "UNLEGENDABLE.png",
+            atlas_table = 'ANIMATION_ATLAS',
+            frames = 108,
+            fps = 60,
+            px = 71,
+            py = 95
+        }
         --divide for reduced animations. 
         SMODS.Atlas{
             key = "j_lusty_joker_reduced_anim",
@@ -1291,7 +1309,7 @@
             print(data.key, " is currently being checked")
             if G.PROFILES[G.SETTINGS.profile].uncardable_alternates[data.key] ~= nil then
                 local checkagainst = G.PROFILES[G.SETTINGS.profile].uncardable_alternates[data.key]
-                print(checkagainst, " ", data.key)
+                --print(checkagainst, " ", data.key)
                 --local jokerdeclare, count = string.gsub(checkagainst, "_anim", "")
                 local position
                 local isAnimated = false
@@ -1321,6 +1339,7 @@
                     }, true)
                 end
             else
+                print("CHOOSING RANDOM")
                 local possibleSkins = 0
                 local skinType = {}
                 local state = {}
@@ -1350,9 +1369,9 @@
                     skinType[#skinType+1] = G.UNCARDABLE_animated_jokers
                     atlastable[#atlastable+1] = G.UNCARDABLE_animated_jokers[data.key].anim
 	            end
-                print("ps: ", possibleSkins, " ", skinType[chosen])
                 if possibleSkins ~= 0 then
                     local chosen = math.random(1, possibleSkins)
+                    print("ps: ", possibleSkins, " num: ", chosen)
                     if state[chosen] == "Static" then
                         SMODS["Joker"]:take_ownership(data.key, {
                             atlas = atlastable[chosen],
@@ -1380,25 +1399,9 @@
             end
         end
     end
-    SMODS.Atlas{
-        key = "j_perkeo_anim",
-        path = "UNLEGENDABLE.png",
-        atlas_table = 'ANIMATION_ATLAS',
-        frames = 108,
-        fps = 60,
-        px = 71,
-        py = 95
-    }
-    
-    if not UNCARDABLE.config.disabled then
-        for jkr, data in pairs(animated_with_soul) do
-            SMODS["Joker"]:take_ownership(jkr, {atlas = jkr .. "_anim",
-            pos = {x = 0, y = 0 + data.row},
-            artist_credits = data.artist,
-            soul_pos = {x = 0, y = 1 + data.row},
-        }, true)
-        end
 
+
+--    }
                 
         --[[SMODS.Joker:take_ownership('j_wee', {
             loc_vars = function(self, info_queue, card)
@@ -1435,7 +1438,7 @@
 
             end,
         }, true)]]
-    end
+
 
     SMODS.Atlas {
         key = "SHOOTABLE",
