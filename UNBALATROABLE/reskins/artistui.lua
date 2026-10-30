@@ -27,6 +27,10 @@ G.C.splashblue = SMODS.Gradient {
     key = "SPBLUE",
     colours = {HEX("4F81FF"), HEX("062880")}
 }
+G.C.nonexistante = SMODS.Gradient {
+    key = "NONEX",
+    colours = {HEX("CA0065"), HEX("AFB9B4")}
+}
 
 G.ARGS.LOC_COLOURS['heroofyore'] = G.C.yore
 G.ARGS.LOC_COLOURS['ermywurm'] = HEX('AD7193')
@@ -55,7 +59,7 @@ G.ARGS.LOC_COLOURS['yuki'] = HEX('FFB3FF')
 G.ARGS.LOC_COLOURS['grimp'] = HEX('C30606')
 G.ARGS.LOC_COLOURS['feesh'] = HEX('FF6665')
 G.ARGS.LOC_COLOURS['MUSTARD'] = HEX('c4a00e')
-G.ARGS.LOC_COLOURS['nonexistante'] = HEX('6A8FCD')
+G.ARGS.LOC_COLOURS['nonexistante'] = G.C.nonexistante
 G.ARGS.LOC_COLOURS['ribbown'] = HEX('E000DB')
 
 function UNCARDABLE_artist_tooltip(_c, info_queue, card, desc_nodes, specific_vars, full_UI_table)
