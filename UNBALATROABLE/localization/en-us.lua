@@ -130,6 +130,7 @@ return {
             --ui stuff
             uncard_chips = "chipispis",
             uncard_skins = "Reskin Selection",
+            uncard_planets = "Planet Selection",
             
             uncard_palettes={
                 'Default',

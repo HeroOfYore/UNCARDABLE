@@ -1,16 +1,16 @@
 G.UNCARDABLE_planets = {
-    c_mercury = {pos = 0, variants = 4, artist = {'guac'}},
-    c_venus = {pos = 1, variants = 2, artist = {'guac'}},
-    c_earth = {pos = 2, variants = 1, artist = {'guac'}},
-    c_mars = {pos = 3, variants = 2, artist = {'guac'}},
-    c_jupiter = {pos = 4, variants = 1, artist = {'guac'}},
-    c_saturn = {pos = 5, variants = 3, artist = {'guac'}},
-    c_uranus = {pos = 6, variants = 1, artist = {'guac'}},
-    c_neptune = {pos = 7, variants = 1, artist = {'guac'}},
-    c_pluto = {pos = 8, variants = 2, artist = {'guac'}},
-    c_planet_x = {pos = 9, variants = 3, artist = {'guac'}},
-    c_ceres = {pos = 10, variants = 2, artist = {'guac'}},
-    c_eris = {pos = 11, variants = 1, artist = {'guac'}},
+    c_mercury = {pos = 0, variants = 4, artist = {'guac'}, anim = "c_mercury"},
+    c_venus = {pos = 1, variants = 2, artist = {'guac'}, anim = "c_venus"},
+    c_earth = {pos = 2, variants = 1, artist = {'guac'}, anim = "c_earth"},
+    c_mars = {pos = 3, variants = 2, artist = {'guac'}, anim = "c_mars"},
+    c_jupiter = {pos = 4, variants = 1, artist = {'guac'}, anim = "c_jupiter"},
+    c_saturn = {pos = 5, variants = 3, artist = {'guac'}, anim = "c_saturn"},
+    c_uranus = {pos = 6, variants = 1, artist = {'guac'}, anim = "c_uranus"},
+    c_neptune = {pos = 7, variants = 1, artist = {'guac'}, anim = "c_neptune"},
+    c_pluto = {pos = 8, variants = 2, artist = {'guac'}, anim = "c_pluto"},
+    c_planet_x = {pos = 9, variants = 3, artist = {'guac'}, anim = "c_planet_x"},
+    c_ceres = {pos = 10, variants = 2, artist = {'guac'}, anim = "c_ceres"},
+    c_eris = {pos = 11, variants = 1, artist = {'guac'}, anim = "c_eris"},
 }
 
 SMODS.Atlas {
@@ -137,17 +137,58 @@ SMODS.Atlas {
 
 
 if not UNCARDABLE.config.disabled then
+    if G.PROFILES[G.SETTINGS.profile].uncardable_planalternates == nil then
+        G.PROFILES[G.SETTINGS.profile].uncardable_planalternates = {}
+    end
     for planet, data in pairs(G.UNCARDABLE_planets) do
-        local randompos = math.random(0, data.variants - 1)
-        SMODS["Consumable"]:take_ownership(planet, {
-        atlas = planet .. "_anim",
-        pos = {x = 0, y = 0 + randompos},
-        artist_credits = {"guac"},
-        --set_sprites = function(self, card, front)
-        --    card.children.center:set_sprite_pos{x = 0, y = randompos}
-        --    print("randompos chosen: ", randompos)
-        --end
-    }, true)
+        if G.PROFILES[G.SETTINGS.profile].uncardable_planalternates[data.key] ~= nil then
+            local pos = G.PROFILES[G.SETTINGS.profile].uncardable.uncardable_planalternates[data.key]
+            SMODS["Consumable"]:take_ownership(planet, {
+                atlas = planet.. "_anim",
+                pos = {x = 0, y = pos},
+                artist_credits = {"guac"},
+            }, true)
+        else
+            local randompos = math.random(0, data.variants - 1)
+            SMODS["Consumable"]:take_ownership(planet, {
+            atlas = planet .. "_anim",
+            pos = {x = 0, y = 0 + randompos},
+            artist_credits = {"guac"},
+            --set_sprites = function(self, card, front)
+            --    card.children.center:set_sprite_pos{x = 0, y = randompos}
+            --    print("randompos chosen: ", randompos)
+            --end
+        }, true)
+    end
     end
 
+end
+
+
+function UNCARDABLE.UNCARD_REINIT_PLANETS()
+        if G.PROFILES[G.SETTINGS.profile].uncardable_planalternates == nil then
+            G.PROFILES[G.SETTINGS.profile].uncardable_planalternates = {}
+        end
+    for planet, data in pairs(G.UNCARDABLE_planets) do
+        --print(planet, " ", G.PROFILES[G.SETTINGS.profile].uncardable_planalternates[planets])
+        if G.PROFILES[G.SETTINGS.profile].uncardable_planalternates[planet] ~= nil then
+            local pos = G.PROFILES[G.SETTINGS.profile].uncardable_planalternates[planet]
+            SMODS["Consumable"]:take_ownership(planet, {
+                atlas = "uncardable_"..planet.. "_anim",
+                pos = {x = 0, y = pos},
+                unlocked = true,
+                discovered = true,
+                artist_credits = {"guac"},
+            }, true)
+        else
+            local randompos = math.random(0, data.variants - 1)
+            SMODS["Consumable"]:take_ownership(planet, {
+            atlas = "uncardable_"..planet .. "_anim",
+            pos = {x = 0, y = 0 + randompos},
+            unlocked = true,
+            discovered = true,
+            artist_credits = {"guac"},
+        }, true)
+    end
+    end
 end

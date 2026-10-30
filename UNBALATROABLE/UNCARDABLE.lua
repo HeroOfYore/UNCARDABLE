@@ -279,6 +279,15 @@ local UNCARDABLEConfigTab = function()
         scale = 0.7, 
         id = "reskinned_jokers"
     })
+    unbal_nodes[#unbal_nodes + 1] = UIBox_button({
+        colour = HEX("F394FF"),
+        button = "planet_reskins",
+        label = {localize("uncard_planets")},
+        minw = 5.0, 
+        minh = 1.7,
+        scale = 0.7,
+        id = "reskinned_planets"
+    })
     unbal_nodes[#unbal_nodes + 1] = create_toggle({
         label = "Disable Reskinned Jokers (requires restart to activate)",
         active_colour = HEX("E01BDE"),

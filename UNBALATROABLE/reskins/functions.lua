@@ -25,6 +25,13 @@ G.FUNCS.total_reskins = function(e)
     })
 end
 
+G.FUNCS.planet_reskins = function(e)
+	G.uncard_prev_collec = "planet_reskins"
+	G.FUNCS.overlay_menu({
+		definition = UNCARDABLE_create_planet_UIBox(),
+	})
+end
+
 function UNCARDABLE_create_UIBox_your_collection_content_sets()
 	local deck_tables = {}
 
@@ -197,6 +204,7 @@ end
 local card_click_ref = Card.click
 function Card:click()
 	card_click_ref(self)
+	--print("clicked a card")
 	if G.your_collection then
 		for k, v in pairs(G.your_collection) do
 			if
@@ -210,6 +218,20 @@ function Card:click()
 					Card.uncardable_set_alternate(self, self.config.center, self.config.center.force_alternate)
 				end
 				UNCARDABLE.alternate_config_ui(self.config.center)
+			end
+		end
+	end
+	if G.planet_collection then
+		for k, v in pairs(G.planet_collection) do
+			if
+				self.area == v
+				and G.ACTIVE_MOD_UI
+				and G.ACTIVE_MOD_UI.id == "UNCARDABLE"
+			then
+				if self.alternate_select then
+					Card.uncardable_set_planalternate(self, self.config.center, self.config.center.force_alternate)
+				end
+				UNCARDABLE.alternate_config_planets(self.config.center)
 			end
 		end
 	end
@@ -302,6 +324,7 @@ function UNCARDABLE.alternate_config_ui(center)
 
 	end
 
+
 	INIT_COLLECTION_CARD_ALERTS()
 	local args = {
 		back_func = G.uncard_prev_collec,
@@ -319,7 +342,114 @@ function UNCARDABLE.alternate_config_ui(center)
 	})
 end
 
-function UNCARDABLE.alternates(card, center)
+function UNCARDABLE_create_planet_UIBox()
+	local planet_tables = {}
+	G.planet_collection = {}
+	for j = 1, 3 do
+		G.planet_collection[j] = CardArea(
+			G.ROOM.T.x + 0.2 * G.ROOM.T.w / 2,
+			G.ROOM.T.h, 
+			5 * G.CARD_W,
+			0.95 * G.CARD_H,
+			{card_limit = 4, type = "title", highlight_limit = 0, collection = true}
+		)
+		table.insert(planet_tables, {
+			n = G.UIT.R,
+			config = {align = "cm", padding = 0.07, no_fill = true},
+			nodes = {
+				{n = G.UIT.O, config = {object = G.planet_collection[j]}},
+			},
+		})
+	end
+	local planet_pool = {}
+	for k, v in pairs(G.P_CENTER_POOLS.Planet) do
+			--print(v.key)
+			table.insert(planet_pool, v)
+	end
+	--print(#G.planet_collection)
+	local indexnum = 1
+	for i = 1, #G.planet_collection do
+		for j = 1, 4 do
+			if indexnum < #planet_pool then
+				local center = planet_pool[indexnum]
+				local card = Card(G.planet_collection[i].T.x + G.planet_collection[i].T.w / 2, G.planet_collection[i].T.y, G.CARD_W, G.CARD_H, nil, G.P_CENTERS[center.key])
+				G.planet_collection[i]:emplace(card)
+				indexnum = indexnum + 1
+			end
+		end
+	end
+
+	local t = create_UIBox_generic_options({
+		back_func = G.ACTIVE_MOD_UI and "openModUI_" .. G.ACTIVE_MOD_UI.id or "planet_collection",
+		contents = {
+			{ n = G.UIT.R, config = { align = "cm", r = 0.1, colour = G.C.BLACK, emboss = 0.05}, nodes = planet_tables},
+		}
+	})
+	return t
+end
+
+function UNCARDABLE.alternate_config_planets(center)
+	G.SETTINGS.paused = true
+	G.planet_collection = {}
+	G.planet_collection[1] = CardArea(
+		G.ROOM.T.x + 0.2 * G.ROOM.T.w / 2,
+		G.ROOM.T.h,
+		5.3 * G.CARD_W,
+		1.03 * G.CARD_H,
+		{ card_limit = 4, type = "title", highlight_limit = 0, collection = true,}
+	)
+	local planet_tables = {
+		n = G.UIT.R,
+		config = { align = "cm", padding = 0, no_fill = true},
+		nodes = {
+			{ n = G.UIT.O, config = {object = G.planet_collection[1]}},
+		},
+	}
+	print(center.key)
+	--print(center)
+	local variants = G.UNCARDABLE_planets[center.key].variants
+	local planetcard = G.UNCARDABLE_planets[center.key]
+	print(variants)
+	--print(planetcard)
+	local randomcenter = UNCARDABLE.deep_copy(center)
+	randomcenter.force_alternate = nil
+	local randomcard = Card(G.ROOM.T.x + 0.2 * G.ROOM.T.w / 2, G.ROOM.T.y, G.CARD_W, G.CARD_H, nil, randomcenter)
+	randomcard.children.center:remove()
+	randomcard.children.center = SMODS.create_sprite(randomcard.T.x, randomcard.T.y, randomcard.T.w, randomcard.T.h, G.ANIMATION_ATLAS["uncardable_RANDOM_SELECT"], {x=0, y=0})
+	randomcard.children.center:set_role({major = randomcard, role_type = 'Glued', draw_major = randomcard})
+	randomcard.alternate_select = true
+	G.planet_collection[1]:emplace(randomcard)
+	for i = 1, variants do
+		local dummycenter = UNCARDABLE.deep_copy(center)
+		dummycenter.force_alternate = i
+		local card = Card(G.ROOM.T.x + 0.2 * G.ROOM.T.w / 2, G.ROOM.T.y, G.CARD_W, G.CARD_H, nil, dummycenter)
+		card.children.center:remove()
+		card.children.center = SMODS.create_sprite(card.T.x, card.T.y, card.T.w, card.T.h, G.ANIMATION_ATLAS["uncardable_" .. planetcard.anim .. "_anim"], {x = 0, y = i - 1})
+		card.children.center:set_role({major = card, role_type = 'Glued', draw_major = card})
+		card.alternate_select = true
+		local obj = card.config.center
+		obj.artist_credits = planetcard.artist
+		G.planet_collection[1]:emplace(card)
+	end
+	
+	--INIT_COLLECTION_CARD_ALERTS()
+	local args = {
+		back_func = G.uncard_prev_collec,
+		contents = {
+			{
+				n = G.UIT.R,
+				config = {align = "cm", minw = 2.0, padding = 0.1, r = 0.1, colour = G.C.BLACK, emboss = 0.05},
+				nodes = {planet_tables},
+			},
+		},
+	}
+	local configbox = create_UIBox_generic_options(args)
+	G.FUNCS.overlay_menu({
+		definition = configbox,
+	})
+end
+
+--[[function UNCARDABLE.alternates(card, center)
 	if not center then
 		if not card then
 			return G.PROFILES[G.SETTINGS.profile].uncardable_alternates
@@ -333,10 +463,30 @@ function UNCARDABLE.alternates(card, center)
 		return center.force_alternate
 	end
 	
+end]]
+
+function Card:uncardable_set_planalternate(center, alternate)
+	print("alternate: ", alternate, " center: ", center.key)
+	if G.PROFILES[G.SETTINGS.profile].uncardable_planalternates == nil then
+		G.PROFILES[G.SETTINGS.profile].uncardable_planalternates = {}
+	end
+	if alternate == nil
+	then
+		G.PROFILES[G.SETTINGS.profile].uncardable_planalternates[center.key] = nil
+		UNCARDABLE.UNCARD_REINIT_PLANETS()
+		return
+	end
+	if G.PROFILES[G.SETTINGS.profile].uncardable_planalternates[center.key] == alternate-1
+	then
+		return
+	end
+	G.PROFILES[G.SETTINGS.profile].uncardable_planalternates[center.key] = alternate-1
+	G:save_progress()
+	UNCARDABLE.UNCARD_REINIT_PLANETS()
 end
 
 function Card:uncardable_set_alternate(center, alternate)
-	print("alternate: ", alternate, ", self: ", self)
+	--print("alternate: ", alternate, ", self: ", self)
 	if G.PROFILES[G.SETTINGS.profile].uncardable_alternates == nil then
 		G.PROFILES[G.SETTINGS.profile].uncardable_alternates = {}
 	end
