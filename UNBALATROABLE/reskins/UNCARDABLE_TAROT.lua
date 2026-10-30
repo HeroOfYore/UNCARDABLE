@@ -17,7 +17,7 @@ G.UNCARDATAROT = {
     c_devil = {pos = 15, artist = {'heroofyore'}},
     c_tower = {pos = 16, artist = {'heroofyore'}},
     c_star = {pos = 17, artist = {'heroofyore'}},
-    
+    c_moon = {pos = 18, artist = {'ploutre'}},
     c_sun = {pos = 19, artist = {'heroofyore'}},
     c_judgement = {pos = 20, artist = {'heroofyore'}},
     c_world = {pos = 21, artist = {'heroofyore'}},
