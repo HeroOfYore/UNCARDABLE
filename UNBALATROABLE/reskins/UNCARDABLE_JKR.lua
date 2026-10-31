@@ -72,6 +72,7 @@
         j_marble = {pos = 70, artist = {'heroofyore'}},
         j_clever = {pos = 71, artist = {'heroofyore'}},
         j_green_joker = {pos = 72, artist = {'guac'}},
+        j_merry_andy = {pos = 73, artist = {'ploutre'}},
 
     }
 
