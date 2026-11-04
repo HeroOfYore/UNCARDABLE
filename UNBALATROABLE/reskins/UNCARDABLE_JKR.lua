@@ -516,6 +516,7 @@
         j_lusty_joker = {row = 0, artist = {'heroofyore'}, anim = "j_lusty_joker_anim"},
         j_perkeo = {row = 0, artist = {'guac'}, anim = "j_perkeo_anim"},
         j_caino = {row = 0, artist = {'guac'}, anim = "j_caino_anim"},
+        j_chicot = {row = 0, artist = {'guac'}, anim = "j_chicot_anim"},
     }
 
 
@@ -1220,6 +1221,15 @@
         SMODS.Atlas{
             key = "j_caino_anim",
             path = "UNUWUABLE.png",
+            atlas_table = 'ANIMATION_ATLAS',
+            frames = 108,
+            fps = 60,
+            px = 71,
+            py = 95
+        }
+        SMODS.Atlas{
+            key = "j_chicot_anim",
+            path = "UNTHELEGENDOFPEAKDIVIDEABLE.png",
             atlas_table = 'ANIMATION_ATLAS',
             frames = 108,
             fps = 60,
