@@ -515,6 +515,7 @@
         j_blue_joker = {row = 0, artist = {'heroofyore'}, anim = "j_blue_joker_anim"},
         j_lusty_joker = {row = 0, artist = {'heroofyore'}, anim = "j_lusty_joker_anim"},
         j_perkeo = {row = 0, artist = {'guac'}, anim = "j_perkeo_anim"},
+        j_triboulet = {row = 0, artist = {'guac'}, anim = "j_triboulet_anim"},
         j_caino = {row = 0, artist = {'guac'}, anim = "j_caino_anim"},
         j_chicot = {row = 0, artist = {'guac'}, anim = "j_chicot_anim"},
     }
@@ -1239,6 +1240,15 @@
         SMODS.Atlas{
             key = "j_perkeo_anim",
             path = "UNLEGENDABLE.png",
+            atlas_table = 'ANIMATION_ATLAS',
+            frames = 108,
+            fps = 60,
+            px = 71,
+            py = 95
+        }
+        SMODS.Atlas{
+            key = "j_triboulet_anim",
+            path = "UNRJABLE.png",
             atlas_table = 'ANIMATION_ATLAS',
             frames = 108,
             fps = 60,
