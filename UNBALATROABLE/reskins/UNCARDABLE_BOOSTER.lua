@@ -1,10 +1,10 @@
 G.UNCARDABLE_BOOSTERS = {
     p_celestial_normal_1 = {pos = 0, artist = {'guac'},},
     p_celestial_normal_2 = {pos = 1, artist = {'guac'},},
-    p_buffoon_mega_1 = {pos = 2, artist = {'stanza', 'guac'},},
-    p_buffoon_normal_1 = {pos = 3, artist = {'stanza', 'guac'},},
+    p_buffoon_mega_1 = {pos = 2, artist = {'heroofyore', 'stanza', 'guac'},},
+    p_buffoon_normal_1 = {pos = 3, artist = {'heroofyore', 'stanza', 'guac'},},
     p_buffoon_normal_2 = {pos = 4, artist = {'stanza', 'guac'},},
-    p_buffoon_jumbo_1 = {pos = 5, artist = {'stanza', 'guac'},},
+    p_buffoon_jumbo_1 = {pos = 5, artist = {'heroofyore', 'stanza', 'guac'},},
 }
 
 SMODS.Atlas {
