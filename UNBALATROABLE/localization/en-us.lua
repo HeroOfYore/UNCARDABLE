@@ -48,7 +48,7 @@ return {
                 "for you.",
             },
             wq_1={
-                "Oh my god, it's you!",
+                "Oh my God, it's you!",
                 "BEAT UNBEATABLE!",
             },
             wq_2={
