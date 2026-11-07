@@ -5,6 +5,7 @@ G.UNCARDABLE_BOOSTERS = {
     p_buffoon_normal_1 = {pos = 3, artist = {'heroofyore', 'stanza', 'guac'},},
     p_buffoon_normal_2 = {pos = 4, artist = {'stanza', 'guac'},},
     p_buffoon_jumbo_1 = {pos = 5, artist = {'heroofyore', 'stanza', 'guac'},},
+    p_spectral_normal_1 = {pos = 6, artist = {'guac'},},
 }
 
 SMODS.Atlas {
