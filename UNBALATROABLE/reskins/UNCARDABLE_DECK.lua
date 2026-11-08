@@ -25,6 +25,13 @@ SMODS.Atlas {
     py = 95,
 }
 
+SMODS.Atlas {
+    key = "locked_deck",
+    path = "UNDECKLOCKABLE.png",
+    px = 71,
+    py = 95,
+}
+
 
 
 if not UNCARDABLE.config.disabled then
@@ -36,4 +43,25 @@ if not UNCARDABLE.config.disabled then
             }, true)
         
     end
+
 end
+
+
+--[[local back_change = Back.change_to
+function Back:change_to(new_back)
+    local ret = back_change(new_back)
+    if not new_back then new_back = G.P_CENTERS.b_red end
+    Back.name = new_back.name or 'Red Deck'
+    
+    Back.effect = {
+        center = new_back,
+        text_UI = '',
+        config = copy_table(new_back.config)
+    }
+    Back.loc_name = localize{type = 'name_text', set = 'Back', key = Back.effect.center.key}
+
+    local pos = Back.effect.center.unlocked and copy_table(new_back.pos) or {x = 16, y = 0}
+    Back.pos = Back.pos or {}
+    Back.pos.x = pos.x
+    Back.pos.y = pos.y 
+end]]--

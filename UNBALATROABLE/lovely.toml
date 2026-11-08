@@ -1,0 +1,52 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = -23
+
+[[patches]]
+[patches.pattern]
+target = "back.lua"
+pattern = "self.name = selected_back.name or 'Red Deck'"
+position = "after"
+payload = '''
+if not selected_back.unlocked then
+    self.atlas = 'uncardable_locked_deck'
+end
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "back.lua"
+pattern = '''local pos = (self.effect.center.unlocked and self.effect.center.pos) or {x = 4, y = 0}'''
+position = "after"
+payload = '''
+if not selected_back.unlocked then
+    pos = {x = 0, y = 0}
+end
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "back.lua"
+pattern = "self.name = new_back.name or 'Red Deck'"
+position = "after"
+payload = '''
+if not new_back.unlocked then
+    self.atlas = 'uncardable_locked_deck'
+end
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "back.lua"
+pattern = '''local pos = self.effect.center.unlocked and copy_table(new_back.pos) or {x = 4, y = 0}'''
+position = "after"
+payload = '''
+if not new_back.unlocked or not self.effect.center.unlocked then
+    pos = {x = 0, y = 0}
+end
+'''
+match_indent = true
