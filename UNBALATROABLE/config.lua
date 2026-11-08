@@ -7,4 +7,5 @@ return {
     ["whitetext"] = false;
     ["PALETTE_MANIA"] = false;
     ["reduced_anims"] = false;
+    ["extras"] = false;
 }

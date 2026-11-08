@@ -59,7 +59,8 @@ G.ARGS.LOC_COLOURS['yuki'] = HEX('FFB3FF')
 G.ARGS.LOC_COLOURS['grimp'] = HEX('C30606')
 G.ARGS.LOC_COLOURS['feesh'] = HEX('FF6665')
 G.ARGS.LOC_COLOURS['MUSTARD'] = HEX('c4a00e')
-G.ARGS.LOC_COLOURS['nonexistante'] = G.C.nonexistante
+G.ARGS.LOC_COLOURS['$2nonexistante1'] = HEX("AFB9B4")
+G.ARGS.LOC_COLOURS['$2nonexistante2'] = HEX("CA0065")
 G.ARGS.LOC_COLOURS['ribbown'] = HEX('E000DB')
 
 function UNCARDABLE_artist_tooltip(_c, info_queue, card, desc_nodes, specific_vars, full_UI_table)

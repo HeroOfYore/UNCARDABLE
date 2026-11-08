@@ -126,6 +126,14 @@ return {
             uncardable_and = " and ",
             msg_eaten = "all gone",
             msg_fed = "QUAVERLINGS SATIATED",
+            extras_crash_warning = {
+                name = "The Eye",
+                text = {
+                    "No repeat hand",
+                        "types this round",
+                        "1% chance of crashing on hand played"
+                },
+            },
 
             --ui stuff
             uncard_chips = "chipispis",
@@ -437,10 +445,16 @@ return {
                     "Feeeshies"
                 }
             },
-            ['nonexistante'] = {
+            ['$2nonexistante1'] = {
                 ['text'] =
                 {
-                    "nonexistante"
+                    "nonexist"
+                }
+            },
+            ['$2nonexistante2'] = {
+                ['text'] =
+                {
+                    "ante"
                 }
             },
         },

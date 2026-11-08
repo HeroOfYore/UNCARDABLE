@@ -5,7 +5,7 @@ G.UNCARDATAROT = {
     c_empress = {pos = 3, artist = {'heroofyore'}},
     c_emperor = {pos = 4,  artist = {'heroofyore'}},
     c_heirophant = {pos = 5,  artist = {'heroofyore'}},
-    c_lovers = {pos = 6, artist = {'nonexistante'}},
+    c_lovers = {pos = 6, artist = {'$2nonexistante'}},
     c_chariot = {pos = 7,  artist = {'heroofyore'}},
     c_justice = {pos = 8, artist = {'heroofyore'}},
     c_hermit = {pos = 9,  artist = {'heroofyore'}},
