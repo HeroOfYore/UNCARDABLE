@@ -33,7 +33,6 @@ assert(SMODS.load_file('reskins/UNCARDABLE_BOOSTER.lua'))()
 assert(SMODS.load_file('reskins/UNCARDABLE_SPECTRALS.lua'))()
 assert(SMODS.load_file('reskins/UNCARDABLE_SEALS.lua'))()
 assert(SMODS.load_file('reskins/UNCARDABLE_BLINDS.lua'))()
-assert(SMODS.current_mod.lovely)
 -----------------------------
 ----------------------------
 
