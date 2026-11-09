@@ -7,7 +7,7 @@ G.UNCARDABLE_DECKS = {
     b_magic = {pos = 5, artist = {"guac"}},
     b_nebula = {pos = 6, artist = {"guac"}},
     b_ghost = {pos = 7, artist = {"guac"}},
-    -- b_abandoned = {pos = 8, artist = {"tentative"}},
+    b_abandoned = {pos = 8, artist = {"guac"}},
     -- b_checkered = {pos = 9, artist = {"tentative"}},
     -- b_zodiac = {pos = 10, artist = {"tentative"}},
     -- b_painted = {pos = 11, artist = {"tentative"}},
