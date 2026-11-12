@@ -518,6 +518,7 @@
         j_triboulet = {row = 0, artist = {'guac'}, anim = "j_triboulet_anim"},
         j_caino = {row = 0, artist = {'guac'}, anim = "j_caino_anim"},
         j_chicot = {row = 0, artist = {'guac'}, anim = "j_chicot_anim"},
+        j_yorick = {row = 0, artist = {'guac'}, anim = "j_yorick_anim"},
     }
 
 
@@ -1222,6 +1223,15 @@
         SMODS.Atlas{
             key = "j_caino_anim",
             path = "UNUWUABLE.png",
+            atlas_table = 'ANIMATION_ATLAS',
+            frames = 108,
+            fps = 60,
+            px = 71,
+            py = 95
+        }
+        SMODS.Atlas{
+            key = "j_yorick_anim",
+            path = "UNFINALABLE.png",
             atlas_table = 'ANIMATION_ATLAS',
             frames = 108,
             fps = 60,
