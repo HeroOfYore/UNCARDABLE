@@ -9,6 +9,11 @@ G.UNCARDABLE_BOOSTERS = {
     p_spectral_normal_2 = {pos = 7, artist = {'guac'},},
     p_spectral_jumbo_1 = {pos = 8, artist = {'guac'},},
     p_spectral_mega_1 = {pos = 9, artist = {'guac'},},
+    p_arcana_normal_1 = {pos = 10, artist = {'heroofyore'},},
+    p_arcana_normal_2 = {pos = 11, artist = {'heroofyore'},},
+    p_arcana_normal_3 = {pos = 12, artist = {'heroofyore'},},
+    p_arcana_normal_4 = {pos = 13, artist = {'heroofyore'},},
+
 }
 
 SMODS.Atlas {
