@@ -17,6 +17,20 @@ G.UNCARDABLE_BOOSTERS = {
     p_arcana_jumbo_2 = {pos = 15, artist = {'heroofyore'},},
     p_arcana_mega_1 = {pos = 16, artist = {'heroofyore'}, },
     p_arcana_mega_2 = {pos = 17, artist = {'heroofyore'},},
+    p_celestial_normal_3 = {pos = 18, artist = {'heroofyore'},},
+    p_celestial_normal_4 = {pos = 19, artist = {'heroofyore'},},
+    p_celestial_jumbo_1 = {pos = 20, artist = {'heroofyore'},},
+    p_celestial_jumbo_2 = {pos = 21, artist = {'heroofyore'},},
+    p_celestial_mega_1 = {pos = 22, artist = {'heroofyore'},},
+    p_celestial_mega_2 = {pos = 23, artist = {'heroofyore'},},
+    p_standard_normal_1 = {pos = 24, artist = {'heroofyore'},},
+    p_standard_normal_2 = {pos = 25, artist = {'heroofyore'},},
+    p_standard_normal_3 = {pos = 26, artist = {'heroofyore'},},
+    p_standard_normal_4 = {pos = 27, artist = {'heroofyore'},},
+    p_standard_jumbo_1 = {pos = 28, artist = {'heroofyore'},},
+    p_standard_jumbo_2 = {pos = 29, artist = {'heroofyore'},},
+    p_standard_mega_1 = {pos = 30, artist = {'heroofyore'},},
+    p_standard_mega_2 = {pos = 31, artist = {'heroofyore'},},
 
 
 }
