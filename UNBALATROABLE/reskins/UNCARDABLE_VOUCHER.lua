@@ -27,6 +27,7 @@ G.UNCARDABLE_Vouchers1 = {
     v_reroll_surplus = {artist = {"heroofyore"}, anim = "v_reroll_surplus"},
     v_reroll_glut = {artist = {"heroofyore"}, anim = "v_reroll_glut"},
     v_omen_globe = {artist = {"heroofyore"}, anim = "v_omen_globe_anim"},
+    --v_paint_brush = {pos = 3, artist = {"ava"}, name = "v_paint_brush"},
 }
 
 SMODS.Atlas {

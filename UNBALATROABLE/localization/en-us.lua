@@ -457,6 +457,12 @@ return {
                     "ante"
                 }
             },
+            ['saltyava'] = {
+                ['text'] =
+                {
+                    "saltyava"
+                }
+            },
         },
         Joker = {
              j_four_fingers={

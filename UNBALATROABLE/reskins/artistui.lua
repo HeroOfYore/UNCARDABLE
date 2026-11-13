@@ -31,6 +31,10 @@ G.C.nonexistante = SMODS.Gradient {
     key = "NONEX",
     colours = {HEX("CA0065"), HEX("AFB9B4")}
 }
+G.C.ava = SMODS.Gradient {
+    key = "SALTYAVA",
+    colours = {HEX("918CC6"), HEX("A98CC6")}
+}
 
 G.ARGS.LOC_COLOURS['heroofyore'] = G.C.yore
 G.ARGS.LOC_COLOURS['ermywurm'] = HEX('AD7193')
@@ -62,6 +66,7 @@ G.ARGS.LOC_COLOURS['MUSTARD'] = HEX('c4a00e')
 G.ARGS.LOC_COLOURS['$2nonexistante1'] = HEX("AFB9B4")
 G.ARGS.LOC_COLOURS['$2nonexistante2'] = HEX("CA0065")
 G.ARGS.LOC_COLOURS['ribbown'] = HEX('E000DB')
+G.ARGS.LOC_COLOURS['saltyava'] = G.C.saltyava
 
 function UNCARDABLE_artist_tooltip(_c, info_queue, card, desc_nodes, specific_vars, full_UI_table)
     localize{type = 'descriptions', set = 'UNCARDABLE Artist', key = _c.key, nodes = desc_nodes, vars = specific_vars or _c.vars}
