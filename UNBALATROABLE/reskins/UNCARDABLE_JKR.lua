@@ -84,6 +84,7 @@
         j_certificate = {pos = 4, artist = {'heroofyore'}},
         j_green_joker = {pos = 5, artist = {'stanza'}},
         j_throwback = {pos = 6, artist = {'stanza'}},
+        j_blue_joker = {pos = 7, artist = {'guac'}},
     }
 
     G.UNCARDABLE_jokers3 = {
