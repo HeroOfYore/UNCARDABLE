@@ -28,6 +28,7 @@ G.UNCARDABLE_Vouchers1 = {
     v_reroll_surplus = {artist = {"heroofyore"}, anim = "v_reroll_surplus"},
     v_reroll_glut = {artist = {"heroofyore"}, anim = "v_reroll_glut"},
     v_omen_globe = {artist = {"heroofyore"}, anim = "v_omen_globe_anim"},
+    v_liquidation = {artist = {"heroofyore", "guac"}, anim = "v_liquidation_anim"},
 }
 
 SMODS.Atlas {
@@ -262,7 +263,15 @@ SMODS.Atlas{
     px = 71,
     py = 95,
 }
-
+SMODS.Atlas{
+    key = "v_liquidation_anim",
+    path = "UNVOUCHABLE/UNLIQUIDABLE.png",
+    atlas_table = "ANIMATION_ATLAS",
+    frames = 43,
+    fps = 24,
+    px = 71,
+    py = 95,
+}
 
 if not UNCARDABLE.config.disabled then
     for vchr, data in pairs(G.UNCARDABLE_Vouchers1) do
