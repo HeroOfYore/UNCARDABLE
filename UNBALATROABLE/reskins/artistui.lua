@@ -31,9 +31,9 @@ G.C.nonexistante = SMODS.Gradient {
     key = "NONEX",
     colours = {HEX("CA0065"), HEX("AFB9B4")}
 }
-G.C.ava = SMODS.Gradient {
+G.C.saltyava = SMODS.Gradient {
     key = "SALTYAVA",
-    colours = {HEX("918CC6"), HEX("A98CC6")}
+    colours = {HEX("918cc6"), HEX("a98cc6")}
 }
 
 G.ARGS.LOC_COLOURS['heroofyore'] = G.C.yore

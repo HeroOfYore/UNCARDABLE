@@ -1,6 +1,7 @@
 G.UNCARDABLE_Vouchers1 = {
     v_grabber = {artist = {"heroofyore"}, anim = "v_grabber_anim"},
     v_seed_money = {pos = 2, artist = {"epicelle"}, name = "v_money_tree"},
+    v_paint_brush = {pos = 3, artist = {"saltyava"}, name = "v_money_tree"},
     v_money_tree = {pos = 0, artist = {"epicelle"}, name = "v_money_tree"},
     v_telescope = {artist = {"heroofyore"}, anim = "v_telescope_anim"},
     v_observatory = {artist = {"heroofyore"}, anim = "v_observatory_anim"},
@@ -27,7 +28,6 @@ G.UNCARDABLE_Vouchers1 = {
     v_reroll_surplus = {artist = {"heroofyore"}, anim = "v_reroll_surplus"},
     v_reroll_glut = {artist = {"heroofyore"}, anim = "v_reroll_glut"},
     v_omen_globe = {artist = {"heroofyore"}, anim = "v_omen_globe_anim"},
-    --v_paint_brush = {pos = 3, artist = {"ava"}, name = "v_paint_brush"},
 }
 
 SMODS.Atlas {
