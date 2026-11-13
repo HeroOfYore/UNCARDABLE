@@ -13,6 +13,11 @@ G.UNCARDABLE_BOOSTERS = {
     p_arcana_normal_2 = {pos = 11, artist = {'heroofyore'},},
     p_arcana_normal_3 = {pos = 12, artist = {'heroofyore'},},
     p_arcana_normal_4 = {pos = 13, artist = {'heroofyore'},},
+    p_arcana_jumbo_1 = {pos = 14, artist = {'heroofyore'},},
+    p_arcana_jumbo_2 = {pos = 15, artist = {'heroofyore'},},
+    p_arcana_mega_1 = {pos = 16, artist = {'heroofyore'}, },
+    p_arcana_mega_2 = {pos = 17, artist = {'heroofyore'},},
+
 
 }
 
