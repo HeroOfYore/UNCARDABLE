@@ -6,7 +6,7 @@ G.UNCARDABLE_STAKES = {
     stake_blue = {pos = 4, artist = {"heroofyore"}},
     stake_purple = {pos = 5, artist = {"heroofyore"}},
     stake_orange = {pos = 6, artist = {"heroofyore"}},
-    stake_gold = {pos = 7, artist = {"guac"}},
+    stake_gold = {pos = 7, artist = {"heroofyore", "guac"}},
 }
 
 G.UNCARDABLE_STAKESTICKERS = {
@@ -17,7 +17,7 @@ G.UNCARDABLE_STAKESTICKERS = {
     Blue = {pos = 4, artist = {"heroofyore"}},
     Purple = {pos = 5, artist = {"heroofyore"}},
     Orange = {pos = 6, artist = {"heroofyore"}},  
-    Gold = {pos = 7, artist = {"guac"}}, 
+    Gold = {pos = 7, artist = {"heroofyore", "guac"}}, 
 }
 
 SMODS.Atlas {
