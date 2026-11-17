@@ -16,8 +16,8 @@ G.UNCARDABLE_STAKESTICKERS = {
     Black = {pos = 3, artist = {"heroofyore"}},   
     Blue = {pos = 4, artist = {"heroofyore"}},
     Purple = {pos = 5, artist = {"heroofyore"}},
-    Orange = {pos = 6, artist = {"heroofyore"}},  
-    --Gold = {pos = 3, artist = {"guac"}}, 
+    --Orange = {pos = 6, artist = {"heroofyore"}},  
+    Gold = {pos = 7, artist = {"guac"}}, 
 }
 
 SMODS.Atlas {
@@ -45,9 +45,10 @@ if not UNCARDABLE.config.disabled then
         }, true)
     end
     for sticker, data in pairs(G.UNCARDABLE_STAKESTICKERS) do
-        SMODS["Sticker"]:take_ownership(sticker, {
+        SMODS["Seal"]:take_ownership(sticker, {
             atlas = "unstickerable",
             pos = {x = 0 + data.pos, y = 0},
             artist_credits = data.artist,
         }, true)
+    end
 end
