@@ -43,7 +43,7 @@ if not UNCARDABLE.config.disabled then
             pos = {x = 0+data.pos, y = 0},
             artist_credits = data.artist,
             sticker_atlas = "unstickerable",
-            sticker_pos = {x = 0 + data.pos, y = 0},
+            sticker_pos = {x = -0.3 + data.pos, y = 0},
         }, true)
     end
 end
