@@ -266,6 +266,13 @@ SMODS.DeckSkin({
     pos_style = 'collab'
 })
 
+SMODS.Atlas({
+	key = "modicon",
+	path = "icon.png",
+	px = 27,
+	py = 27
+})
+
 -----------------------------
 -----------------------------
 

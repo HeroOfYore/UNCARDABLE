@@ -3,9 +3,10 @@
     "id":"UNCARDABLE",
     "version":"1.0.0",
     "author":["HeroOfYore"],
-    "description":"Balatro Unbeatable-ized",
+    "description":"Balatro UNBEATABLE-ized",
     "prefix":"uncardable",
     "main_file":"UNCARDABLE.lua",
     "priority": -20,
-    "display_name":"UBL"
+    "display_name":"UBL",
+    "icon_path": "icon.png"
 }
