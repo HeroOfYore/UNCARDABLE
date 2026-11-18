@@ -29,6 +29,7 @@ G.UNCARDABLE_Vouchers1 = {
     v_reroll_glut = {artist = {"heroofyore"}, anim = "v_reroll_glut"},
     v_omen_globe = {artist = {"heroofyore"}, anim = "v_omen_globe_anim"},
     v_liquidation = {artist = {"heroofyore", "guac"}, anim = "v_liquidation_anim"},
+    v_crystal_ball = {pos = 4, artist = {"ploutre"}, name = "v_money_tree"}
 }
 
 SMODS.Atlas {
