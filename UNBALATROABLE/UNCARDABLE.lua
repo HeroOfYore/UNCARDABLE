@@ -438,6 +438,12 @@ local UNCARDABLEConfigTab = function()
         ref_table = UNCARDABLE.config,
         ref_value = "reduced_anims",
     })
+    unbal_nodes[#unbal_nodes+1] = create_toggle({
+        label = "Custom hand names",
+        active_colour = HEX("E01BDE"),
+        ref_table = UNCARDABLE.config,
+        ref_value = "rename_hand_types",
+    })
     return {
 		n = G.UIT.ROOT,
 		config = {

@@ -9,4 +9,5 @@ return {
     ["reduced_anims"] = false;
     ["extras"] = false;
     credit_num = 1,
+    ["rename_hand_types"] = true;
 }
