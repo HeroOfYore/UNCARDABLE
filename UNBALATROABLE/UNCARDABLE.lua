@@ -74,7 +74,7 @@ SMODS.Atlas {
 }
 
 SMODS.Atlas {
-    key = 'unbeataspades_hc_reverse',
+    key = 'unbeataspades_hcreverse',
     px = 71,
     py = 95,
     disable_mipmap = true;
