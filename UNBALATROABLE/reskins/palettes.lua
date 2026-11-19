@@ -91,7 +91,7 @@ UNCARDABLE.credits =
 	{ -- page
 		{ -- the three per page
 			{
-			"HeroOfYore", --credit name
+			"heroofyore", --credit name. MUST MATCH ARTISTUI DOC
 			{
 				"Jokers",
 				"Code",
@@ -106,7 +106,7 @@ UNCARDABLE.credits =
 			"4", -- and a position
 			},
 			{
-				"Guacamole Sean",
+				"guac",
 				{
 					"Jokers",
 					"Code",
@@ -120,7 +120,7 @@ UNCARDABLE.credits =
 				"worked on basically everything, as well",
 			},
 			{
-				"Ploutre",
+				"ploutre",
 				{
 					"Jokers",
 					"Tarot",
@@ -133,22 +133,23 @@ UNCARDABLE.credits =
 	{ -- page 2
 		{
 			{
-				"ErmyWurm",
+				"ermywurm",
 				{
 					"Jokers",
 				},
 			},
 			{
-				"Murdock",
+				"murdock",
 				{
 					"Jokers",
 				},
 			},
 			{
-				"Stanza",
+				"stanza",
 				{
 					"Jokers",
 					"Cardbacks",
+					"Boosters",
 				},
 			}
 		}
@@ -156,61 +157,67 @@ UNCARDABLE.credits =
 	{ -- page 3
 		{
 			{
-				"Bramble",
+				"$7bramble",
 				{
 					"Jokers",
 				},
 			},
 			{
-				"8Z",
+				"8z",
 				{
 					"Jokers",
 				},
 			},
 			{
-				"Objitude",
+				"objitude",
 				{
 					"Jokers",
 				},
 			}
 		}
 	},
-	{
+	{ -- 4
 		{
 			{
-				"Elle",
+				"epicelle",
 				{
 					"Jokers",
 				},				
 			},
 			{
-				"Fleur",
+				"birb",
 				{
 					"Jokers",
 				},
 			},
 			{
-				"suvi++;",
+				"$3suvi",
 				{
 					"Jokers",
 				},
 			},
 		}
 	},
-	{
+	{ -- 5
 		{
 			{
-				"Angel",
+				"yuki",
 				{
 					"Jokers",
 				},
 			},
 			{
-				"YeetPro",
+				"ribbown",
 				{
-					"Code Optimization",
-				},
-			}
+					"Tags",
+				}
+			},
+			{
+				"$2nonexistante",
+				{
+					"Tarot",
+				}
+			},
 		}
 	}
 }
@@ -451,9 +458,7 @@ function UNCARDABLE.craft_credit(name, credit, atl, pos)
 					colour = G.C.RED,
 					}
 				}
-
-			}
-			
+			}			
 		})
 	end
 
@@ -480,18 +485,7 @@ function UNCARDABLE.craft_credit(name, credit, atl, pos)
 							r = 0.1,
 							
 						},
-						nodes = 
-						{
-							{
-								n = G.UIT.T,
-								config = {
-									text = name,
-									colour = G.C.WHITE,
-									scale = 0.7,
-								}
-							},
-
-						},
+						nodes = credit_node(name)
 					},
 					{
 						n = G.UIT.R,
@@ -589,7 +583,8 @@ function UNCARDABLE.credit_tab_def(page)
 		nodes = {
 			{
 				n = G.UIT.C,
-				config = {},
+				config = {
+				},
 				nodes = {
 					create_option_cycle({
 						options = credit_pages,
@@ -603,7 +598,7 @@ function UNCARDABLE.credit_tab_def(page)
 	--print(#credit_nodes)
 	return {
 		n = G.UIT.ROOT,
-		config = {align = "cm", colour = G.C.BLACK, padding = 0.1},
+		config = {align = "cm", colour = G.C.BLACK, padding = 0.1, minh = 4},
 		nodes = {
 			{
 				n = G.UIT.C,
@@ -615,3 +610,43 @@ function UNCARDABLE.credit_tab_def(page)
 end
 
 
+function credit_node(name)
+	local credit_name_nodes = {}
+	if string.sub(name, 1, 1) == "$" then
+		local index = tonumber(string.sub(name, 2, 2))
+		for i = 1, index, 1 do
+			table.insert(credit_name_nodes, 
+		{
+			n = G.UIT.O, config = {
+				object = DynaText({string = localize{type = 'raw_descriptions', set = 'UNCARDABLE Artist', key = name .. i },
+				colours = {G.ARGS.LOC_COLOURS[name..i] or G.C.WHITE},
+				bump = true,
+				silent = true,
+				pop_in = 0,
+				pop_in_rate = 4,
+				shadow = true,
+				y_offset = -0.6,
+				scale = 0.4,
+				})
+			}
+		})
+		end
+	else
+	table.insert(credit_name_nodes,
+	{n = G.UIT.O, config =
+		{
+			object = DynaText({string = localize{type = 'raw_descriptions', set = 'UNCARDABLE Artist', key = name},
+			colours = {G.ARGS.LOC_COLOURS[name] or G.C.WHITE},
+			bump = true,
+			silent = true,
+			pop_in = 0,
+			pop_in_rate = 4,
+			shadow = true,
+			y_offset = -0.6,
+			scale = 0.4,
+			})
+		}
+	})
+	end
+	return credit_name_nodes
+end

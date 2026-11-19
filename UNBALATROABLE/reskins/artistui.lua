@@ -56,9 +56,9 @@ G.ARGS.LOC_COLOURS['$7bramble7'] = HEX('992D22')
 G.ARGS.LOC_COLOURS['birb'] = G.C.birb
 G.ARGS.LOC_COLOURS['epicelle'] = HEX('15b159')
 G.ARGS.LOC_COLOURS['fieldofgrass'] = G.C.grass
-G.ARGS.LOC_COLOURS['suvi'] = HEX('FFF0C9')
-G.ARGS.LOC_COLOURS['suvib'] = HEX('287C88')
-G.ARGS.LOC_COLOURS['suvic'] = HEX('8F8F8F') 
+G.ARGS.LOC_COLOURS['$3suvi1'] = HEX('FFF0C9')
+G.ARGS.LOC_COLOURS['$3suvi2'] = HEX('287C88')
+G.ARGS.LOC_COLOURS['$3suvi3'] = HEX('8F8F8F') 
 G.ARGS.LOC_COLOURS['yuki'] = HEX('FFB3FF')
 G.ARGS.LOC_COLOURS['grimp'] = HEX('C30606')
 G.ARGS.LOC_COLOURS['feesh'] = HEX('FF6665')
@@ -67,6 +67,7 @@ G.ARGS.LOC_COLOURS['$2nonexistante1'] = HEX("AFB9B4")
 G.ARGS.LOC_COLOURS['$2nonexistante2'] = HEX("CA0065")
 G.ARGS.LOC_COLOURS['ribbown'] = HEX('E000DB')
 G.ARGS.LOC_COLOURS['saltyava'] = G.C.saltyava
+--G.ARGS.LOC_COLOURS["yeetpro"]
 
 function UNCARDABLE_artist_tooltip(_c, info_queue, card, desc_nodes, specific_vars, full_UI_table)
     localize{type = 'descriptions', set = 'UNCARDABLE Artist', key = _c.key, nodes = desc_nodes, vars = specific_vars or _c.vars}

@@ -410,19 +410,19 @@ return {
                     "FieldOfGrass"
                 }
             },
-            ['suvi'] = {
+            ['$3suvi1'] = {
                 ['text'] =
                 {
                     "suvi"
                 }
             },
-            ['suvib'] = {
+            ['$3suvi2'] = {
                 ['text'] =
                 {
                     "++"
                 }
             },
-            ['suvic'] = {
+            ['$3suvi3'] = {
                 ['text'] = 
                 {
                     ";"
