@@ -86,6 +86,135 @@ pal = {
 	{ "c37293", "6DB68C", "FFD0DF", "c04b67", "ffcd00" },
 }
 
+UNCARDABLE.credits = 
+{ 
+	{ -- page
+		{ -- the three per page
+			{
+			"HeroOfYore", --credit name
+			{
+				"Jokers",
+				"Code",
+				"Spectrals",
+				"Tarot",
+				"Blinds",
+				"Tags",
+				"Vouchers",
+				"...and everything else"
+			}, -- credited for
+			"agglomeration1", -- throw an atlas name here
+			"4", -- and a position
+			},
+			{
+				"Guacamole Sean",
+				{
+					"Jokers",
+					"Code",
+					"Spectrals",
+					"Decks",
+					"All Planets",
+					"Vouchers",
+					"Seals",
+					"and more",
+				},
+				"worked on basically everything, as well",
+			},
+			{
+				"Ploutre",
+				{
+					"Jokers",
+					"Tarot",
+					"A Voucher",
+				},
+				"Buncha jokers",
+			}
+		},
+	},
+	{ -- page 2
+		{
+			{
+				"ErmyWurm",
+				{
+					"Jokers",
+				},
+			},
+			{
+				"Murdock",
+				{
+					"Jokers",
+				},
+			},
+			{
+				"Stanza",
+				{
+					"Jokers",
+					"Cardbacks",
+				},
+			}
+		}
+	},
+	{ -- page 3
+		{
+			{
+				"Bramble",
+				{
+					"Jokers",
+				},
+			},
+			{
+				"8Z",
+				{
+					"Jokers",
+				},
+			},
+			{
+				"Objitude",
+				{
+					"Jokers",
+				},
+			}
+		}
+	},
+	{
+		{
+			{
+				"Elle",
+				{
+					"Jokers",
+				},				
+			},
+			{
+				"Fleur",
+				{
+					"Jokers",
+				},
+			},
+			{
+				"suvi++;",
+				{
+					"Jokers",
+				},
+			},
+		}
+	},
+	{
+		{
+			{
+				"Angel",
+				{
+					"Jokers",
+				},
+			},
+			{
+				"YeetPro",
+				{
+					"Code Optimization",
+				},
+			}
+		}
+	}
+}
+
 G.C.DORU_GRADIENT = SMODS.Gradient{
  key = "DORU_GRADIENT",
  colours = {HEX("bcffb9"), HEX("4bf0ff")}
@@ -106,65 +235,72 @@ SMODS.Atlas {
 
 
 SMODS.current_mod.extra_tabs = function()
-
-    return {
-                {
-                    label = 'Palettes',
-                    tab_definition_function = function()
-                    return {n = G.UIT.ROOT, config = {
-                            emboss = 0.05,
-			    			minh = 6,
-			    			r = 0.1,
-			    			minw = 10,
-			    			align = "cm",
-			    			padding = 0.2,
-			    			colour = G.C.BLACK,
-                        }, 
-                        nodes = {
-							create_option_cycle({
+	return 
+	{
+            {
+                label = 'Palettes',
+                tab_definition_function = function()
+                return {n = G.UIT.ROOT, config = {
+                        emboss = 0.05,
+						minh = 6,
+						r = 0.1,
+						minw = 10,
+						align = "cm",
+						padding = 0.2,
+						colour = G.C.BLACK,
+                    }, 
+                    nodes = {
+						create_option_cycle({
+							options = localize('uncard_palettes'),
+							scale = 0.7,
+							w = 4.5,
+							current_option = UNCARDABLE.config.palette_num,
+							opt_callback = "uncardable_change_palette",
+							ref_table = UNCARDABLE.config,
+							ref_value = "palette_num",
+							no_pips = true,
+							mid = SMODS.GUI.dropdown_select({
+								id = "uncardable_palette_dropdown",
 								options = localize('uncard_palettes'),
-								scale = 0.7,
-								w = 4.5,
-								current_option = UNCARDABLE.config.palette_num,
-								opt_callback = "uncardable_change_palette",
+								minw = 5,
+								scale = 0.5,
+								align = "cm",
+								option_align = "cm",
 								ref_table = UNCARDABLE.config,
 								ref_value = "palette_num",
-								no_pips = true,
-								mid = SMODS.GUI.dropdown_select({
-									id = "uncardable_palette_dropdown",
-									options = localize('uncard_palettes'),
-									minw = 5,
-									scale = 0.5,
-									align = "cm",
-									option_align = "cm",
-									ref_table = UNCARDABLE.config,
-									ref_value = "palette_num",
-									callback = "uncardable_palette_drop_change",
-									close_on_select = true,
-									max_menu_h = 3,
-								})
-							}),
-							create_toggle(
-								{
-									label = "Keep chip x mult text white",
-									active_colour = HEX("E01BDE"),
-									ref_table = UNCARDABLE.config,
-									ref_value = "whitetext",
-								}
-							),
-							create_toggle(
-								{
-									label = "Enable PALETTE MANIA. at your own risk",
-									active_colour = HEX("E01BDE"),
-									ref_table = UNCARDABLE.config,
-									ref_value = "PALETTE_MANIA",
-								}
-							),
-							UNCARDABLE.embedded_ui_sprite()
-                        }}
-                end,
-                },
-        }
+								callback = "uncardable_palette_drop_change",
+								close_on_select = true,
+								max_menu_h = 3,
+							})
+						}),
+						create_toggle(
+							{
+								label = "Keep chip x mult text white",
+								active_colour = HEX("E01BDE"),
+								ref_table = UNCARDABLE.config,
+								ref_value = "whitetext",
+							}
+						),
+						create_toggle(
+							{
+								label = "Enable PALETTE MANIA. at your own risk",
+								active_colour = HEX("E01BDE"),
+								ref_table = UNCARDABLE.config,
+								ref_value = "PALETTE_MANIA",
+							}
+						),
+						UNCARDABLE.embedded_ui_sprite()
+                    }}
+            end,
+            },
+			{
+				label = "Credits",
+            	tab_definition_function = function ()
+            		return UNCARDABLE.credits_tab()
+            	end,
+
+			}
+    }
 end
 
 function UNCARDABLE.embedded_ui_sprite()
@@ -297,3 +433,185 @@ function Game:update(dt)
 	local ret = update_col(self, dt)
 	G.C.WHITE = {1, 1, 1, 1}
 end
+
+function UNCARDABLE.craft_credit(name, credit, atl, pos)
+	local credited_for = {}
+	for _, line in ipairs(credit) do
+		table.insert(credited_for, {
+			n= G.UIT.R,
+			config = {
+				align = "cl",
+			},
+			nodes = {
+				{
+					n = G.UIT.T,
+					config = {
+					text = line,
+					scale = 0.4,
+					colour = G.C.RED,
+					}
+				}
+
+			}
+			
+		})
+	end
+
+	print(name)
+	return {
+		n = G.UIT.C,
+		config = { align = "tm", padding = 0.1},
+		nodes = {
+			{
+				n = G.UIT.C,
+				config = {
+					align = "cm",
+					colour = G.C.BLUE,
+					padding = 0.1,
+					r = 0.1,
+				},
+				nodes = {
+					{
+						n = G.UIT.R,
+						config = {
+							align = "cm",
+							colour = G.C.MONEY,
+							padding = 0.1,
+							r = 0.1,
+							
+						},
+						nodes = 
+						{
+							{
+								n = G.UIT.T,
+								config = {
+									text = name,
+									colour = G.C.WHITE,
+									scale = 0.7,
+								}
+							},
+
+						},
+					},
+					{
+						n = G.UIT.R,
+						config = {
+							align = "cl",
+							padding = 0.1,
+							r = 0.1,
+							
+						},
+						nodes = {
+							{
+								n = G.UIT.C,
+								config = {
+									align = "cl",
+									padding = 0.1,
+									r = 0.1,
+								},
+								nodes =	credited_for,
+							}
+						}
+					},
+				}
+			}
+		}
+	}
+
+end
+
+
+function UNCARDABLE.display_credits(page)
+	credit_columns = {}
+	for _, row in ipairs(UNCARDABLE.credits[page]) do
+		local credit_items = {}
+		for _, item in ipairs(row) do -- fuck with this once it's working
+			table.insert(credit_columns, UNCARDABLE.craft_credit(item[1], item[2]))
+		end
+	end
+	print(#credit_columns)
+
+	return {
+				n = G.UIT.R,
+				config = {align = "ct"},
+				nodes = credit_columns,
+	}
+end
+
+function UNCARDABLE.credits_tab()
+	UNCARDABLE.selected_credit_page = UNCARDABLE.selected_credit_page or 1
+	return {
+		n = G.UIT.ROOT,
+		config = { colour = G.C.BLACK, align = "cm", r = 0.1, padding = 0.1, emboss = 0.05},
+		nodes = {
+			{
+				n = G.UIT.O,
+				config = {
+					id = "uncardable_credits_page_active",
+					object = UIBox({
+						definition = UNCARDABLE.credit_tab_def(UNCARDABLE.selected_credit_page),
+						config = { type = "cm"},
+					}),
+				},
+				align = "ct",
+			},
+		},
+	}
+end
+
+function G.FUNCS.uncardable_select_credits_page(args)
+	if not G.OVERLAY_MENU then
+		return
+	end
+	UNCARDABLE.selected_credit_page = args.to_key
+	local def = UNCARDABLE.credit_tab_def(UNCARDABLE.selected_credit_page)
+	local container = G.OVERLAY_MENU:get_UIE_by_ID("uncardable_credits_page_active")
+	if container then
+		container.config.object:remove()
+		container.config.object = UIBox({
+			definition = def,
+			config = {type = "cm", parent = container},
+		})
+		container.config.object:recalculate()
+	end
+end
+
+function UNCARDABLE.credit_tab_def(page)
+	local credit_nodes = {}
+	table.insert(credit_nodes, UNCARDABLE.display_credits(page))
+	local credit_pages = {}
+	for i, _ in ipairs(UNCARDABLE.credits) do
+		table.insert(credit_pages, localize("k_page") .. string.format(" %s/%s", i, #UNCARDABLE.credits))
+	end
+	table.insert(credit_nodes, {
+		n = G.UIT.R,
+		config = {align = "cm"},
+		nodes = {
+			{
+				n = G.UIT.C,
+				config = {},
+				nodes = {
+					create_option_cycle({
+						options = credit_pages,
+						current_option = page,
+						opt_callback = "uncardable_select_credits_page"
+					}),
+				},
+			},
+		},
+	})
+	--print(#credit_nodes)
+	return {
+		n = G.UIT.ROOT,
+		config = {align = "cm", colour = G.C.BLACK, padding = 0.1},
+		nodes = {
+			{
+				n = G.UIT.C,
+				config = {align = "cm", padding = 0.1},
+				nodes = credit_nodes,
+			},
+		}
+	}
+end
+
+

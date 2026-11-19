@@ -207,6 +207,7 @@ return {
                 'Octave (Darkmode)',
                 'DORU_TEST',
             },
+            credits_tabs= 'Credits Tab',
         },
         v_dictionary = {
             a_mult_minus="-#1# Mult",

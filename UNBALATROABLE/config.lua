@@ -8,4 +8,5 @@ return {
     ["PALETTE_MANIA"] = false;
     ["reduced_anims"] = false;
     ["extras"] = false;
+    credit_num = 1,
 }

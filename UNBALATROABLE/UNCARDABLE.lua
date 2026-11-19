@@ -34,6 +34,7 @@ assert(SMODS.load_file('reskins/UNCARDABLE_SPECTRALS.lua'))()
 assert(SMODS.load_file('reskins/UNCARDABLE_SEALS.lua'))()
 assert(SMODS.load_file('reskins/UNCARDABLE_BLINDS.lua'))()
 assert(SMODS.load_file('reskins/UNCARDABLE_STAKES.lua'))()
+assert(SMODS.load_file('reskins/credits.lua'))()
 -----------------------------
 ----------------------------
 
