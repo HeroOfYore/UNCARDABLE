@@ -66,6 +66,22 @@ SMODS.Atlas {
 }
 
 SMODS.Atlas {
+    key = 'unbeataspadesreverse',
+    px = 71,
+    py = 95,
+    disable_mipmap = true;
+    path = 'UNBEATASPADESLCREVERSE.png'
+}
+
+SMODS.Atlas {
+    key = 'unbeataspades_hc_reverse',
+    px = 71,
+    py = 95,
+    disable_mipmap = true;
+    path = 'UNBEATASPADESHCREVERSE.png'
+}
+
+SMODS.Atlas {
     key = 'unbeatahearts',
     px = 71,
     py = 95,
@@ -78,6 +94,21 @@ SMODS.Atlas {
     py = 95,
     disable_mipmap = true;
     path = 'UNBEATAHEARTSHC.png'
+}
+
+SMODS.Atlas {
+    key = 'unbeataheartsreverse',
+    px = 71,
+    py = 95,
+    disable_mipmap = true;
+    path = 'UNBEATAHEARTSLCREVERSE.png'
+}
+SMODS.Atlas {
+    key = 'unbeatahearts_hcreverse',
+    px = 71,
+    py = 95,
+    disable_mipmap = true;
+    path = 'UNBEATAHEARTSHCREVERSE.png'
 }
 
 SMODS.Atlas {
@@ -96,6 +127,21 @@ SMODS.Atlas {
 }
 
 SMODS.Atlas {
+    key = 'unbeataclubsreverse',
+    px = 71,
+    py = 95,
+    disable_mipmap = true;
+    path = 'UNBEATACLUBSLCREVERSE.png'
+}
+SMODS.Atlas {
+    key = 'unbeataclubs_hcreverse',
+    px = 71,
+    py = 95,
+    disable_mipmap = true;
+    path = 'UNBEATACLUBSHCREVERSE.png'
+}
+
+SMODS.Atlas {
     key = 'unbeatadiamonds',
     px = 71,
     py = 95,
@@ -108,6 +154,21 @@ SMODS.Atlas {
     py = 95,
     disable_mipmap = true;
     path = 'UNBEATADIAMONDSHC.png'
+}
+
+SMODS.Atlas {
+    key = 'unbeatadiamondsreverse',
+    px = 71,
+    py = 95,
+    disable_mipmap = true;
+    path = 'UNBEATADIAMONDSLCREVERSE.png'
+}
+SMODS.Atlas {
+    key = 'unbeatadiamonds_hcreverse',
+    px = 71,
+    py = 95,
+    disable_mipmap = true;
+    path = 'UNBEATADIAMONDSHCREVERSE.png'
 }
 
 SMODS.DeckSkin ({
@@ -154,6 +215,54 @@ SMODS.DeckSkin({
     hc_atlas = 'unbeatadiamonds_hc',
     loc_txt = {
         ['en-us'] = 'UNBEATABLE',
+    },
+    pos_style = 'collab'
+})
+
+SMODS.DeckSkin ({
+    key = 'UnbeataSpadesReverse',
+    suit = "Spades",
+    ranks = ranks,
+    lc_atlas = 'unbeataspadesreverse',
+    hc_atlas = 'unbeataspades_hcreverse',
+    loc_txt = {
+        ['en-us'] = 'UNBEATABLE REVERSE'
+    },
+    pos_style = 'collab'
+})
+
+SMODS.DeckSkin({
+    key = 'UnbeataHeartsReverse',
+    suit = "Hearts",
+    ranks = ranks,
+    lc_atlas = 'unbeataheartsreverse',
+    hc_atlas = 'unbeatahearts_hcreverse',
+    loc_txt = {
+        ['en-us'] = 'UNBEATABLE REVERSE',
+    },
+    pos_style = 'collab'
+})
+
+SMODS.DeckSkin({
+    key = 'UnbeataClubsReverse',
+    suit = "Clubs",
+    ranks = ranks,
+    lc_atlas = 'unbeataclubsreverse',
+    hc_atlas = 'unbeataclubs_hcreverse',
+    loc_txt = {
+        ['en-us'] = 'UNBEATABLE REVERSE',
+    },
+    pos_style = 'collab'
+})
+
+SMODS.DeckSkin({
+    key = 'UnbeataDiamondsReverse',
+    suit = "Diamonds",
+    ranks = ranks,
+    lc_atlas = 'unbeatadiamondsreverse',
+    hc_atlas = 'unbeatadiamonds_hcreverse',
+    loc_txt = {
+        ['en-us'] = 'UNBEATABLE REVERSE',
     },
     pos_style = 'collab'
 })
