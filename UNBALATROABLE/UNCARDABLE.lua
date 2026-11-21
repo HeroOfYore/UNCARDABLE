@@ -41,6 +41,7 @@ assert(SMODS.load_file('reskins/credits.lua'))()
 
 
 ranks = {"Jack", "Queen", "King"}
+ranks_all = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"}
 
 SMODS.Atlas {
     key = 'balatro',
@@ -54,7 +55,7 @@ SMODS.Atlas {
     px = 71,
     py = 95,
     disable_mipmap = true;
-    path = 'UNBEATASPADESLC.png'
+    path = 'DECKSKINS/UNBEATASPADESLC.png'
 }
 
 SMODS.Atlas {
@@ -62,7 +63,7 @@ SMODS.Atlas {
     px = 71,
     py = 95,
     disable_mipmap = true;
-    path = 'UNBEATASPADESHC.png'
+    path = 'DECKSKINS/UNBEATASPADESHC.png'
 }
 
 SMODS.Atlas {
@@ -70,7 +71,7 @@ SMODS.Atlas {
     px = 71,
     py = 95,
     disable_mipmap = true;
-    path = 'UNBEATASPADESLCREVERSE.png'
+    path = 'DECKSKINS/UNBEATASPADESLCREVERSE.png'
 }
 
 SMODS.Atlas {
@@ -78,7 +79,7 @@ SMODS.Atlas {
     px = 71,
     py = 95,
     disable_mipmap = true;
-    path = 'UNBEATASPADESHCREVERSE.png'
+    path = 'DECKSKINS/UNBEATASPADESHCREVERSE.png'
 }
 
 SMODS.Atlas {
@@ -86,14 +87,14 @@ SMODS.Atlas {
     px = 71,
     py = 95,
     disable_mipmap = true;
-    path = 'UNBEATAHEARTSLC.png'
+    path = 'DECKSKINS/UNBEATAHEARTSLC.png'
 }
 SMODS.Atlas {
     key = 'unbeatahearts_hc',
     px = 71,
     py = 95,
     disable_mipmap = true;
-    path = 'UNBEATAHEARTSHC.png'
+    path = 'DECKSKINS/UNBEATAHEARTSHC.png'
 }
 
 SMODS.Atlas {
@@ -101,14 +102,14 @@ SMODS.Atlas {
     px = 71,
     py = 95,
     disable_mipmap = true;
-    path = 'UNBEATAHEARTSLCREVERSE.png'
+    path = 'DECKSKINS/UNBEATAHEARTSLCREVERSE.png'
 }
 SMODS.Atlas {
-    key = 'unbeatahearts_hcreverse',
+    key = 'DECKSKINS/unbeatahearts_hcreverse',
     px = 71,
     py = 95,
     disable_mipmap = true;
-    path = 'UNBEATAHEARTSHCREVERSE.png'
+    path = 'DECKSKINS/UNBEATAHEARTSHCREVERSE.png'
 }
 
 SMODS.Atlas {
@@ -116,14 +117,14 @@ SMODS.Atlas {
     px = 71,
     py = 95,
     disable_mipmap = true;
-    path = 'UNBEATACLUBSLC.png'
+    path = 'DECKSKINS/UNBEATACLUBSLC.png'
 }
 SMODS.Atlas {
     key = 'unbeataclubs_hc',
     px = 71,
     py = 95,
     disable_mipmap = true;
-    path = 'UNBEATACLUBSHC.png'
+    path = 'DECKSKINS/UNBEATACLUBSHC.png'
 }
 
 SMODS.Atlas {
@@ -131,14 +132,14 @@ SMODS.Atlas {
     px = 71,
     py = 95,
     disable_mipmap = true;
-    path = 'UNBEATACLUBSLCREVERSE.png'
+    path = 'DECKSKINS/UNBEATACLUBSLCREVERSE.png'
 }
 SMODS.Atlas {
     key = 'unbeataclubs_hcreverse',
     px = 71,
     py = 95,
     disable_mipmap = true;
-    path = 'UNBEATACLUBSHCREVERSE.png'
+    path = 'DECKSKINS/UNBEATACLUBSHCREVERSE.png'
 }
 
 SMODS.Atlas {
@@ -146,14 +147,14 @@ SMODS.Atlas {
     px = 71,
     py = 95,
     disable_mipmap = true;
-    path = 'UNBEATADIAMONDSLC.png'
+    path = 'DECKSKINS/UNBEATADIAMONDSLC.png'
 }
 SMODS.Atlas {
     key = 'unbeatadiamonds_hc',
     px = 71,
     py = 95,
     disable_mipmap = true;
-    path = 'UNBEATADIAMONDSHC.png'
+    path = 'DECKSKINS/UNBEATADIAMONDSHC.png'
 }
 
 SMODS.Atlas {
@@ -161,14 +162,14 @@ SMODS.Atlas {
     px = 71,
     py = 95,
     disable_mipmap = true;
-    path = 'UNBEATADIAMONDSLCREVERSE.png'
+    path = 'DECKSKINS/UNBEATADIAMONDSLCREVERSE.png'
 }
 SMODS.Atlas {
     key = 'unbeatadiamonds_hcreverse',
     px = 71,
     py = 95,
     disable_mipmap = true;
-    path = 'UNBEATADIAMONDSHCREVERSE.png'
+    path = 'DECKSKINS/UNBEATADIAMONDSHCREVERSE.png'
 }
 
 SMODS.DeckSkin ({
@@ -267,12 +268,83 @@ SMODS.DeckSkin({
     pos_style = 'collab'
 })
 
+SMODS.Atlas{
+    key = "tapesuit",
+    px = 71,
+    py = 95,
+    path = "DECKSKINS/UNBEATATAPES.png"
+}
+SMODS.Atlas{
+    key = "guitarsuit",
+    px = 71,
+    py = 95,
+    path = "DECKSKINS/UNBEATAGUITARS.png"
+}
+SMODS.Atlas{
+    key = "synthsuit",
+    px = 71,
+    py = 95,
+    path = "DECKSKINS/UNBEATASYNTHS.png"
+}
+
+SMODS.DeckSkin({
+    key = 'tapesuit_skin',
+    suit = "Hearts",
+    palettes = {
+        {
+            key = 'lc',
+            ranks = ranks_all,
+            display_ranks = ranks_all,
+            atlas = "uncardable_tapesuit",
+            pos_style = 'suit',
+        }
+    },
+    loc_txt = {
+        ["en-us"] = 'UNCARDABLE HEARTS'
+    },
+    pos_style = 'collab'
+})
+SMODS.DeckSkin({
+    key = 'guitarsuit_skin',
+    suit = "Spades",
+    palettes = {
+        {
+            key = 'lc',
+            ranks = ranks_all,
+            display_ranks = ranks_all,
+            atlas = "uncardable_guitarsuit",
+            pos_style = 'suit',
+        }
+    },
+    loc_txt = {
+        ["en-us"] = 'UNCARDABLE SPADES'
+    },
+    pos_style = 'collab'
+})
+SMODS.DeckSkin({
+    key = 'synthsuit_skin',
+    suit = "Diamonds",
+    palettes = {
+        {
+            key = 'lc',
+            ranks = ranks_all,
+            display_ranks = ranks_all,
+            atlas = "uncardable_synthsuit",
+            pos_style = 'suit',
+        }
+    },
+    loc_txt = {
+        ["en-us"] = 'UNCARDABLE DIAMONDS'
+    },
+    pos_style = 'collab'
+})
+
 SMODS.Atlas {
     key = 'unniraspades',
     px = 71,
     py = 95,
     disable_mipmap = true;
-    path = 'UNNIRASPADESLC.png'
+    path = 'DECKSKINS/UNNIRASPADESLC.png'
 }
 
 SMODS.Atlas {
@@ -280,7 +352,7 @@ SMODS.Atlas {
     px = 71,
     py = 95,
     disable_mipmap = true;
-    path = 'UNNIRASPADESHC.png'
+    path = 'DECKSKINS/UNNIRASPADESHC.png'
 }
 
 SMODS.Atlas {
@@ -288,14 +360,14 @@ SMODS.Atlas {
     px = 71,
     py = 95,
     disable_mipmap = true;
-    path = 'UNNIRAHEARTSLC.png'
+    path = 'DECKSKINS/UNNIRAHEARTSLC.png'
 }
 SMODS.Atlas {
     key = 'unnirahearts_hc',
     px = 71,
     py = 95,
     disable_mipmap = true;
-    path = 'UNNIRAHEARTSHC.png'
+    path = 'DECKSKINS/UNNIRAHEARTSHC.png'
 }
 
 SMODS.Atlas {
@@ -303,14 +375,14 @@ SMODS.Atlas {
     px = 71,
     py = 95,
     disable_mipmap = true;
-    path = 'UNNIRACLUBSLC.png'
+    path = 'DECKSKINS/UNNIRACLUBSLC.png'
 }
 SMODS.Atlas {
     key = 'unniraclubs_hc',
     px = 71,
     py = 95,
     disable_mipmap = true;
-    path = 'UNNIRACLUBSHC.png'
+    path = 'DECKSKINS/UNNIRACLUBSHC.png'
 }
 
 SMODS.Atlas {
@@ -318,14 +390,14 @@ SMODS.Atlas {
     px = 71,
     py = 95,
     disable_mipmap = true;
-    path = 'UNNIRADIAMONDSLC.png'
+    path = 'DECKSKINS/UNNIRADIAMONDSLC.png'
 }
 SMODS.Atlas {
     key = 'unniradiamonds_hc',
     px = 71,
     py = 95,
     disable_mipmap = true;
-    path = 'UNNIRADIAMONDSHC.png'
+    path = 'DECKSKINS/UNNIRADIAMONDSHC.png'
 }
 
 SMODS.DeckSkin ({
