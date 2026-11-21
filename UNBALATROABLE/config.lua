@@ -10,4 +10,5 @@ return {
     ["extras"] = false;
     credit_num = 1,
     ["rename_hand_types"] = true;
+    ["rename_suits"] = false;
 }

@@ -164,4 +164,42 @@ end
       end
    end
 
+if UNCARDABLE.config.rename_suits then
+   print("RE-SUITING")
+   function SMODS.current_mod.process_loc_text()
+      -- decks
+      G.localization.descriptions.Back.b_checkered.text[3] = string.gsub(G.localization.descriptions.Back.b_checkered.text[3], " Hearts", " Tapes")
+      G.localization.descriptions.Back.b_checkered.text[2] = string.gsub(G.localization.descriptions.Back.b_checkered.text[2], " Spades", " Guitars")
 
+      -- blinds
+      G.localization.descriptions.Blind.bl_head.text[1] = string.gsub(G.localization.descriptions.Blind.bl_head.text[1], " Heart", " Tape")
+      G.localization.descriptions.Blind.bl_goad.text[1] = string.gsub(G.localization.descriptions.Blind.bl_goad.text[1], " Spade", " Guitar")
+      G.localization.descriptions.Blind.bl_window.text[1] = string.gsub(G.localization.descriptions.Blind.bl_window.text[1], " Diamond", "Synth")
+      G.localization.descriptions.Blind.bl_club.text[1] = string.gsub(G.localization.descriptions.Blind.bl_club.text[1], " Club", "Drum")
+      
+      --jokers
+      for pos, locstring in pairs(G.localization.descriptions.Joker) do
+         for text, lstring in pairs(G.localization.descriptions.Joker[pos].text) do
+            G.localization.descriptions.Joker[pos].text[text] = string.gsub(lstring, "Heart", " Tape")
+            G.localization.descriptions.Joker[pos].text[text] = string.gsub(lstring, "Hearts", " Tapes")
+            G.localization.descriptions.Joker[pos].text[text] = string.gsub(lstring, "Spade", " Guitar")
+            G.localization.descriptions.Joker[pos].text[text] = string.gsub(lstring, "Spades", " Guitars")
+            G.localization.descriptions.Joker[pos].text[text] = string.gsub(lstring, "Diamond", " Synth")
+            G.localization.descriptions.Joker[pos].text[text] = string.gsub(lstring, "Diamonds", " Synths")
+            G.localization.descriptions.Joker[pos].text[text] = string.gsub(lstring, "Club", " Drum")
+            G.localization.descriptions.Joker[pos].text[text] = string.gsub(lstring, "Clubs", " Drums")
+         end
+      end
+
+      -- suits plural
+      G.localization.misc.suits_plural.Hearts = string.gsub(G.localization.misc.suits_plural.Hearts, "Hearts", "Tapes")
+      G.localization.misc.suits_plural.Spades = string.gsub(G.localization.misc.suits_plural.Spades, "Spades", "Guitars")
+      G.localization.misc.suits_plural.Diamonds = string.gsub(G.localization.misc.suits_plural.Diamonds, "Diamonds", "Synths")
+      G.localization.misc.suits_plural.Clubs = string.gsub(G.localization.misc.suits_plural.Clubs, "Clubs", "Drums")
+      --suits singular
+      G.localization.misc.suits_singular.Hearts = string.gsub(G.localization.misc.suits_singular.Hearts, "Heart", "Tape")
+      G.localization.misc.suits_singular.Spades = string.gsub(G.localization.misc.suits_singular.Spades, "Spade", "Guitar")
+      G.localization.misc.suits_singular.Diamonds = string.gsub(G.localization.misc.suits_singular.Diamonds, "Diamond", "Synth")
+      G.localization.misc.suits_singular.Clubs  = string.gsub(G.localization.misc.suits_singular.Clubs, "Club", "Drum")
+   end
+end
