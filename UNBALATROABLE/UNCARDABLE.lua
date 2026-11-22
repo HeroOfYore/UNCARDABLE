@@ -286,6 +286,13 @@ SMODS.Atlas{
     py = 95,
     path = "DECKSKINS/UNBEATASYNTHS.png"
 }
+SMODS.Atlas {
+    key = "drumsuit",
+    px = 71,
+    py = 95,
+    path = "DECKSKINS/UNBEATADRUMS.png"
+}
+
 
 SMODS.DeckSkin({
     key = 'tapesuit_skin',
@@ -302,6 +309,12 @@ SMODS.DeckSkin({
     loc_txt = {
         ["en-us"] = 'UNCARDABLE HEARTS'
     },
+    has_ds_card_ui = function(card, self, palette)
+        return true
+    end,
+    generate_ds_card_ui = function(card, deckskin, palette, info_queue, desc_nodes, specific_vars, full_UI_table)
+        localize{ type = 'other', key = 'headsup', nodes = desc_nodes, vars = {}}
+    end,
     pos_style = 'collab'
 })
 SMODS.DeckSkin({
@@ -319,6 +332,12 @@ SMODS.DeckSkin({
     loc_txt = {
         ["en-us"] = 'UNCARDABLE SPADES'
     },
+    has_ds_card_ui = function(card, self, palette)
+        return true
+    end,
+    generate_ds_card_ui = function(card, deckskin, palette, info_queue, desc_nodes, specific_vars, full_UI_table)
+        return localize{ type = 'other', key = 'uncardable_headsup', nodes = desc_nodes, vars = {}}
+    end,
     pos_style = 'collab'
 })
 SMODS.DeckSkin({
@@ -336,6 +355,29 @@ SMODS.DeckSkin({
     loc_txt = {
         ["en-us"] = 'UNCARDABLE DIAMONDS'
     },
+    has_ds_card_ui = function(card, self, palette)
+        return true
+    end,
+    pos_style = 'collab'
+})
+SMODS.DeckSkin({
+    key = 'drumsuit_skin',
+    suit = "Clubs",
+    palettes = {
+        {
+            key = 'lc',
+            ranks = ranks_all,
+            display_ranks = ranks_all,
+            atlas = "uncardable_drumsuit",
+            pos_style = 'suit',
+        }
+    },
+    loc_txt = {
+        ["en-us"] = 'UNCARDABLE Clubs'
+    },
+    has_ds_card_ui = function(card, self, palette)
+        return true
+    end,
     pos_style = 'collab'
 })
 

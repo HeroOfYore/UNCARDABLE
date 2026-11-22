@@ -1,4 +1,14 @@
 return {
+    descriptions = {
+        Other = {
+            headsup = {
+                text = {
+                    "This suit is recommended",
+                    "for use with config option Change Suits",
+                },
+            },
+        },
+    },
     ["misc"] ={
         quips = {
             dq_1={
@@ -139,7 +149,6 @@ return {
             uncard_chips = "chipispis",
             uncard_skins = "Reskin Selection",
             uncard_planets = "Planet Selection",
-            
             uncard_palettes={
                 'Default',
                 'UNBEATABLE Default',

@@ -180,14 +180,14 @@ if UNCARDABLE.config.rename_suits then
       --jokers
       for pos, locstring in pairs(G.localization.descriptions.Joker) do
          for text, lstring in pairs(G.localization.descriptions.Joker[pos].text) do
-            G.localization.descriptions.Joker[pos].text[text] = string.gsub(lstring, "Heart", " Tape")
-            G.localization.descriptions.Joker[pos].text[text] = string.gsub(lstring, "Hearts", " Tapes")
-            G.localization.descriptions.Joker[pos].text[text] = string.gsub(lstring, "Spade", " Guitar")
-            G.localization.descriptions.Joker[pos].text[text] = string.gsub(lstring, "Spades", " Guitars")
-            G.localization.descriptions.Joker[pos].text[text] = string.gsub(lstring, "Diamond", " Synth")
-            G.localization.descriptions.Joker[pos].text[text] = string.gsub(lstring, "Diamonds", " Synths")
-            G.localization.descriptions.Joker[pos].text[text] = string.gsub(lstring, "Club", " Drum")
-            G.localization.descriptions.Joker[pos].text[text] = string.gsub(lstring, "Clubs", " Drums")
+            G.localization.descriptions.Joker[pos].text[text] = string.gsub(lstring, "Heart", "Tape")
+            G.localization.descriptions.Joker[pos].text[text] = string.gsub(lstring, "Hearts", "Tapes")
+            G.localization.descriptions.Joker[pos].text[text] = string.gsub(lstring, "Spade", "Guitar")
+            G.localization.descriptions.Joker[pos].text[text] = string.gsub(lstring, "Spades", "Guitars")
+            G.localization.descriptions.Joker[pos].text[text] = string.gsub(lstring, "Diamond", "Synth")
+            G.localization.descriptions.Joker[pos].text[text] = string.gsub(lstring, "Diamonds", "Synths")
+            G.localization.descriptions.Joker[pos].text[text] = string.gsub(lstring, "Club", "Drum")
+            G.localization.descriptions.Joker[pos].text[text] = string.gsub(lstring, "Clubs", "Drums")
          end
       end
 
