@@ -50,3 +50,15 @@ if not new_back.unlocked or not self.effect.center.unlocked then
 end
 '''
 match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "game.lua"
+pattern = "boot_timer('splash prep', 'end',1)"
+position = "after"
+payload = '''
+if SMODS.find_mod("uncardable") then
+    self.shared_soul = Sprite(0, 0, self.CARD_W, self.CARD_H, self.ASSET_ATLAS['uncardable_c_soul_soul'], {x = 0, y = 0})
+end
+'''
+match_indent = true

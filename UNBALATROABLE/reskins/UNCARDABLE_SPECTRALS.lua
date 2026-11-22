@@ -210,6 +210,13 @@ SMODS.Atlas {
     py = 95, 
 }
 
+SMODS.Atlas {
+    key = "c_soul_soul",
+    path = "UNSPECTRABLE/UNSOULSOUL.png",
+    px = 71,
+    py = 95,
+}
+
 
 if not UNCARDABLE.config.disabled then
     for spectral, data in pairs(G.UNCARDABLE_SPECTRALS) do
@@ -217,6 +224,12 @@ if not UNCARDABLE.config.disabled then
             local randompos = math.random(1, 3)
             SMODS["Consumable"]:take_ownership(spectral, {
                 atlas = spectral .. "_anim_" .. randompos,
+                pos = {x = 0, y = 0},
+                artist_credits = data.artist,
+            }, true)
+        elseif spectral == "c_soul" then
+            SMODS["Consumable"]:take_ownership(spectral, {
+                atlas = spectral .. "_anim",
                 pos = {x = 0, y = 0},
                 artist_credits = data.artist,
             }, true)
