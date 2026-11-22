@@ -318,11 +318,22 @@
             end
         }, true)
 
-        SMODS.Joker:take_ownership("j_hologram", {
-            soul_pos = {x = 24, y = 1, draw = function(card, size_mod, rotate_mod) 
-                local rotate_mod = 0.1 * math.sin(1.219 * G.TIMERS.REAL) + 0.07 * math.sin((G.TIMERS.REAL) * math.pi * 5) * (1 - (G.TIMERS.REAL - math.floor(G.TIMERS.REAL))) ^ 2
-                local size_mod = 1.25
-            end}
+    SMODS.Atlas{
+        key = "unhologramable",
+        path = "UNHOLOGRAMMABLE.png",
+        px = 71,
+        py = 95
+    }
+    SMODS.Joker:take_ownership("j_hologram", {
+            soul_atlas = "unhologramable",
+            soul_pos = {x = 0, y = 0,
+            draw = function(card, scale_mod, rotate_mod)
+                card.hover_tilt = card.hover_tilt * 1.5
+                card.children.floating_sprite:draw_shader('hologram', nil, card.ARGS.send_to_shader, nil,
+                    card.children.center, 2 * scale_mod, 2 * rotate_mod)
+                card.hover_tilt = card.hover_tilt / 1.5
+            end
+            },
         }, true)
 
         SMODS.Joker:take_ownership("j_crafty", {
