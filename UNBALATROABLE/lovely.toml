@@ -62,3 +62,19 @@ if SMODS.find_mod("uncardable") then
 end
 '''
 match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "game.lua"
+pattern = '''G.SPLASH_LOGO = Sprite(0, 0, 
+        13*SC_scale, 
+        13*SC_scale*(G.ASSET_ATLAS["balatro"].py/G.ASSET_ATLAS["balatro"].px),
+        G.ASSET_ATLAS["balatro"], {x=0,y=0})'''
+position = "after"
+payload = '''
+G.SPLASH_LOGO = SMODS.create_sprite(0, 0, 
+    13*SC_scale, 
+    13*SC_scale*216/333,
+        G.ANIMATION_ATLAS["uncardable_balatro"], {x=0,y=0})
+'''
+match_indent = true

@@ -45,11 +45,17 @@ ranks_all = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "Kin
 
 SMODS.Atlas {
     key = 'balatro',
-    path = 'uncardalogo.png',
+    path = 'UNCARDALOGO_ANIM.png',
+    atlas_table = 'ANIMATION_ATLAS',
+    frames = 32,
     px = 333,
     py = 216,
-    prefix_config = {key = false}
+    --prefix_config = {key = false}
 }
+--[[if not UNCARDABLE.config.disabled then
+    local tempscale = 1.1*(G.debug_splash_size_toggle and 0.8 or 1)
+    G.SPLASH_LOGO = SMODS.create_sprite(0, 0, 13*tempscale, 13*tempscale*216 / 333, G.ANIMATION_ATLAS["uncardable_balatro"], {x = 0, y = 0})
+end]]
 SMODS.Atlas {
     key = 'unbeataspades',
     px = 71,
