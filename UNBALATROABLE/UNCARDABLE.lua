@@ -52,13 +52,14 @@ SMODS.Atlas {
     py = 216,
     --prefix_config = {key = false}
 }
-SMODS.Atlas {
-    key = 'balatro'
-    path = 'uncardalogo.png',
-    px =333, 
-    py = 216,
-    prefix_config = {key = true}
-}
+-- this is causing a crash :(
+--SMODS.Atlas {
+--    key = 'balatro'
+--    path = 'uncardalogo.png',
+--    px = 333, 
+--    py = 216,
+--    prefix_config = {key = true}
+--}
 --[[if not UNCARDABLE.config.disabled then
     local tempscale = 1.1*(G.debug_splash_size_toggle and 0.8 or 1)
     G.SPLASH_LOGO = SMODS.create_sprite(0, 0, 13*tempscale, 13*tempscale*216 / 333, G.ANIMATION_ATLAS["uncardable_balatro"], {x = 0, y = 0})

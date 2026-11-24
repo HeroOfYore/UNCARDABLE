@@ -16,7 +16,7 @@ G.UNCARDABLE_SPECTRALS = {
     c_cryptid = {artist = {'heroofyore'}, anim = "c_cryptid_anim"},
     c_black_hole = {artist = {'guac'}, anim = "c_black_hole_anim"},
     c_soul = {artist = {'guac'}, anim = "c_soul_anim"},
-
+    c_hex = {artist = {'guac'}, anim = "c_hex_anim"},
 }
 
 
@@ -217,6 +217,15 @@ SMODS.Atlas {
     py = 95,
 }
 
+SMODS.Atlas {
+    key = "c_hex_anim",
+    path = "UNSPECTRABLE/UNHEXABLE.png",
+    atlas_table = "ANIMATION_ATLAS",
+    frames = 171,
+    fps = 30,
+    px = 71,
+    py = 95, 
+}
 
 if not UNCARDABLE.config.disabled then
     for spectral, data in pairs(G.UNCARDABLE_SPECTRALS) do
