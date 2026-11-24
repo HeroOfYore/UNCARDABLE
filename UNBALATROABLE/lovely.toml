@@ -75,6 +75,6 @@ payload = '''
 G.SPLASH_LOGO = SMODS.create_sprite(0, 0, 
     13*SC_scale, 
     13*SC_scale*216/333,
-        G.ANIMATION_ATLAS["uncardable_balatro"], {x=0,y=0})
+        G.ANIMATION_ATLAS["uncardable_balatro_anim"], {x=0,y=0})
 '''
 match_indent = true
