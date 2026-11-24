@@ -44,13 +44,20 @@ ranks = {"Jack", "Queen", "King"}
 ranks_all = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"}
 
 SMODS.Atlas {
-    key = 'balatro',
+    key = 'balatro_anim',
     path = 'UNCARDALOGO_ANIM.png',
     atlas_table = 'ANIMATION_ATLAS',
     frames = 32,
     px = 333,
     py = 216,
     --prefix_config = {key = false}
+}
+SMODS.Atlas {
+    key = 'balatro'
+    path = 'uncardalogo.png',
+    px =333, 
+    py = 216,
+    prefix_config = {key = true}
 }
 --[[if not UNCARDABLE.config.disabled then
     local tempscale = 1.1*(G.debug_splash_size_toggle and 0.8 or 1)
