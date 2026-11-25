@@ -14,7 +14,7 @@ G.UNCARDABLE_DECKS = {
     b_anaglyph = {pos = 12, artist = {"guac"}},
     b_plasma = {pos = 13, artist = {"guac"}},
     b_erratic = {pos = 14, artist = {"heroofyore"}},
-    -- b_challenge = {pos = 15, artist = {"tentative"}},
+    b_challenge = {pos = 15, artist = {"guac"}},
     -- Put Locked Deck Here = {pos = 16, artist = {"guac"}},
 }
 
