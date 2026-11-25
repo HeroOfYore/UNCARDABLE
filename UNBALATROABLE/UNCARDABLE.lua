@@ -62,7 +62,7 @@ SMODS.Atlas {
     path = 'uncardalogo.png',
     px = 333, 
     py = 216,
-    prefix_config = {key = true}
+    prefix_config = {key = false}
 }
 --[[if not UNCARDABLE.config.disabled then
     local tempscale = 1.1*(G.debug_splash_size_toggle and 0.8 or 1)
