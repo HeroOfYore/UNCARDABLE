@@ -174,8 +174,8 @@ if UNCARDABLE.config.rename_suits then
       -- blinds
       G.localization.descriptions.Blind.bl_head.text[1] = string.gsub(G.localization.descriptions.Blind.bl_head.text[1], " Heart", " Tape")
       G.localization.descriptions.Blind.bl_goad.text[1] = string.gsub(G.localization.descriptions.Blind.bl_goad.text[1], " Spade", " Guitar")
-      G.localization.descriptions.Blind.bl_window.text[1] = string.gsub(G.localization.descriptions.Blind.bl_window.text[1], " Diamond", "Synth")
-      G.localization.descriptions.Blind.bl_club.text[1] = string.gsub(G.localization.descriptions.Blind.bl_club.text[1], " Club", "Drum")
+      G.localization.descriptions.Blind.bl_window.text[1] = string.gsub(G.localization.descriptions.Blind.bl_window.text[1], " Diamond", " Synth")
+      G.localization.descriptions.Blind.bl_club.text[1] = string.gsub(G.localization.descriptions.Blind.bl_club.text[1], " Club", " Drum")
       
       --jokers
       G.localization.descriptions.Joker.j_bloodstone.text[3] = string.gsub(G.localization.descriptions.Joker.j_bloodstone.text[3], "Heart", "Tape")
