@@ -222,7 +222,7 @@ SMODS.Atlas {
     path = "UNSPECTRABLE/UNHEXABLE.png",
     atlas_table = "ANIMATION_ATLAS",
     frames = 104,
-    fps = 30,
+    fps = 20,
     px = 71,
     py = 95, 
     sprite_args = {
