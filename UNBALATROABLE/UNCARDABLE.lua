@@ -50,6 +50,11 @@ SMODS.Atlas {
     frames = 32,
     px = 333,
     py = 216,
+    sprite_args = {
+        frame_durations = {
+            [26] = 40,
+        }
+    }
     --prefix_config = {key = false}
 }
 SMODS.Atlas {
