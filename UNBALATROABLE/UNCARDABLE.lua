@@ -293,10 +293,22 @@ SMODS.Atlas{
     path = "DECKSKINS/UNBEATATAPES.png"
 }
 SMODS.Atlas{
+    key = "tapesuitHC",
+    px = 71,
+    py = 95,
+    path = "DECKSKINS/UNBEATATAPESHC.png"
+}
+SMODS.Atlas{
     key = "guitarsuit",
     px = 71,
     py = 95,
     path = "DECKSKINS/UNBEATAGUITARS.png"
+}
+SMODS.Atlas{
+    key = "guitarsuitHC",
+    px = 71,
+    py = 95,
+    path = "DECKSKINS/UNBEATAGUITARSHC.png"
 }
 SMODS.Atlas{
     key = "synthsuit",
@@ -304,13 +316,24 @@ SMODS.Atlas{
     py = 95,
     path = "DECKSKINS/UNBEATASYNTHS.png"
 }
+SMODS.Atlas{
+    key = "synthsuitHC",
+    px = 71,
+    py = 95,
+    path = "DECKSKINS/UNBEATASYNTHSHC.png"
+}
 SMODS.Atlas {
     key = "drumsuit",
     px = 71,
     py = 95,
     path = "DECKSKINS/UNBEATADRUMS.png"
 }
-
+SMODS.Atlas {
+    key = "drumsuitHC",
+    px = 71,
+    py = 95,
+    path = "DECKSKINS/UNBEATADRUMSHC.png"
+}
 
 SMODS.DeckSkin({
     key = 'tapesuit_skin',
@@ -321,6 +344,13 @@ SMODS.DeckSkin({
             ranks = ranks_all,
             display_ranks = ranks_all,
             atlas = "uncardable_tapesuit",
+            pos_style = 'suit',
+        },
+        {
+            key = 'hc',
+            ranks = ranks_all,
+            display_ranks = ranks_all,
+            atlas = "uncardable_tapesuitHC",
             pos_style = 'suit',
         }
     },
@@ -345,6 +375,13 @@ SMODS.DeckSkin({
             display_ranks = ranks_all,
             atlas = "uncardable_guitarsuit",
             pos_style = 'suit',
+        },
+        {
+            key = 'hc',
+            ranks = ranks_all,
+            display_ranks = ranks_all,
+            atlas = "uncardable_guitarsuitHC",
+            pos_style = 'suit',
         }
     },
     loc_txt = {
@@ -368,6 +405,13 @@ SMODS.DeckSkin({
             display_ranks = ranks_all,
             atlas = "uncardable_synthsuit",
             pos_style = 'suit',
+        },
+        {
+            key = 'hc',
+            ranks = ranks_all,
+            display_ranks = ranks_all,
+            atlas = "uncardable_synthsuitHC",
+            pos_style = 'suit',
         }
     },
     loc_txt = {
@@ -387,6 +431,13 @@ SMODS.DeckSkin({
             ranks = ranks_all,
             display_ranks = ranks_all,
             atlas = "uncardable_drumsuit",
+            pos_style = 'suit',
+        },
+        {
+            key = 'hc',
+            ranks = ranks_all,
+            display_ranks = ranks_all,
+            atlas = "uncardable_drumsuitHC",
             pos_style = 'suit',
         }
     },
