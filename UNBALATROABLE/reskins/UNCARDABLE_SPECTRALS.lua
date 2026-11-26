@@ -209,6 +209,24 @@ SMODS.Atlas {
     px = 71,
     py = 95, 
 }
+SMODS.Atlas {
+    key = "c_soul_anim",
+    path = "UNSPECTRABLE/UNSOULABLE.png",
+    atlas_table = "ANIMATION_ATLAS",
+    frames = 180,
+    fps = 30,
+    px = 71,
+    py = 95, 
+}
+SMODS.Atlas {
+    key = "c_soul_reduced_anim",
+    path = "UNSPECTRABLE/UNSOULABLE_REDUCED.png",
+    atlas_table = "ANIMATION_ATLAS",
+    frames = 90,
+    fps = 30,
+    px = 71,
+    py = 95, 
+}
 
 SMODS.Atlas {
     key = "c_soul_soul",
@@ -309,12 +327,18 @@ if not UNCARDABLE.config.disabled then
                 pos = {x = 0, y = 0},
                 artist_credits = data.artist,
             }, true)
-        elseif spectral == "c_soul" then
+        elseif spectral == "c_soul" and not UNCARDABLE.config.reduced_anims then
             SMODS["Consumable"]:take_ownership(spectral, {
                 atlas = spectral .. "_anim",
                 pos = {x = 0, y = 0},
                 artist_credits = data.artist,
             }, true)
+        elseif spectral == "c_soul" and UNCARDABLE.config.reduced_anims then
+            SMODS["Consumable"]:take_ownership(spectral, {
+            atlas = spectral .. "_reduced_anim",
+            pos = {x = 0, y = 0},
+            artist_credits = data.artist,
+        }, true)
         else
             SMODS["Consumable"]:take_ownership(spectral, {
                 atlas = spectral .. "_anim",
